@@ -7,19 +7,33 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         protected readonly Entity Entity;
 
         protected bool IsExitingState;
+        private string _animationBoolName;
 
-        public State(Entity entity)
+        public State(Entity entity, string animationBoolName)
         {
             Entity = entity;
+            _animationBoolName = animationBoolName;
         }
 
-        public virtual void Enter() => IsExitingState = false;
+        public virtual void Enter()
+        {
+            IsExitingState = false;
+
+            DoChecks();
+
+            Entity.CoreContainer.Animator.SetBool(_animationBoolName, true);
+        }
 
         public virtual void LogicUpdate() { }
 
         public virtual void PhysicsUpdate() => DoChecks();
 
-        public virtual void Exit() => IsExitingState = true;
+        public virtual void Exit()
+        {
+            Entity.CoreContainer.Animator.SetBool(_animationBoolName, false);
+
+            IsExitingState = true;
+        }
 
         public virtual void DoChecks() { }
     }
