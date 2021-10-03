@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeca6000520d6ce43b481de6926af035, type: 3}
   m_Name: Swordmaster_Data
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveVelocity: 1.6

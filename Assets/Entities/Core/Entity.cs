@@ -8,7 +8,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         [SerializeField] private D_Entity _data;
         public D_Entity Data
         {
-            get => Data;
+            get => _data;
             private set => _data = value;
         }
 
