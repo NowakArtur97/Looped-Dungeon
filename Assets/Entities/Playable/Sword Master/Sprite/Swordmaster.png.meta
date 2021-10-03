@@ -221,7 +221,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -233,7 +233,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -245,7 +245,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -264,8 +264,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,10 +283,10 @@ TextureImporter:
       name: Swordmaster_1
       rect:
         serializedVersion: 2
-        x: 28
+        x: 48
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +304,10 @@ TextureImporter:
       name: Swordmaster_2
       rect:
         serializedVersion: 2
-        x: 56
+        x: 96
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,10 +325,10 @@ TextureImporter:
       name: Swordmaster_3
       rect:
         serializedVersion: 2
-        x: 84
+        x: 144
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,10 +346,10 @@ TextureImporter:
       name: Swordmaster_4
       rect:
         serializedVersion: 2
-        x: 112
+        x: 192
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,10 +367,10 @@ TextureImporter:
       name: Swordmaster_5
       rect:
         serializedVersion: 2
-        x: 140
+        x: 240
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -388,10 +388,10 @@ TextureImporter:
       name: Swordmaster_6
       rect:
         serializedVersion: 2
-        x: 168
+        x: 288
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -409,10 +409,10 @@ TextureImporter:
       name: Swordmaster_7
       rect:
         serializedVersion: 2
-        x: 196
+        x: 336
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -430,10 +430,10 @@ TextureImporter:
       name: Swordmaster_8
       rect:
         serializedVersion: 2
-        x: 224
+        x: 384
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,10 +451,10 @@ TextureImporter:
       name: Swordmaster_9
       rect:
         serializedVersion: 2
-        x: 252
+        x: 432
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,10 +472,10 @@ TextureImporter:
       name: Swordmaster_10
       rect:
         serializedVersion: 2
-        x: 280
+        x: 480
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,10 +493,10 @@ TextureImporter:
       name: Swordmaster_11
       rect:
         serializedVersion: 2
-        x: 308
+        x: 528
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -514,10 +514,10 @@ TextureImporter:
       name: Swordmaster_12
       rect:
         serializedVersion: 2
-        x: 336
+        x: 576
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,10 +535,10 @@ TextureImporter:
       name: Swordmaster_13
       rect:
         serializedVersion: 2
-        x: 364
+        x: 624
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -556,10 +556,10 @@ TextureImporter:
       name: Swordmaster_14
       rect:
         serializedVersion: 2
-        x: 392
+        x: 672
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -577,10 +577,10 @@ TextureImporter:
       name: Swordmaster_15
       rect:
         serializedVersion: 2
-        x: 420
+        x: 720
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -598,10 +598,10 @@ TextureImporter:
       name: Swordmaster_16
       rect:
         serializedVersion: 2
-        x: 448
+        x: 768
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -619,10 +619,10 @@ TextureImporter:
       name: Swordmaster_17
       rect:
         serializedVersion: 2
-        x: 476
+        x: 816
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -640,10 +640,10 @@ TextureImporter:
       name: Swordmaster_18
       rect:
         serializedVersion: 2
-        x: 504
+        x: 864
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -661,10 +661,10 @@ TextureImporter:
       name: Swordmaster_19
       rect:
         serializedVersion: 2
-        x: 532
+        x: 912
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -682,10 +682,10 @@ TextureImporter:
       name: Swordmaster_20
       rect:
         serializedVersion: 2
-        x: 560
+        x: 960
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -703,10 +703,10 @@ TextureImporter:
       name: Swordmaster_21
       rect:
         serializedVersion: 2
-        x: 588
+        x: 1008
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -724,10 +724,10 @@ TextureImporter:
       name: Swordmaster_22
       rect:
         serializedVersion: 2
-        x: 616
+        x: 1056
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -745,10 +745,10 @@ TextureImporter:
       name: Swordmaster_23
       rect:
         serializedVersion: 2
-        x: 644
+        x: 1104
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -766,10 +766,10 @@ TextureImporter:
       name: Swordmaster_24
       rect:
         serializedVersion: 2
-        x: 672
+        x: 1152
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -787,10 +787,10 @@ TextureImporter:
       name: Swordmaster_25
       rect:
         serializedVersion: 2
-        x: 700
+        x: 1200
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -808,10 +808,10 @@ TextureImporter:
       name: Swordmaster_26
       rect:
         serializedVersion: 2
-        x: 728
+        x: 1248
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -829,10 +829,10 @@ TextureImporter:
       name: Swordmaster_27
       rect:
         serializedVersion: 2
-        x: 756
+        x: 1296
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -850,10 +850,10 @@ TextureImporter:
       name: Swordmaster_28
       rect:
         serializedVersion: 2
-        x: 784
+        x: 1344
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -871,10 +871,10 @@ TextureImporter:
       name: Swordmaster_29
       rect:
         serializedVersion: 2
-        x: 812
+        x: 1392
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -892,10 +892,10 @@ TextureImporter:
       name: Swordmaster_30
       rect:
         serializedVersion: 2
-        x: 840
+        x: 1440
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -913,10 +913,10 @@ TextureImporter:
       name: Swordmaster_31
       rect:
         serializedVersion: 2
-        x: 868
+        x: 1488
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -934,10 +934,10 @@ TextureImporter:
       name: Swordmaster_32
       rect:
         serializedVersion: 2
-        x: 896
+        x: 1536
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -955,10 +955,10 @@ TextureImporter:
       name: Swordmaster_33
       rect:
         serializedVersion: 2
-        x: 924
+        x: 1584
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -976,10 +976,10 @@ TextureImporter:
       name: Swordmaster_34
       rect:
         serializedVersion: 2
-        x: 952
+        x: 1632
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -997,10 +997,10 @@ TextureImporter:
       name: Swordmaster_35
       rect:
         serializedVersion: 2
-        x: 980
+        x: 1680
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1018,10 +1018,10 @@ TextureImporter:
       name: Swordmaster_36
       rect:
         serializedVersion: 2
-        x: 1008
+        x: 1728
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1039,10 +1039,10 @@ TextureImporter:
       name: Swordmaster_37
       rect:
         serializedVersion: 2
-        x: 1036
+        x: 1776
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1060,10 +1060,10 @@ TextureImporter:
       name: Swordmaster_38
       rect:
         serializedVersion: 2
-        x: 1064
+        x: 1824
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1081,10 +1081,10 @@ TextureImporter:
       name: Swordmaster_39
       rect:
         serializedVersion: 2
-        x: 1092
+        x: 1872
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1102,10 +1102,10 @@ TextureImporter:
       name: Swordmaster_40
       rect:
         serializedVersion: 2
-        x: 1120
+        x: 1920
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1123,10 +1123,10 @@ TextureImporter:
       name: Swordmaster_41
       rect:
         serializedVersion: 2
-        x: 1148
+        x: 1968
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1144,10 +1144,10 @@ TextureImporter:
       name: Swordmaster_42
       rect:
         serializedVersion: 2
-        x: 1176
+        x: 2016
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1165,10 +1165,10 @@ TextureImporter:
       name: Swordmaster_43
       rect:
         serializedVersion: 2
-        x: 1204
+        x: 2064
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1186,10 +1186,10 @@ TextureImporter:
       name: Swordmaster_44
       rect:
         serializedVersion: 2
-        x: 1232
+        x: 2112
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1207,10 +1207,10 @@ TextureImporter:
       name: Swordmaster_45
       rect:
         serializedVersion: 2
-        x: 1260
+        x: 2160
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1228,10 +1228,10 @@ TextureImporter:
       name: Swordmaster_46
       rect:
         serializedVersion: 2
-        x: 1288
+        x: 2208
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1249,10 +1249,10 @@ TextureImporter:
       name: Swordmaster_47
       rect:
         serializedVersion: 2
-        x: 1316
+        x: 2256
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1270,10 +1270,10 @@ TextureImporter:
       name: Swordmaster_48
       rect:
         serializedVersion: 2
-        x: 1344
+        x: 2304
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1291,10 +1291,10 @@ TextureImporter:
       name: Swordmaster_49
       rect:
         serializedVersion: 2
-        x: 1372
+        x: 2352
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1312,10 +1312,10 @@ TextureImporter:
       name: Swordmaster_50
       rect:
         serializedVersion: 2
-        x: 1400
+        x: 2400
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1333,10 +1333,10 @@ TextureImporter:
       name: Swordmaster_51
       rect:
         serializedVersion: 2
-        x: 1428
+        x: 2448
         y: 0
-        width: 28
-        height: 23
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

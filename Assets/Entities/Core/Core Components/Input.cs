@@ -13,7 +13,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             base.Awake();
 
-            _inputManager = GetComponentInChildren<PlayerInputManager>();
+            _inputManager = GetComponent<PlayerInputManager>();
         }
 
         public void LogicUpdate()

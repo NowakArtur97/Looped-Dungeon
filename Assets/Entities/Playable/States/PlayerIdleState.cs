@@ -17,5 +17,18 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             Entity.CoreContainer.Movement.SetVelocityZero();
         }
+
+        public override void LogicUpdate()
+        {
+            base.LogicUpdate();
+
+            if (!IsExitingState)
+            {
+                if (_player.CoreContainer.Input.MovementInput.x != 0)
+                {
+                    Entity.StateMachine.ChangeState(_player.MoveState);
+                }
+            }
+        }
     }
 }
