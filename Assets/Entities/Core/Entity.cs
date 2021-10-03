@@ -3,8 +3,15 @@ using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
 {
-    public class Entity : MonoBehaviour
+    public abstract class Entity : MonoBehaviour
     {
+        [SerializeField] private D_Entity _data;
+        public D_Entity Data
+        {
+            get => Data;
+            private set => _data = value;
+        }
+
         public CoreContainer CoreContainer { get; private set; }
         public FiniteStateMachine StateMachine { get; private set; }
 

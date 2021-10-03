@@ -28,13 +28,26 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _animatior = value;
         }
 
+        private Input _input;
+
+        public Input Input
+        {
+            get => GenericNotImplementedError<Input>.TryGet(_input, transform.parent.name);
+            private set => _input = value;
+        }
+
         private void Awake()
         {
             Movement = GetComponentInChildren<Movement>();
             CollisionSenses = GetComponentInChildren<CollisionSenses>();
             Animator = GetComponentInChildren<Animator>();
+            Input = GetComponentInChildren<Input>();
         }
 
-        public void LogicUpdate() => Movement.LogicUpdate();
+        public void LogicUpdate()
+        {
+            Movement.LogicUpdate();
+            Input?.LogicUpdate();
+        }
     }
 }

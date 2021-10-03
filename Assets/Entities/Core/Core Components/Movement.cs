@@ -8,6 +8,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         private Vector2 _workspace;
 
         public Vector2 CurrentVelocity { get; private set; }
+        public int FacingDirection { get; private set; }
 
         protected override void Awake()
         {
@@ -17,5 +18,37 @@ namespace NowakArtur97.LoopedDungeon.Core
         }
 
         public void LogicUpdate() => CurrentVelocity = _myRigidbody.velocity;
+
+        public void SetVelocityZero()
+        {
+            _workspace.Set(0, 0);
+            SetFinalVelocity();
+        }
+
+        public void SetVelocityX(float velocityX)
+        {
+            _workspace.Set(velocityX, CurrentVelocity.y);
+            SetFinalVelocity();
+        }
+
+        private void SetFinalVelocity()
+        {
+            _myRigidbody.velocity = _workspace;
+            CurrentVelocity = _workspace;
+        }
+
+        public void CheckIfShouldFlip(int xInput)
+        {
+            if (xInput != 0 && xInput != FacingDirection)
+            {
+                Flip();
+            }
+        }
+
+        public void Flip()
+        {
+            FacingDirection *= -1;
+            _myRigidbody.transform.Rotate(0.0f, 180.0f, 0.0f);
+        }
     }
 }
