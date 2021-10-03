@@ -1,3 +1,5 @@
+using NowakArtur97.IntergalacticRacing.Core;
+
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
     public abstract class State
