@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Platforms
-  - 
+  - Player
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: Platforms
     uniqueID: 2647798235
+    locked: 0
+  - name: Characters
+    uniqueID: 470007
     locked: 0

@@ -1,7 +1,7 @@
 using NowakArtur97.LoopedDungeon.StateMachine;
 using UnityEngine;
 
-namespace NowakArtur97.IntergalacticRacing.Core
+namespace NowakArtur97.LoopedDungeon.Core
 {
     public class Entity : MonoBehaviour
     {

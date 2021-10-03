@@ -1,4 +1,4 @@
-using NowakArtur97.IntergalacticRacing.Core;
+using NowakArtur97.LoopedDungeon.Core;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
