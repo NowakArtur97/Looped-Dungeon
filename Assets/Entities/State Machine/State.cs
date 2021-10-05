@@ -6,7 +6,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
     {
         protected readonly Entity Entity;
 
-        protected bool IsExitingState;
+        protected bool IsExitingState { get; private set; }
+        protected bool IsAnimationFinished { get; private set; }
         private string _animationBoolName;
 
         public State(Entity entity, string animationBoolName)
@@ -18,10 +19,12 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         public virtual void Enter()
         {
             IsExitingState = false;
+            IsAnimationFinished = false;
+
+            Entity.CoreContainer.AnimationToStateMachine.CurrentState = this;
+            Entity.CoreContainer.Animation.SetBoolVariable(_animationBoolName, true);
 
             DoChecks();
-
-            Entity.CoreContainer.Animation.SetBoolVariable(_animationBoolName, true);
         }
 
         public virtual void LogicUpdate() { }
@@ -36,5 +39,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         }
 
         public virtual void DoChecks() { }
+
+        public virtual void AnimationFinishedTrigger() => IsAnimationFinished = true;
     }
 }

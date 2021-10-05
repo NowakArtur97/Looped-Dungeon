@@ -28,6 +28,14 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _animation = value;
         }
 
+        private AnimationToStateMachine _animationToStateMachine;
+
+        public AnimationToStateMachine AnimationToStateMachine
+        {
+            get => GenericNotImplementedError<AnimationToStateMachine>.TryGet(_animationToStateMachine, transform.parent.name);
+            private set => _animationToStateMachine = value;
+        }
+
         private Input _input;
 
         public Input Input
@@ -42,6 +50,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             CollisionSenses = GetComponentInChildren<CollisionSenses>();
             Animation = GetComponentInChildren<Animation>();
             Input = GetComponentInChildren<Input>();
+            AnimationToStateMachine = GetComponentInChildren<AnimationToStateMachine>();
         }
 
         public void LogicUpdate()

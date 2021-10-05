@@ -8,6 +8,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         public PlayerMoveState MoveState { get; private set; }
         public PlayerJumpState JumpState { get; private set; }
         public PlayerInAirState InAirState { get; private set; }
+        public PlayerLandState LandState { get; private set; }
 
         protected override void Awake()
         {
@@ -17,6 +18,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             MoveState = new PlayerMoveState(this, "move");
             JumpState = new PlayerJumpState(this, "inAir");
             InAirState = new PlayerInAirState(this, "inAir");
+            LandState = new PlayerLandState(this, "land");
 
             StateMachine.Initialize(IdleState);
         }
