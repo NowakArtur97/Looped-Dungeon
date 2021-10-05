@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,9 +24,14 @@ namespace NowakArtur97.LoopedDungeon.Input
 
         public void OnJumpInput(InputAction.CallbackContext context)
         {
-            JumpInput = true;
+            if (context.started)
+            {
+                JumpInput = true;
+            }
+            if (context.canceled)
+            {
+                JumpInput = false;
+            }
         }
-
-        public void UseJumpInput() => JumpInput = false;
     }
 }

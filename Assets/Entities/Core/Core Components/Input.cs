@@ -23,7 +23,5 @@ namespace NowakArtur97.LoopedDungeon.Core
             MovementInput = _inputManager.MovementInput;
             JumpInput = _inputManager.JumpInput;
         }
-
-        public void UseJumpInput() => _inputManager.UseJumpInput();
     }
 }

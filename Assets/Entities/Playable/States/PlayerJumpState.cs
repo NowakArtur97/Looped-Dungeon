@@ -15,14 +15,31 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             base.Enter();
 
-            _player.CoreContainer.Input.UseJumpInput();
-
             _player.CoreContainer.Movement.SetVelocityY(Entity.Data.jumpVelocity);
 
-            Entity.CoreContainer.Animator.SetFloat("velocityX", Entity.CoreContainer.Movement.CurrentVelocity.x);
-            Entity.CoreContainer.Animator.SetFloat("velocityY", Entity.CoreContainer.Movement.CurrentVelocity.y);
+            Entity.CoreContainer.Animation.SetVelocityVariable();
 
             IsAbilityFinished = true;
+        }
+
+        public override void LogicUpdate()
+        {
+            base.LogicUpdate();
+
+            if (!IsExitingState)
+            {
+                if (IsAbilityFinished)
+                {
+                    if (IsGrounded)
+                    {
+                        _player.StateMachine.ChangeState(_player.IdleState);
+                    }
+                    else
+                    {
+                        _player.StateMachine.ChangeState(_player.InAirState);
+                    }
+                }
+            }
         }
     }
 }

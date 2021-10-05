@@ -1543,10 +1543,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1472407396}
+  - component: {fileID: 1472407399}
   - component: {fileID: 1472407397}
   - component: {fileID: 1472407398}
   m_Layer: 0
-  m_Name: Animator
+  m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1637,6 +1638,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1472407399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472407395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8c56b2ea8d97146bf0c01efa3cf473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1574618858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,13 +1738,43 @@ MonoBehaviour:
     m_ActionId: 9d5e4e59-d681-4b04-9876-c1d0b0f781b0
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: NowakArtur97.LoopedDungeon.Input.PlayerInputManager,
+          Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3495997f-138e-4d28-bb97-38c738537ec2
     m_ActionName: Player/Ability[/Mouse/leftButton,/Mouse/rightButton]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: eb24a5ce-3c04-4d5f-a0a7-dd9bae327e17
     m_ActionName: Player/Secondary Ability[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1574618860}
+        m_TargetAssemblyTypeName: NowakArtur97.LoopedDungeon.Input.PlayerInputManager,
+          Assembly-CSharp
+        m_MethodName: OnJumpInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 279ed9fc-388e-45fa-b151-15d94832d5a0
+    m_ActionName: Player/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -3890,7 +3933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _groundCheck: {fileID: 402458280}
-  _groundCheckRadius: 2
+  _groundCheckRadius: 1
   _whatIsGround:
     serializedVersion: 2
     m_Bits: 64

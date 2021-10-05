@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Swordmaster_Data
   m_EditorClassIdentifier: 
   moveVelocity: 1.6
+  jumpVelocity: 6

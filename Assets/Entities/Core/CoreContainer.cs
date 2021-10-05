@@ -20,12 +20,12 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _collisionSenses = value;
         }
 
-        private Animator _animatior;
+        private Animation _animation;
 
-        public Animator Animator
+        public Animation Animation
         {
-            get => GenericNotImplementedError<Animator>.TryGet(_animatior, transform.parent.name);
-            private set => _animatior = value;
+            get => GenericNotImplementedError<Animation>.TryGet(_animation, transform.parent.name);
+            private set => _animation = value;
         }
 
         private Input _input;
@@ -40,7 +40,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             Movement = GetComponentInChildren<Movement>();
             CollisionSenses = GetComponentInChildren<CollisionSenses>();
-            Animator = GetComponentInChildren<Animator>();
+            Animation = GetComponentInChildren<Animation>();
             Input = GetComponentInChildren<Input>();
         }
 

@@ -21,7 +21,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             DoChecks();
 
-            Entity.CoreContainer.Animator.SetBool(_animationBoolName, true);
+            Entity.CoreContainer.Animation.SetBoolVariable(_animationBoolName, true);
         }
 
         public virtual void LogicUpdate() { }
@@ -30,7 +30,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
         public virtual void Exit()
         {
-            Entity.CoreContainer.Animator.SetBool(_animationBoolName, false);
+            Entity.CoreContainer.Animation.SetBoolVariable(_animationBoolName, false);
 
             IsExitingState = true;
         }

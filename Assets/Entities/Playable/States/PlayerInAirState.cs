@@ -2,11 +2,11 @@ using NowakArtur97.LoopedDungeon.Core;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
-    public class PlayerMoveState : GroundedState
+    public class PlayerInAirState : InAirState
     {
         private Player _player;
 
-        public PlayerMoveState(Player entity, string animationBoolName) : base(entity, animationBoolName)
+        public PlayerInAirState(Player entity, string animationBoolName) : base(entity, animationBoolName)
         {
             _player = entity;
         }
@@ -18,15 +18,13 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             Entity.CoreContainer.Movement.CheckIfShouldFlip((int)_player.CoreContainer.Input.MovementInput.x);
             Entity.CoreContainer.Movement.SetVelocityX(Entity.Data.moveVelocity * _player.CoreContainer.Input.MovementInput.x);
 
-            if (!IsExitingState)
+            Entity.CoreContainer.Animation.SetVelocityVariable();
+
+            if (IsGrounded)
             {
-                if (_player.CoreContainer.Input.JumpInput)
+                if (IsGrounded)
                 {
-                    Entity.StateMachine.ChangeState(_player.JumpState);
-                }
-                else if (_player.CoreContainer.Input.MovementInput.x == 0)
-                {
-                    Entity.StateMachine.ChangeState(_player.IdleState);
+                    _player.StateMachine.ChangeState(_player.IdleState);
                 }
             }
         }

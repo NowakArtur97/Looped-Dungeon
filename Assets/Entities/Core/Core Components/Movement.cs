@@ -46,6 +46,8 @@ namespace NowakArtur97.LoopedDungeon.Core
             CurrentVelocity = _workspace;
         }
 
+        public void AddYForce(float velocity) => _myRigidbody.AddForce(transform.up * velocity);
+
         public void CheckIfShouldFlip(int xInput)
         {
             if (xInput != 0 && xInput != FacingDirection)
