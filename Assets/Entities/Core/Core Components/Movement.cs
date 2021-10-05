@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
@@ -30,6 +31,12 @@ namespace NowakArtur97.LoopedDungeon.Core
         public void SetVelocityX(float velocityX)
         {
             _workspace.Set(velocityX, CurrentVelocity.y);
+            SetFinalVelocity();
+        }
+
+        public void SetVelocityY(float velocityY)
+        {
+            _workspace.Set(CurrentVelocity.x, velocityY);
             SetFinalVelocity();
         }
 
