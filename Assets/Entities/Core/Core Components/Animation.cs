@@ -21,10 +21,9 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public void SetVelocityVariable()
         {
-            Debug.Log(CoreContainer.Movement.CurrentVelocity);
-            _animator.SetFloat(VELOCITY_X, CoreContainer.Movement.CurrentVelocity.x);
+            Debug.Log(CoreContainer.Movement.CurrentVelocity.y);
+            _animator.SetFloat(VELOCITY_X, Mathf.Abs(CoreContainer.Input.MovementInput.x));
             _animator.SetFloat(VELOCITY_Y, CoreContainer.Movement.CurrentVelocity.y);
-
         }
     }
 }
