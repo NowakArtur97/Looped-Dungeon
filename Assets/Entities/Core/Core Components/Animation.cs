@@ -14,7 +14,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             base.Awake();
 
-            _animator = GetComponentInChildren<Animator>();
+            _animator = GetComponent<Animator>();
         }
 
         public void SetBoolVariable(string animationBoolName, bool value) => _animator.SetBool(animationBoolName, value);

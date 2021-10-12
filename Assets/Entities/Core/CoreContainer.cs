@@ -44,6 +44,14 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _input = value;
         }
 
+        private Inventory _inventory;
+
+        public Inventory Inventory
+        {
+            get => GenericNotImplementedError<Inventory>.TryGet(_inventory, transform.parent.name);
+            private set => _inventory = value;
+        }
+
         private void Awake()
         {
             Movement = GetComponentInChildren<Movement>();
@@ -51,6 +59,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             Animation = GetComponentInChildren<Animation>();
             Input = GetComponentInChildren<Input>();
             AnimationToStateMachine = GetComponentInChildren<AnimationToStateMachine>();
+            Inventory = GetComponentInChildren<Inventory>();
         }
 
         public void LogicUpdate()

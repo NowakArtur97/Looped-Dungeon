@@ -44,6 +44,9 @@ TagManager:
   - name: Platforms
     uniqueID: 2647798235
     locked: 0
+  - name: Weapon
+    uniqueID: 2463618767
+    locked: 0
   - name: Characters
     uniqueID: 470007
     locked: 0

@@ -24,6 +24,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             Entity.CoreContainer.AnimationToStateMachine.CurrentState = this;
             Entity.CoreContainer.Animation.SetBoolVariable(_animationBoolName, true);
 
+            Entity.CoreContainer.Inventory.CurrentWeapon.EnterWeapon(_animationBoolName);
+
             DoChecks();
         }
 
@@ -34,6 +36,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         public virtual void Exit()
         {
             Entity.CoreContainer.Animation.SetBoolVariable(_animationBoolName, false);
+
+            Entity.CoreContainer.Inventory.CurrentWeapon.ExitWeapon(_animationBoolName);
 
             IsExitingState = true;
         }

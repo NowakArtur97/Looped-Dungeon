@@ -19,8 +19,8 @@ namespace NowakArtur97.LoopedDungeon.Core
             JumpState = new PlayerJumpState(this, "inAir");
             InAirState = new PlayerInAirState(this, "inAir");
             LandState = new PlayerLandState(this, "land");
-
-            StateMachine.Initialize(IdleState);
         }
+
+        private void Start() => StateMachine.Initialize(IdleState);
     }
 }
