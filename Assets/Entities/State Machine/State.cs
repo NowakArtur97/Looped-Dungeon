@@ -22,9 +22,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             IsAnimationFinished = false;
 
             Entity.CoreContainer.AnimationToStateMachine.CurrentState = this;
-            Entity.CoreContainer.Animation.SetBoolVariable(_animationBoolName, true);
-
             Entity.CoreContainer.Inventory.CurrentWeapon.EnterWeapon(_animationBoolName);
+            Entity.CoreContainer.Animation.SetBoolVariable(_animationBoolName, true);
 
             DoChecks();
         }

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sword Idle Animation
+  m_Name: Sword Land Animation
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 7895331751462828495, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
+      value: {fileID: 7383815813161029808, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
     - time: 0.125
-      value: {fileID: 5831856643361557347, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
+      value: {fileID: 8629342664908103020, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
     - time: 0.25
-      value: {fileID: 8798243351490519842, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
-    - time: 0.375
-      value: {fileID: 7090169715276754743, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
+      value: {fileID: -5638815333102367161, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,16 +44,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 7895331751462828495, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
-    - {fileID: 5831856643361557347, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
-    - {fileID: 8798243351490519842, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
-    - {fileID: 7090169715276754743, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
+    - {fileID: 7383815813161029808, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
+    - {fileID: 8629342664908103020, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
+    - {fileID: -5638815333102367161, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 0.375
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

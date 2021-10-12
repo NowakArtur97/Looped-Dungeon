@@ -18,6 +18,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             _player.CoreContainer.Movement.SetVelocityY(Entity.Data.jumpVelocity);
 
             Entity.CoreContainer.Animation.SetVelocityVariable();
+            Entity.CoreContainer.Inventory.CurrentWeapon.SetCharacterVelocity(Entity.CoreContainer.Movement.CurrentVelocity);
 
             IsAbilityFinished = true;
         }

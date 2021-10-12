@@ -19,6 +19,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             Entity.CoreContainer.Movement.SetVelocityX(Entity.Data.moveVelocity * _player.CoreContainer.Input.MovementInput.x);
 
             Entity.CoreContainer.Animation.SetVelocityVariable();
+            Entity.CoreContainer.Inventory.CurrentWeapon.SetCharacterVelocity(Entity.CoreContainer.Movement.CurrentVelocity);
 
             if (IsGrounded)
             {
