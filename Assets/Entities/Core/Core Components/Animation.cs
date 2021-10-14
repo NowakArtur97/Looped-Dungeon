@@ -24,11 +24,5 @@ namespace NowakArtur97.LoopedDungeon.Core
             _animator.SetFloat(VELOCITY_X, Mathf.Abs(CoreContainer.Input.MovementInput.x));
             _animator.SetFloat(VELOCITY_Y, CoreContainer.Movement.CurrentVelocity.y);
         }
-
-        // TODO: Animation: Move to separate script
-        private void Update()
-        {
-            _animator.Play(0, -1, CoreContainer.Inventory.CurrentWeapon.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
-        }
     }
 }

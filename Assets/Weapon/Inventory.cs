@@ -7,7 +7,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         private Weapon[] _weapons;
         public Weapon CurrentWeapon { get; private set; }
 
-        private void Start()
+        private void Awake()
         {
             _weapons = GetComponentsInChildren<Weapon>();
             CurrentWeapon = _weapons[0];
