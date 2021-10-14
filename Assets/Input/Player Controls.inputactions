@@ -15,7 +15,7 @@
                 },
                 {
                     "name": "Main Ability",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "3495997f-138e-4d28-bb97-38c738537ec2",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -23,7 +23,7 @@
                 },
                 {
                     "name": "Secondary Ability",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "eb24a5ce-3c04-4d5f-a0a7-dd9bae327e17",
                     "expectedControlType": "Button",
                     "processors": "",
