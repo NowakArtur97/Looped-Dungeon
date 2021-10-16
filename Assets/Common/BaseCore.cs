@@ -4,6 +4,14 @@ namespace NowakArtur97.LoopedDungeon.Core
 {
     public abstract class BaseCore : MonoBehaviour
     {
+        private Movement _movement;
+
+        public Movement Movement
+        {
+            get => GenericNotImplementedError<Movement>.TryGet(_movement, transform.parent.name);
+            private set => _movement = value;
+        }
+
         private Animation _animation;
 
         public Animation Animation
@@ -12,6 +20,12 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _animation = value;
         }
 
-        protected virtual void Awake() => Animation = GetComponentInChildren<Animation>();
+        protected virtual void Awake()
+        {
+            Animation = GetComponentInChildren<Animation>();
+            Movement = GetComponentInChildren<Movement>();
+        }
+
+        public virtual void LogicUpdate() => Movement.LogicUpdate();
     }
 }

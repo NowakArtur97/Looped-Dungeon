@@ -4,20 +4,42 @@ namespace NowakArtur97.LoopedDungeon.Core
 {
     public abstract class Weapon : MonoBehaviour
     {
-        [SerializeField] protected D_Weapon Data;
+        [SerializeField] private D_Weapon _data;
+        public D_Weapon Data
+        {
+            get => _data;
+            private set => _data = value;
+        }
+        public IAbility MainAbility { get; protected set; }
+        public IAbility SecondaryAbility { get; protected set; }
 
-        protected WeaponCoreContrainer CoreContainer { get; private set; }
+        public WeaponCoreContrainer CoreContainer { get; private set; }
 
-        protected virtual void Awake() => CoreContainer = GetComponentInChildren<WeaponCoreContrainer>();
+        protected virtual void Awake()
+        {
+            CoreContainer = GetComponentInChildren<WeaponCoreContrainer>();
 
-        public void EnterWeapon(string animationBoolName) => CoreContainer.Animation.SetBoolVariable(animationBoolName, true);
+            InitializeAbilities();
+        }
 
-        public void ExitWeapon(string animationBoolName) => CoreContainer.Animation.SetBoolVariable(animationBoolName, false);
+        public void EnterWeapon(string animationBoolName) =>
+            CoreContainer.Animation.SetBoolVariable(animationBoolName, true);
 
-        protected abstract void UseWeapon();
+        public void ExitWeapon(string animationBoolName) =>
+            CoreContainer.Animation.SetBoolVariable(animationBoolName, false);
 
-        public void SetCharacterVelocity(Vector2 velocity) => CoreContainer.Animation.SetVelocityVariable(velocity.x, velocity.y);
+        private void UseMainAbility() => MainAbility.UseAbility(this);
 
-        public virtual void AnimationActionTrigger() { }
+        private void UseSecondaryAbility() => SecondaryAbility.UseAbility(this);
+
+        protected abstract void InitializeAbilities();
+
+        public virtual void AnimationMainAbilityTrigger() => UseMainAbility();
+
+        public virtual void AnimationSecondaryAbilityTrigger() => UseSecondaryAbility();
+
+        public virtual void OnTriggerEnter2D(Collider2D collision) { }
+
+        public virtual void OnTriggerExit2D(Collider2D collision) { }
     }
 }

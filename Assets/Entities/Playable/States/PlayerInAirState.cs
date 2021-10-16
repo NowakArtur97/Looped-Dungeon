@@ -6,6 +6,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
     public class PlayerInAirState : InAirState
     {
         private Player _player;
+        private Vector2 _currentVelocity;
 
         public PlayerInAirState(Player entity, string animationBoolName) : base(entity, animationBoolName)
         {
@@ -19,14 +20,15 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             Entity.CoreContainer.Movement.CheckIfShouldFlip((int)_player.CoreContainer.Input.MovementInput.x);
             Entity.CoreContainer.Movement.SetVelocityX(Entity.Data.moveVelocity * _player.CoreContainer.Input.MovementInput.x);
 
+            _currentVelocity = Entity.CoreContainer.Movement.CurrentVelocity;
             Entity.CoreContainer.Animation
                 .SetVelocityVariable(Mathf.Abs(Entity.CoreContainer.Input.MovementInput.x),
-                Entity.CoreContainer.Movement.CurrentVelocity.y);
-            Entity.CoreContainer.Inventory.CurrentWeapon.SetCharacterVelocity(Entity.CoreContainer.Movement.CurrentVelocity);
+                _currentVelocity.y);
+            Entity.CoreContainer.Inventory.CurrentWeapon.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y);
 
             if (IsGrounded)
             {
-                if (IsGrounded && Entity.CoreContainer.Movement.CurrentVelocity.y < 0.01f)
+                if (IsGrounded && _currentVelocity.y < 0.01f)
                 {
                     _player.StateMachine.ChangeState(_player.LandState);
                 }

@@ -8,6 +8,8 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         private void Awake() => _weapon = transform.parent.parent.GetComponentInParent<Weapon>();
 
-        public void AnimationActionTrigger() => _weapon.AnimationActionTrigger();
+        public void AnimationMainAbilityTrigger() => _weapon.AnimationMainAbilityTrigger();
+
+        public void AnimationSecondaryAbilityTrigger() => _weapon.AnimationSecondaryAbilityTrigger();
     }
 }

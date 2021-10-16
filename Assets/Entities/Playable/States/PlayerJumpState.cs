@@ -5,6 +5,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 {
     public class PlayerJumpState : PlayerAbilityState
     {
+        private Vector2 _currentVelocity;
+
         public PlayerJumpState(Player entity, string animationBoolName) : base(entity, animationBoolName)
         { }
 
@@ -17,7 +19,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             Entity.CoreContainer.Animation
                            .SetVelocityVariable(Mathf.Abs(Entity.CoreContainer.Input.MovementInput.x),
                            Entity.CoreContainer.Movement.CurrentVelocity.y);
-            Entity.CoreContainer.Inventory.CurrentWeapon.SetCharacterVelocity(Entity.CoreContainer.Movement.CurrentVelocity);
+            _currentVelocity = Entity.CoreContainer.Movement.CurrentVelocity;
+            Entity.CoreContainer.Inventory.CurrentWeapon.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y);
 
             IsAbilityFinished = true;
         }
