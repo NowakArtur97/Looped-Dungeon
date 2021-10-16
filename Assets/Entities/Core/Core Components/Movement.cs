@@ -15,7 +15,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             base.Awake();
 
-            _myRigidbody = GetComponentInParent<Rigidbody2D>();
+            _myRigidbody = transform.parent.parent.GetComponentInParent<Rigidbody2D>();
 
             FacingDirection = 1;
         }

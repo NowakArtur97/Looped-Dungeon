@@ -6,7 +6,7 @@ namespace NowakArtur97.LoopedDungeon.Core
     {
         private AggressiveWeapon _weapon;
 
-        private void Awake() => _weapon = GetComponentInParent<AggressiveWeapon>();
+        private void Awake() => _weapon = transform.parent.parent.GetComponent<AggressiveWeapon>();
 
         private void OnTriggerEnter2D(Collider2D collision) => _weapon.DetectTarget(collision);
 

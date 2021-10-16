@@ -1,8 +1,6 @@
-using UnityEngine;
-
 namespace NowakArtur97.LoopedDungeon.Core
 {
-    public class CoreContainer : MonoBehaviour
+    public class CoreContainer : BaseCore
     {
         private Movement _movement;
 
@@ -18,14 +16,6 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             get => GenericNotImplementedError<CollisionSenses>.TryGet(_collisionSenses, transform.parent.name);
             private set => _collisionSenses = value;
-        }
-
-        private Animation _animation;
-
-        public Animation Animation
-        {
-            get => GenericNotImplementedError<Animation>.TryGet(_animation, transform.parent.name);
-            private set => _animation = value;
         }
 
         private AnimationToStateMachine _animationToStateMachine;
@@ -52,11 +42,12 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _inventory = value;
         }
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             Movement = GetComponentInChildren<Movement>();
             CollisionSenses = GetComponentInChildren<CollisionSenses>();
-            Animation = GetComponentInChildren<Animation>();
             Input = GetComponentInChildren<Input>();
             AnimationToStateMachine = GetComponentInChildren<AnimationToStateMachine>();
             Inventory = GetComponentInChildren<Inventory>();
