@@ -10,7 +10,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         private readonly string VELOCITY_X = "velocityX";
         private readonly string VELOCITY_Y = "velocityY";
 
-        private Animator _animator;
+        protected Animator _animator;
 
         protected virtual void Awake() => _animator = GetComponent<Animator>();
 
@@ -18,7 +18,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public void ExitWeapon(string animationBoolName) => _animator.SetBool(animationBoolName, false);
 
-        public abstract void UseWeapon();
+        protected abstract void UseWeapon();
 
         // TODO: Weapon: Use methods from Animation Core Component(?)
         public void SetCharacterVelocity(Vector2 velocity)

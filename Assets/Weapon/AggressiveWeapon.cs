@@ -14,7 +14,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             _toDamage = new List<IDamagable>();
         }
 
-        public override void UseWeapon() => _toDamage.ForEach(damagable => damagable.Damage(Data.damageAmount));
+        protected override void UseWeapon() => _toDamage.ForEach(damagable => damagable.Damage(Data.damageAmount));
 
         public void DetectTarget(Collider2D collision)
         {

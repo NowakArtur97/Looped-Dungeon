@@ -28,7 +28,10 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             DoChecks();
         }
 
-        public virtual void LogicUpdate() { }
+        public virtual void LogicUpdate()
+        {
+            Entity.CoreContainer.AnimatorSynchronizer.Synchronize();
+        }
 
         public virtual void PhysicsUpdate() => DoChecks();
 
@@ -37,6 +40,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             Entity.CoreContainer.Animation.SetBoolVariable(_animationBoolName, false);
 
             Entity.CoreContainer.Inventory.CurrentWeapon.ExitWeapon(_animationBoolName);
+
+            Entity.CoreContainer.AnimatorSynchronizer.Synchronize();
 
             IsExitingState = true;
         }
