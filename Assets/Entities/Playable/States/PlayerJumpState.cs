@@ -1,4 +1,5 @@
 using NowakArtur97.LoopedDungeon.Core;
+using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
@@ -13,7 +14,9 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             Player.CoreContainer.Movement.SetVelocityY(Entity.Data.jumpVelocity);
 
-            Entity.CoreContainer.Animation.SetVelocityVariable();
+            Entity.CoreContainer.Animation
+                           .SetVelocityVariable(Mathf.Abs(Entity.CoreContainer.Input.MovementInput.x),
+                           Entity.CoreContainer.Movement.CurrentVelocity.y);
             Entity.CoreContainer.Inventory.CurrentWeapon.SetCharacterVelocity(Entity.CoreContainer.Movement.CurrentVelocity);
 
             IsAbilityFinished = true;

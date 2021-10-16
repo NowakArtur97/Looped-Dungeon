@@ -19,10 +19,10 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public void SetBoolVariable(string animationBoolName, bool value) => _animator.SetBool(animationBoolName, value);
 
-        public void SetVelocityVariable()
+        public void SetVelocityVariable(float x, float y)
         {
-            _animator.SetFloat(VELOCITY_X, Mathf.Abs(CoreContainer.Input.MovementInput.x));
-            _animator.SetFloat(VELOCITY_Y, CoreContainer.Movement.CurrentVelocity.y);
+            _animator.SetFloat(VELOCITY_X, x);
+            _animator.SetFloat(VELOCITY_Y, y);
         }
     }
 }

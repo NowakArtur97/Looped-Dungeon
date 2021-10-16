@@ -52,14 +52,6 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _inventory = value;
         }
 
-        private AnimatorSynchronizer _animatorSynchronizer;
-
-        public AnimatorSynchronizer AnimatorSynchronizer
-        {
-            get => GenericNotImplementedError<AnimatorSynchronizer>.TryGet(_animatorSynchronizer, transform.parent.name);
-            private set => _animatorSynchronizer = value;
-        }
-
         private void Awake()
         {
             Movement = GetComponentInChildren<Movement>();
@@ -68,7 +60,6 @@ namespace NowakArtur97.LoopedDungeon.Core
             Input = GetComponentInChildren<Input>();
             AnimationToStateMachine = GetComponentInChildren<AnimationToStateMachine>();
             Inventory = GetComponentInChildren<Inventory>();
-            AnimatorSynchronizer = GetComponentInChildren<AnimatorSynchronizer>();
         }
 
         public void LogicUpdate()

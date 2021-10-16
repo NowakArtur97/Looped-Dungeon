@@ -10,9 +10,15 @@ namespace NowakArtur97.LoopedDungeon.Core
         private readonly string VELOCITY_X = "velocityX";
         private readonly string VELOCITY_Y = "velocityY";
 
-        protected Animator _animator;
+        private Animator _animator;
+        private HitboxesToWeapon _hitboxesToWeapon;
 
-        protected virtual void Awake() => _animator = GetComponent<Animator>();
+        // TODO: Weapon: Create WeaponCoreContrainer
+        protected virtual void Awake()
+        {
+            _animator = GetComponent<Animator>();
+            _hitboxesToWeapon = GetComponentInChildren<HitboxesToWeapon>();
+        }
 
         public void EnterWeapon(string animationBoolName) => _animator.SetBool(animationBoolName, true);
 
@@ -26,5 +32,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             _animator.SetFloat(VELOCITY_X, velocity.x);
             _animator.SetFloat(VELOCITY_Y, velocity.y);
         }
+
+        public virtual void AnimationActionTrigger() { }
     }
 }
