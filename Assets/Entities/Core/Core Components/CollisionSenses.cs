@@ -21,6 +21,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public bool Grounded => Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _whatIsGround);
 
+        // TODO: CollisionSenses: Remove GET?
         public Transform WallCheck
         {
             get => GenericNotImplementedError<Transform>.TryGet(_wallCheck, CoreContainer.transform.name);

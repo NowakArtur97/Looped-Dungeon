@@ -1322,7 +1322,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _wallCheck: {fileID: 1223725806}
-  _wallCheckRadius: 1
+  _wallCheckRadius: 0.2
   _whatIsWall:
     serializedVersion: 2
     m_Bits: 64
@@ -1931,7 +1931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1200541674
 MonoBehaviour:
   m_ObjectHideFlags: 0

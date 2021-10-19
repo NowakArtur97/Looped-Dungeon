@@ -28,5 +28,12 @@ namespace NowakArtur97.LoopedDungeon.Core
 
             _mainAbility.IgnoreTarget(collision);
         }
+
+        public override void AnimationSecondaryAbilityTrigger()
+        {
+            FreezeState();
+
+            base.AnimationSecondaryAbilityTrigger();
+        }
     }
 }
