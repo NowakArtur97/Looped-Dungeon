@@ -1282,7 +1282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 138034641}
   - component: {fileID: 138034642}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Weapon Core Contrainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1302,6 +1302,7 @@ Transform:
   m_Children:
   - {fileID: 881729083}
   - {fileID: 1159967383}
+  - {fileID: 1336810832}
   m_Father: {fileID: 943969737}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1564,6 +1565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 943969737}
   - component: {fileID: 943969738}
+  - component: {fileID: 943969739}
   m_Layer: 7
   m_Name: Sword
   m_TagString: Untagged
@@ -1599,6 +1601,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 1084e01ac0e85694db619de6de9b592c, type: 2}
+--- !u!50 &943969739
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943969736}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1159967382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,7 +1635,7 @@ GameObject:
   - component: {fileID: 1159967387}
   - component: {fileID: 1159967385}
   - component: {fileID: 1159967384}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1948,6 +1971,49 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!1 &1336810831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336810832}
+  - component: {fileID: 1336810833}
+  m_Layer: 9
+  m_Name: Movement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1336810832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336810831}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 138034641}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1336810833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336810831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f757a600689ab46a79ab0631aa071f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1472407395
 GameObject:
   m_ObjectHideFlags: 0
