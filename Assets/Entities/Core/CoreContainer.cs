@@ -2,14 +2,6 @@ namespace NowakArtur97.LoopedDungeon.Core
 {
     public class CoreContainer : BaseCore
     {
-        private CollisionSenses _collisionSenses;
-
-        public CollisionSenses CollisionSenses
-        {
-            get => GenericNotImplementedError<CollisionSenses>.TryGet(_collisionSenses, transform.parent.name);
-            private set => _collisionSenses = value;
-        }
-
         private AnimationToStateMachine _animationToStateMachine;
 
         public AnimationToStateMachine AnimationToStateMachine
@@ -38,7 +30,6 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             base.Awake();
 
-            CollisionSenses = GetComponentInChildren<CollisionSenses>();
             Input = GetComponentInChildren<Input>();
             AnimationToStateMachine = GetComponentInChildren<AnimationToStateMachine>();
             Inventory = GetComponentInChildren<Inventory>();

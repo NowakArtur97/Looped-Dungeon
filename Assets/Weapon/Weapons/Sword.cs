@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
 {
-    public class Sword : Weapon
+    public class Sword : ThrowableWeapon
     {
         private CloseRangeAbility _mainAbility;
         private ThrowAbility _secondaryAbility;

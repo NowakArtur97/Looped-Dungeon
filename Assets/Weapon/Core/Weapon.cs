@@ -10,10 +10,10 @@ namespace NowakArtur97.LoopedDungeon.Core
             get => _data;
             private set => _data = value;
         }
-        private bool _isStateFrozen;
+        protected bool IsStateFrozen { get; private set; }
         public IAbility MainAbility { get; protected set; }
         public IAbility SecondaryAbility { get; protected set; }
-        public void FreezeState() => _isStateFrozen = true;
+        public void FreezeState() => IsStateFrozen = true;
 
         public WeaponCoreContrainer CoreContainer { get; private set; }
 
@@ -26,7 +26,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public void EnterWeapon(string animationBoolName)
         {
-            if (!_isStateFrozen)
+            if (!IsStateFrozen)
             {
                 CoreContainer.Animation.SetBoolVariable(animationBoolName, true);
             }
@@ -34,11 +34,15 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public void ExitWeapon(string animationBoolName)
         {
-            if (!_isStateFrozen)
+            if (!IsStateFrozen)
             {
                 CoreContainer.Animation.SetBoolVariable(animationBoolName, false);
             }
         }
+
+        protected virtual void FixedUpdate() => DoChecks();
+
+        protected virtual void DoChecks() { }
 
         private void UseMainAbility() => MainAbility.UseAbility(this);
 

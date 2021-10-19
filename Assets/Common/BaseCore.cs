@@ -4,6 +4,14 @@ namespace NowakArtur97.LoopedDungeon.Core
 {
     public abstract class BaseCore : MonoBehaviour
     {
+        private CollisionSenses _collisionSenses;
+
+        public CollisionSenses CollisionSenses
+        {
+            get => GenericNotImplementedError<CollisionSenses>.TryGet(_collisionSenses, transform.parent.name);
+            private set => _collisionSenses = value;
+        }
+
         private Movement _movement;
 
         public Movement Movement
@@ -24,6 +32,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             Animation = GetComponentInChildren<Animation>();
             Movement = GetComponentInChildren<Movement>();
+            CollisionSenses = GetComponentInChildren<CollisionSenses>();
         }
 
         public virtual void LogicUpdate() => Movement.LogicUpdate();
