@@ -3,13 +3,19 @@ namespace NowakArtur97.LoopedDungeon.Core
     public abstract class ThrowableWeapon : Weapon
     {
         private bool _isTouchingWall;
+        private bool _isThrown;
         private bool _hasStopped;
 
         public override void InitWeapon(string animationBoolName, bool value)
         {
-            if (_hasStopped)
+            if (_isThrown)
             {
                 return;
+            }
+
+            if (IsAbilityState(animationBoolName))
+            {
+                _isThrown = true;
             }
 
             base.InitWeapon(animationBoolName, value);
@@ -31,12 +37,6 @@ namespace NowakArtur97.LoopedDungeon.Core
             base.DoChecks();
 
             _isTouchingWall = CoreContainer.CollisionSenses.Wall;
-        }
-
-        public override void AnimationSecondaryAbilityTrigger()
-        {
-
-            base.AnimationSecondaryAbilityTrigger();
         }
     }
 }

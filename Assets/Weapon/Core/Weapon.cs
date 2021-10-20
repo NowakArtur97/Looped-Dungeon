@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
@@ -10,6 +11,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             get => _data;
             private set => _data = value;
         }
+
         public IAbility MainAbility { get; protected set; }
         public IAbility SecondaryAbility { get; protected set; }
 
@@ -22,8 +24,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             InitializeAbilities();
         }
 
-        public virtual void InitWeapon(string animationBoolName, bool value) =>
-            CoreContainer.Animation.SetBoolVariable(animationBoolName, value);
+        public virtual void InitWeapon(string animationBoolName, bool value) => CoreContainer.Animation.SetBoolVariable(animationBoolName, value);
 
         protected virtual void FixedUpdate() => DoChecks();
 
@@ -38,5 +39,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         public virtual void OnTriggerEnter2D(Collider2D collision) { }
 
         public virtual void OnTriggerExit2D(Collider2D collision) { }
+
+        protected bool IsAbilityState(string animationBoolName) => CoreContainer.Animation.AbilityVariables.Contains(animationBoolName);
     }
 }
