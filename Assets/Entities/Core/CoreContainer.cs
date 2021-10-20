@@ -35,6 +35,11 @@ namespace NowakArtur97.LoopedDungeon.Core
             Inventory = GetComponentInChildren<Inventory>();
         }
 
-        public override void LogicUpdate() => Input?.LogicUpdate();
+        public override void LogicUpdate()
+        {
+            base.LogicUpdate();
+
+            Input?.LogicUpdate();
+        }
     }
 }
