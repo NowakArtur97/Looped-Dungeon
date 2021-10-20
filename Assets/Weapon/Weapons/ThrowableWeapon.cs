@@ -16,11 +16,21 @@ namespace NowakArtur97.LoopedDungeon.Core
             base.InitWeapon(animationBoolName, value);
         }
 
+        protected override void Update()
+        {
+            if (WasThrown)
+            {
+                return;
+            }
+
+            base.Update();
+        }
+
         protected override void FixedUpdate()
         {
             base.FixedUpdate();
 
-            if (_isTouchingWall && !_hasStopped)
+            if (WasThrown && _isTouchingWall && !_hasStopped)
             {
                 _hasStopped = true;
                 CoreContainer.Movement.SetVelocityZero();
