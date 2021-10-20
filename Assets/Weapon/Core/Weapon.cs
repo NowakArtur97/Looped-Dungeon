@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
@@ -39,7 +38,5 @@ namespace NowakArtur97.LoopedDungeon.Core
         public virtual void OnTriggerEnter2D(Collider2D collision) { }
 
         public virtual void OnTriggerExit2D(Collider2D collision) { }
-
-        protected bool IsAbilityState(string animationBoolName) => CoreContainer.Animation.AbilityVariables.Contains(animationBoolName);
     }
 }

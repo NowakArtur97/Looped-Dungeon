@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
@@ -6,7 +5,11 @@ namespace NowakArtur97.LoopedDungeon.Core
     [RequireComponent(typeof(Animator))]
     public class Animation : CoreComponent
     {
-        public readonly List<string> AbilityVariables = new List<string> { "mainAbility", "secondaryAbility" };
+        public static class AbilityState
+        {
+            public static string MAIN = "mainAbility";
+            public static string SECONDARY = "secondaryAbility";
+        }
         private readonly string VELOCITY_X = "velocityX";
         private readonly string VELOCITY_Y = "velocityY";
 

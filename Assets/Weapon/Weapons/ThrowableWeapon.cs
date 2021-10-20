@@ -3,19 +3,14 @@ namespace NowakArtur97.LoopedDungeon.Core
     public abstract class ThrowableWeapon : Weapon
     {
         private bool _isTouchingWall;
-        private bool _isThrown;
+        protected bool WasThrown;
         private bool _hasStopped;
 
         public override void InitWeapon(string animationBoolName, bool value)
         {
-            if (_isThrown)
+            if (WasThrown)
             {
                 return;
-            }
-
-            if (IsAbilityState(animationBoolName))
-            {
-                _isThrown = true;
             }
 
             base.InitWeapon(animationBoolName, value);
