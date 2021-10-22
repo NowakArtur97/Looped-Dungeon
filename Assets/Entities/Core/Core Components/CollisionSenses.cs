@@ -10,6 +10,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         [SerializeField] private Transform _wallCheck;
         [SerializeField] private float _wallCheckRadius = 2f;
+        [SerializeField] private float _wallCheckDistance = 2f;
         [SerializeField] private LayerMask _whatIsWall;
 
         // TODO: CollisionSenses: Remove GET?
@@ -28,6 +29,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _wallCheck = value;
         }
 
-        public bool Wall => Physics2D.OverlapCircle(_wallCheck.position, _wallCheckRadius, _whatIsGround);
+        public bool WallCircle => Physics2D.OverlapCircle(_wallCheck.position, _wallCheckRadius, _whatIsGround);
+        public bool WallDistance => Physics2D.Raycast(_wallCheck.position, transform.right, _wallCheckDistance, _whatIsGround);
     }
 }

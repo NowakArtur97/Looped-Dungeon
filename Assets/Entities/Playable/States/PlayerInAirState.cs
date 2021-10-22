@@ -18,13 +18,21 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             base.LogicUpdate();
 
             Entity.CoreContainer.Movement.CheckIfShouldFlip((int)_player.CoreContainer.Input.MovementInput.x);
-            Entity.CoreContainer.Movement.SetVelocityX(Entity.Data.moveVelocity * _player.CoreContainer.Input.MovementInput.x);
 
-            _currentVelocity = Entity.CoreContainer.Movement.CurrentVelocity;
-            Entity.CoreContainer.Animation
-            .SetVelocityVariable(Mathf.Abs(Entity.CoreContainer.Input.MovementInput.x),
-            _currentVelocity.y);
-            Entity.CoreContainer.Inventory.CurrentWeapon?.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y);
+            if (IsTouchingWall)
+            {
+                Entity.CoreContainer.Movement.SetVelocityX(0);
+                _currentVelocity = Entity.CoreContainer.Movement.CurrentVelocity;
+                Entity.CoreContainer.Animation.SetVelocityVariable(0, _currentVelocity.y);
+                Entity.CoreContainer.Inventory.CurrentWeapon?.CoreContainer.Animation.SetVelocityVariable(0, _currentVelocity.y);
+            }
+            else
+            {
+                Entity.CoreContainer.Movement.SetVelocityX(Entity.Data.moveVelocity * _player.CoreContainer.Input.MovementInput.x);
+                _currentVelocity = Entity.CoreContainer.Movement.CurrentVelocity;
+                Entity.CoreContainer.Animation.SetVelocityVariable(Mathf.Abs(Entity.CoreContainer.Input.MovementInput.x), _currentVelocity.y);
+                Entity.CoreContainer.Inventory.CurrentWeapon?.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y);
+            }
 
             if (IsGrounded)
             {
