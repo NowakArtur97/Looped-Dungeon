@@ -19,6 +19,19 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             Entity.CoreContainer.Movement.CheckIfShouldFlip((int)_player.CoreContainer.Input.MovementInput.x);
 
+            SetupVelocityRelatedVariables();
+
+            if (IsGrounded)
+            {
+                if (IsGrounded && _currentVelocity.y < 0.01f)
+                {
+                    _player.StateMachine.ChangeState(_player.LandState);
+                }
+            }
+        }
+
+        private void SetupVelocityRelatedVariables()
+        {
             if (IsTouchingWall)
             {
                 Entity.CoreContainer.Movement.SetVelocityX(0);
@@ -32,14 +45,6 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 _currentVelocity.Set(Mathf.Abs(Entity.CoreContainer.Input.MovementInput.x), Entity.CoreContainer.Movement.CurrentVelocity.y);
                 Entity.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y);
                 Entity.CoreContainer.Inventory.CurrentWeapon?.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y);
-            }
-
-            if (IsGrounded)
-            {
-                if (IsGrounded && _currentVelocity.y < 0.01f)
-                {
-                    _player.StateMachine.ChangeState(_player.LandState);
-                }
             }
         }
     }
