@@ -22,7 +22,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             InAirState = new PlayerInAirState(this, "inAir");
             LandState = new PlayerLandState(this, "land");
             MainAbilityState = new PlayerAttackState(this, "mainAbility");
-            SecondaryAbilityState = new PlayerAttackState(this, "secondaryAbility");
+            SecondaryAbilityState = new PlayerThrowState(this, "secondaryAbility");
         }
 
         private void Start() => StateMachine.Initialize(IdleState);

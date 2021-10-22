@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea8e8201c201f2b48a0e260243c1027a, type: 3}
-  m_Name: Sword_Data
+  m_Script: {fileID: 11500000, guid: 15714685bef3beb49ad75f8616f7c976, type: 3}
+  m_Name: Sword_ThrowableData
   m_EditorClassIdentifier: 
   damageAmount: 10
+  throwableLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  thrownSpeed: 10

@@ -24,7 +24,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             Entity.CoreContainer.Animation
             .SetVelocityVariable(Mathf.Abs(Entity.CoreContainer.Input.MovementInput.x),
             _currentVelocity.y);
-            Entity.CoreContainer.Inventory.CurrentWeapon.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y);
+            Entity.CoreContainer.Inventory.CurrentWeapon?.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y);
 
             if (IsGrounded)
             {

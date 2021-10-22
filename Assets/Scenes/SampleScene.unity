@@ -1655,7 +1655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55761814d32f98e4aa887a1f509fb0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data: {fileID: 11400000, guid: 1084e01ac0e85694db619de6de9b592c, type: 2}
+  _data: {fileID: 11400000, guid: 6b0bf7d6dd02bec4ba21057e1f984c75, type: 2}
 --- !u!50 &943969739
 Rigidbody2D:
   serializedVersion: 4
@@ -1691,6 +1691,7 @@ GameObject:
   - component: {fileID: 1159967388}
   - component: {fileID: 1159967385}
   - component: {fileID: 1159967384}
+  - component: {fileID: 1159967389}
   m_Layer: 9
   m_Name: Animation
   m_TagString: Untagged
@@ -1821,6 +1822,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _masterAnimator: {fileID: 1472407397}
   _childAnimator: {fileID: 1159967385}
+--- !u!61 &1159967389
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159967382}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.035437822, y: -0.46743464}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 2}
+    newSize: {x: 3.0295858, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.80286694, y: 0.19006371}
+  m_EdgeRadius: 0
 --- !u!1 &1186743109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,20 +1907,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.2570899, y: -0.23071885}
-      - {x: 1.0710245, y: -0.2328552}
-      - {x: 1.00218, y: -0.35282278}
-      - {x: 0.6309669, y: -0.35425246}
-      - {x: 0.63197505, y: -0.5392746}
-      - {x: 0.88209796, y: -0.5421412}
-      - {x: 1.0043924, y: -0.6314213}
-      - {x: 1.0058846, y: -0.9647205}
-      - {x: 1.2607913, y: -0.9614948}
-      - {x: 1.3166789, y: -0.7226156}
-      - {x: 1.3219202, y: -0.6007992}
-      - {x: 1.4350756, y: -0.5975498}
+    - - {x: 1.4072303, y: -0.48040697}
+      - {x: 1.2576965, y: -0.4829043}
+      - {x: 1.2570899, y: -0.23071887}
+      - {x: 1.0846766, y: -0.23572598}
+      - {x: 1.0805432, y: -0.29193792}
+      - {x: 1.0180455, y: -0.2933272}
+      - {x: 1.0164214, y: -0.96902275}
+      - {x: 1.2647576, y: -0.9694276}
+      - {x: 1.2693654, y: -0.72627103}
+      - {x: 1.3325442, y: -0.7285651}
+      - {x: 1.3318362, y: -0.6007992}
+      - {x: 1.448958, y: -0.60746574}
       - {x: 1.5648476, y: -0.47574162}
-      - {x: 1.5633538, y: -0.41951507}
 --- !u!50 &1186743113
 Rigidbody2D:
   serializedVersion: 4
@@ -4586,7 +4612,7 @@ MonoBehaviour:
   _groundCheckRadius: 0.1
   _whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1088
   _wallCheck: {fileID: 0}
   _wallCheckRadius: 2
   _whatIsWall:
