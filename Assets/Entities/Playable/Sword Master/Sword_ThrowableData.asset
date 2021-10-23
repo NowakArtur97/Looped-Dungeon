@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: Sword_ThrowableData
   m_EditorClassIdentifier: 
   damageAmount: 10
-  throwableLayerMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  thrownSpeed: 10
+  throwableLayerName: Throwable
+  thrownSpeed: 30

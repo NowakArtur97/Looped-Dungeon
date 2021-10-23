@@ -140,6 +140,9 @@ TextureImporter:
   - first:
       213: 214504261976605936
     second: Swordmaster_weapon_45
+  - first:
+      213: 8922343124561423259
+    second: Swordmaster_weapon_46
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1202,6 +1205,27 @@ TextureImporter:
       bones: []
       spriteID: 0f44ce16d721af200800000000000000
       internalID: 214504261976605936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swordmaster_weapon_46
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9be1a79cc782db70800000000000000
+      internalID: 8922343124561423259
       vertices: []
       indices: 
       edges: []
