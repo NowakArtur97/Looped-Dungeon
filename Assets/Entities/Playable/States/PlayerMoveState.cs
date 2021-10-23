@@ -5,6 +5,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
     public class PlayerMoveState : GroundedState
     {
         private Player _player;
+        private float _xMovementInput;
 
         public PlayerMoveState(Player entity, string animationBoolName) : base(entity, animationBoolName)
         {
@@ -15,8 +16,12 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             base.LogicUpdate();
 
-            Entity.CoreContainer.Movement.CheckIfShouldFlip((int)_player.CoreContainer.Input.MovementInput.x);
-            Entity.CoreContainer.Movement.SetVelocityX(Entity.Data.moveVelocity * _player.CoreContainer.Input.MovementInput.x);
+            _xMovementInput = _player.CoreContainer.Input.MovementInput.x;
+
+            Entity.CoreContainer.Movement.CheckIfShouldFlip((int)_xMovementInput);
+            Entity.CoreContainer.Inventory.CurrentWeapon?.CoreContainer.Movement.CheckIfShouldFlipWithoutRotation((int)_xMovementInput);
+
+            Entity.CoreContainer.Movement.SetVelocityX(Entity.Data.moveVelocity * _xMovementInput);
 
             if (!IsExitingState)
             {
@@ -36,7 +41,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 {
                     Entity.StateMachine.ChangeState(_player.JumpState);
                 }
-                else if (_player.CoreContainer.Input.MovementInput.x == 0)
+                else if (_xMovementInput == 0)
                 {
                     Entity.StateMachine.ChangeState(_player.IdleState);
                 }

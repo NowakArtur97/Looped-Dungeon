@@ -18,6 +18,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             base.LogicUpdate();
 
             Entity.CoreContainer.Movement.CheckIfShouldFlip((int)_player.CoreContainer.Input.MovementInput.x);
+            Entity.CoreContainer.Inventory.CurrentWeapon?.CoreContainer.Movement.CheckIfShouldFlipWithoutRotation((int)_player.CoreContainer.Input.MovementInput.x);
 
             SetupVelocityRelatedVariables();
 

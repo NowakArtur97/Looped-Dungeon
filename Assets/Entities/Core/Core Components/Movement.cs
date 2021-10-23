@@ -55,16 +55,28 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public void CheckIfShouldFlip(int xInput)
         {
-            if (xInput != 0 && xInput != FacingDirection)
+            if (ShouldFlip(xInput))
             {
                 Flip();
             }
         }
 
-        public void Flip()
+        public void CheckIfShouldFlipWithoutRotation(int xInput)
+        {
+            if (ShouldFlip(xInput))
+            {
+                FlipWithoutRotation();
+            }
+        }
+
+        private bool ShouldFlip(int xInput) => xInput != 0 && xInput != FacingDirection;
+
+        private void Flip()
         {
             FacingDirection *= -1;
             _myRigidbody.transform.Rotate(0.0f, 180.0f, 0.0f);
         }
+
+        private void FlipWithoutRotation() => FacingDirection *= -1;
     }
 }
