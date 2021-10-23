@@ -20,7 +20,11 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             if (!IsExitingState)
             {
-                if (_player.CoreContainer.Input.MainAbilityInput)
+                if (!IsGrounded)
+                {
+                    Entity.StateMachine.ChangeState(_player.InAirState);
+                }
+                else if (_player.CoreContainer.Input.MainAbilityInput)
                 {
                     Entity.StateMachine.ChangeState(_player.MainAbilityState);
                 }
