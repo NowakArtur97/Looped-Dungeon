@@ -40,6 +40,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             base.LogicUpdate();
 
             Input?.LogicUpdate();
+            Inventory?.LogicUpdate();
         }
     }
 }

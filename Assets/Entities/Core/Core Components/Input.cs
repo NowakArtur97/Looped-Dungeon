@@ -20,8 +20,10 @@ namespace NowakArtur97.LoopedDungeon.Core
             _inputManager = GetComponent<PlayerInputManager>();
         }
 
-        public void LogicUpdate()
+        public override void LogicUpdate()
         {
+            base.LogicUpdate();
+
             MovementInput = _inputManager.MovementInput;
             JumpInput = _inputManager.JumpInput;
             MainAbilityInput = _inputManager.MainAbilityInput;

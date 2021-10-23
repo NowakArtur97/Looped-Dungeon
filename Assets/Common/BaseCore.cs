@@ -35,6 +35,10 @@ namespace NowakArtur97.LoopedDungeon.Core
             CollisionSenses = GetComponentInChildren<CollisionSenses>();
         }
 
-        public virtual void LogicUpdate() => Movement.LogicUpdate();
+        public virtual void LogicUpdate()
+        {
+            Movement.LogicUpdate();
+            Animation.LogicUpdate();
+        }
     }
 }
