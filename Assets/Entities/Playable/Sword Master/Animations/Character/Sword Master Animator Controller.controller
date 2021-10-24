@@ -476,7 +476,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle State WW
+  m_Name: Idle State 0W
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -530,7 +530,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Move State WW
+  m_Name: Move State 0W
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -758,55 +758,55 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: secondaryAbility
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: mainAbility
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: land
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: inAir
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: move
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: idle
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: velocityX
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: velocityY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -1237,18 +1237,18 @@ AnimatorStateMachine:
   - {fileID: -5651782019428634576}
   - {fileID: 7233164472806682412}
   m_StateMachineTransitions:
-  - first: {fileID: 2040278932415526852}
-    second:
-    - {fileID: 1863868444262644620}
-  - first: {fileID: 3095890072329080339}
-    second:
-    - {fileID: 4472575636617144056}
-  - first: {fileID: -883962728544666132}
-    second:
-    - {fileID: -3459792993151594524}
   - first: {fileID: -615505633406625219}
     second:
     - {fileID: 9097474461762823720}
+  - first: {fileID: -883962728544666132}
+    second:
+    - {fileID: -3459792993151594524}
+  - first: {fileID: 3095890072329080339}
+    second:
+    - {fileID: 4472575636617144056}
+  - first: {fileID: 2040278932415526852}
+    second:
+    - {fileID: 1863868444262644620}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
@@ -1279,7 +1279,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jump State WW
+  m_Name: Jump State 0W
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1306,7 +1306,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Land State WW
+  m_Name: Land State 0W
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
