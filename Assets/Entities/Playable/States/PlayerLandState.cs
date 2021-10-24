@@ -11,6 +11,13 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             _player = entity;
         }
 
+        public override void Enter()
+        {
+            base.Enter();
+
+            _player.CoreContainer.Movement.SetVelocityZero();
+        }
+
         public override void LogicUpdate()
         {
             base.LogicUpdate();

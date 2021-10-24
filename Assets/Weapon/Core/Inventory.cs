@@ -12,7 +12,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             base.Awake();
 
             _weapons = new List<Weapon>(GetComponentsInChildren<Weapon>());
-            CurrentWeapon = _weapons[0];
+            CurrentWeapon = _weapons.Count > 0 ? _weapons[0] : null;
         }
 
         public void RemoveCurrentWeapon()
