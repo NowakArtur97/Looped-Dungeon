@@ -1645,7 +1645,7 @@ Animator:
   m_GameObject: {fileID: 193681535}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2efc137fae9b05b4a8d673f461cde1f1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 96aa3a8711186314387c44cd20b2ad24, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1824,7 +1824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &473269420
 Transform:
   m_ObjectHideFlags: 0
@@ -1974,7 +1974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &527415486
 Transform:
   m_ObjectHideFlags: 0
@@ -2373,7 +2373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &750387708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5946,7 +5946,7 @@ Animator:
   m_GameObject: {fileID: 2052368293}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2efc137fae9b05b4a8d673f461cde1f1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0ba92fc1f9b2cf84da7a54c7b1bd7ae5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

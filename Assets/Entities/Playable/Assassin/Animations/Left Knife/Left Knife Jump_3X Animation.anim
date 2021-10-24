@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sword Fall Animation
+  m_Name: Left Knife Jump_3X Animation
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,18 +20,12 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -392837989075025233, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
-    - time: 0.2
-      value: {fileID: -3121215380286574784, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
-    - time: 0.4
-      value: {fileID: 1922492533157605952, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
-    - time: 0.6
-      value: {fileID: 1458011931071233494, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
+      value: {fileID: 9158495197058307878, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 5
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -46,21 +40,18 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -392837989075025233, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
-    - {fileID: -3121215380286574784, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
-    - {fileID: 1922492533157605952, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
-    - {fileID: 1458011931071233494, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
+    - {fileID: 9158495197058307878, guid: 0f2351ea18bdd2847b0a6ce20b0b177c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
