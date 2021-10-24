@@ -4,24 +4,24 @@ namespace NowakArtur97.LoopedDungeon.Core
 {
     public class Inventory : CoreComponent
     {
-        private List<Weapon> _weapons;
+        public List<Weapon> Weapons { get; private set; }
         public Weapon CurrentWeapon { get; private set; }
 
         protected override void Awake()
         {
             base.Awake();
 
-            _weapons = new List<Weapon>(GetComponentsInChildren<Weapon>());
-            CurrentWeapon = _weapons.Count > 0 ? _weapons[0] : null;
+            Weapons = new List<Weapon>(GetComponentsInChildren<Weapon>());
+            CurrentWeapon = Weapons.Count > 0 ? Weapons[0] : null;
         }
 
         public void RemoveCurrentWeapon()
         {
-            Weapon newWeapon = _weapons.Count > 1 ? _weapons[1] : null;
+            Weapon newWeapon = Weapons.Count > 1 ? Weapons[1] : null;
             if (CurrentWeapon)
             {
                 CurrentWeapon.transform.parent = null;
-                _weapons.Remove(CurrentWeapon);
+                Weapons.Remove(CurrentWeapon);
             }
             CurrentWeapon = newWeapon;
         }
@@ -30,7 +30,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             base.LogicUpdate();
 
-            CoreContainer.Animation.SetNumberOfWeaponsVariable(_weapons.Count);
+            CoreContainer.Animation.SetNumberOfWeaponsVariable(Weapons.Count);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             base.LogicUpdate();
 
             Entity.CoreContainer.Movement.CheckIfShouldFlip((int)_player.CoreContainer.Input.MovementInput.x);
-            Entity.CoreContainer.Inventory.CurrentWeapon?.CoreContainer.Movement.CheckIfShouldFlipWithoutRotation((int)_player.CoreContainer.Input.MovementInput.x);
+            Entity.CoreContainer.Inventory.Weapons.ForEach(weapon => weapon.CoreContainer.Movement.CheckIfShouldFlipWithoutRotation((int)_player.CoreContainer.Input.MovementInput.x));
 
             SetupVelocityRelatedVariables();
 
@@ -38,14 +38,14 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 Entity.CoreContainer.Movement.SetVelocityX(0);
                 _currentVelocity.Set(Entity.CoreContainer.Movement.CurrentVelocity.x, Entity.CoreContainer.Movement.CurrentVelocity.y);
                 Entity.CoreContainer.Animation.SetVelocityVariable(0, _currentVelocity.y);
-                Entity.CoreContainer.Inventory.CurrentWeapon?.CoreContainer.Animation.SetVelocityVariable(0, _currentVelocity.y);
+                Entity.CoreContainer.Inventory.Weapons.ForEach(weapon => weapon.CoreContainer.Animation.SetVelocityVariable(0, _currentVelocity.y));
             }
             else
             {
                 Entity.CoreContainer.Movement.SetVelocityX(Entity.Data.moveVelocity * _player.CoreContainer.Input.MovementInput.x);
                 _currentVelocity.Set(Mathf.Abs(Entity.CoreContainer.Input.MovementInput.x), Entity.CoreContainer.Movement.CurrentVelocity.y);
                 Entity.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y);
-                Entity.CoreContainer.Inventory.CurrentWeapon?.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y);
+                Entity.CoreContainer.Inventory.Weapons.ForEach(weapon => weapon.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y));
             }
         }
     }

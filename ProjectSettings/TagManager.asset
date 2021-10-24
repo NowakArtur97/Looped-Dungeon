@@ -41,9 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Weapon
-    uniqueID: 2463618767
-    locked: 0
   - name: Platforms
     uniqueID: 2647798235
     locked: 0
