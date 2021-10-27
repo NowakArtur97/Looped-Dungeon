@@ -7,16 +7,6 @@ namespace NowakArtur97.LoopedDungeon.Core
         private CloseRangeAbility _mainAbility;
         private ThrowAbility _secondaryAbility;
 
-        public override void InitWeapon(string animationBoolName, bool value)
-        {
-            base.InitWeapon(animationBoolName, value);
-
-            if (animationBoolName.Equals(Animation.AbilityState.SECONDARY))
-            {
-                WasThrown = true;
-            }
-        }
-
         protected override void InitializeAbilities()
         {
             _mainAbility = new CloseRangeAbility();

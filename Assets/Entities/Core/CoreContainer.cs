@@ -18,14 +18,6 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _input = value;
         }
 
-        private Inventory _inventory;
-
-        public Inventory Inventory
-        {
-            get => GenericNotImplementedError<Inventory>.TryGet(_inventory, transform.parent.name);
-            private set => _inventory = value;
-        }
-
         protected override void Awake()
         {
             base.Awake();

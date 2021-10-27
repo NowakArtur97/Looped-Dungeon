@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace NowakArtur97.LoopedDungeon.Core
 {
     public abstract class ThrowableWeapon : Weapon
@@ -5,15 +7,22 @@ namespace NowakArtur97.LoopedDungeon.Core
         private bool _isTouchingWall;
         protected bool WasThrown;
         private bool _hasStopped;
+        [SerializeField] private AnimationAbilityState _throwBoolTrigger;
 
         public override void InitWeapon(string animationBoolName, bool value)
         {
-            if (WasThrown)
+            bool isAbilityAnimation = animationBoolName.Equals(_throwBoolTrigger.ToString());
+            if (WasThrown || (CoreContainer.Inventory.CurrentWeapon != this && isAbilityAnimation))
             {
                 return;
             }
 
             base.InitWeapon(animationBoolName, value);
+
+            if (isAbilityAnimation)
+            {
+                WasThrown = true;
+            }
         }
 
         protected override void Update()

@@ -24,6 +24,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
             AnimationToWeapon = GetComponentInChildren<AnimationToWeapon>();
             AnimatorSynchronizer = GetComponentInChildren<AnimatorSynchronizer>();
+            Inventory = GetComponentInParent<Inventory>();
         }
     }
 }

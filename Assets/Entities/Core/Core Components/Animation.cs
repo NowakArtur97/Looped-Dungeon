@@ -5,11 +5,6 @@ namespace NowakArtur97.LoopedDungeon.Core
     [RequireComponent(typeof(Animator))]
     public class Animation : CoreComponent
     {
-        public static class AbilityState
-        {
-            public static string MAIN = "mainAbility";
-            public static string SECONDARY = "secondaryAbility";
-        }
         private readonly string VELOCITY_X = "velocityX";
         private readonly string VELOCITY_Y = "velocityY";
         private readonly string NUMBER_OF_WEAPONS = "numberOfWeapons";

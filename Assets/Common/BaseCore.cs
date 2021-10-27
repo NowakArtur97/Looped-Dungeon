@@ -28,6 +28,14 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _animation = value;
         }
 
+        private Inventory _inventory;
+
+        public Inventory Inventory
+        {
+            get => GenericNotImplementedError<Inventory>.TryGet(_inventory, transform.parent.name);
+            protected set => _inventory = value;
+        }
+
         protected virtual void Awake()
         {
             Animation = GetComponentInChildren<Animation>();
