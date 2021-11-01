@@ -280,8 +280,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 527415486}
   - {fileID: 473269420}
+  - {fileID: 527415486}
   m_Father: {fileID: 683921434}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1865,7 +1865,7 @@ Transform:
   m_Children:
   - {fileID: 1720810510}
   m_Father: {fileID: 46365943}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &473269421
 Rigidbody2D:
@@ -2016,7 +2016,7 @@ Transform:
   m_Children:
   - {fileID: 2004701813}
   m_Father: {fileID: 46365943}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &527415487
 Rigidbody2D:

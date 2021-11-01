@@ -21,6 +21,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
             if (isAbilityAnimation)
             {
+                Debug.Log(WasThrown);
                 WasThrown = true;
             }
         }

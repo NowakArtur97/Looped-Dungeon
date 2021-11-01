@@ -33,7 +33,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         protected abstract void InitializeAbilities();
 
-        public virtual void AnimationMainAbilityTrigger() { Debug.Log("MAIN"); MainAbility?.UseAbility(this); }
+        public virtual void AnimationMainAbilityTrigger() => MainAbility?.UseAbility(this);
 
         public virtual void AnimationSecondaryAbilityTrigger() => SecondaryAbility?.UseAbility(this);
 
