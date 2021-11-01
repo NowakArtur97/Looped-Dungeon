@@ -331,7 +331,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Main Ability State
+  m_Name: Main Ability State Machine
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -2663200074498980542}
@@ -803,7 +803,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Move  StateMachine
+  m_Name: Move State Machine
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 6802575364434330657}
@@ -884,7 +884,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle StateMachine
+  m_Name: Idle State Machine
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 3568479039657358279}
@@ -1341,7 +1341,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jump StateMachine
+  m_Name: Jump State Machine
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 4180360863583143372}
@@ -1391,7 +1391,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Land StateMachine
+  m_Name: Land State Machine
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 6627394219896606976}
@@ -1737,21 +1737,21 @@ AnimatorStateMachine:
   - {fileID: 7233164472806682412}
   - {fileID: 1147916241263116024}
   m_StateMachineTransitions:
-  - first: {fileID: -5223580611069353435}
-    second:
-    - {fileID: -1561248256494030041}
-  - first: {fileID: -883962728544666132}
-    second:
-    - {fileID: -3459792993151594524}
   - first: {fileID: -615505633406625219}
     second:
     - {fileID: 9097474461762823720}
-  - first: {fileID: 2040278932415526852}
+  - first: {fileID: -883962728544666132}
     second:
-    - {fileID: 1863868444262644620}
+    - {fileID: -3459792993151594524}
   - first: {fileID: 3095890072329080339}
     second:
     - {fileID: 4472575636617144056}
+  - first: {fileID: 2040278932415526852}
+    second:
+    - {fileID: 1863868444262644620}
+  - first: {fileID: -5223580611069353435}
+    second:
+    - {fileID: -1561248256494030041}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}

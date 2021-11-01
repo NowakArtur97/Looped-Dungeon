@@ -25,7 +25,12 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public virtual void InitWeapon(string animationBoolName, bool value) => CoreContainer.Animation.SetBoolVariable(animationBoolName, value);
 
-        protected virtual void Update() => CoreContainer.AnimatorSynchronizer.Synchronize();
+        protected virtual void Update()
+        {
+            CoreContainer.AnimatorSynchronizer.Synchronize();
+
+            CoreContainer.LogicUpdate();
+        }
 
         protected virtual void FixedUpdate() => DoChecks();
 

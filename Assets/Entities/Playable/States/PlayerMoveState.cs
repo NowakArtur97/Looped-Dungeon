@@ -19,7 +19,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             _xMovementInput = _player.CoreContainer.Input.MovementInput.x;
 
             Entity.CoreContainer.Movement.CheckIfShouldFlip((int)_xMovementInput);
-            Entity.CoreContainer.Inventory.CurrentWeapon?.CoreContainer.Movement.CheckIfShouldFlipWithoutRotation((int)_xMovementInput);
+            Entity.CoreContainer.Inventory.Weapons.ForEach(weapon =>
+                weapon.CoreContainer.Movement.CheckIfShouldFlipWithoutRotating((int)_xMovementInput));
 
             Entity.CoreContainer.Movement.SetVelocityX(Entity.Data.moveVelocity * _xMovementInput);
 

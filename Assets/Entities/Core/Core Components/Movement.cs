@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
@@ -61,7 +60,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             }
         }
 
-        public void CheckIfShouldFlipWithoutRotation(int xInput)
+        public void CheckIfShouldFlipWithoutRotating(int xInput)
         {
             if (ShouldFlip(xInput))
             {

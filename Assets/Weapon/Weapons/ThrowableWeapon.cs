@@ -4,24 +4,25 @@ namespace NowakArtur97.LoopedDungeon.Core
 {
     public abstract class ThrowableWeapon : Weapon
     {
+        [SerializeField] private AnimationAbilityState _throwBoolTrigger = AnimationAbilityState.mainAbility;
         private bool _isTouchingWall;
         protected bool WasThrown;
         private bool _hasStopped;
-        [SerializeField] private AnimationAbilityState _throwBoolTrigger;
 
         public override void InitWeapon(string animationBoolName, bool value)
         {
             bool isAbilityAnimation = animationBoolName.Equals(_throwBoolTrigger.ToString());
-            if (WasThrown || (CoreContainer.Inventory.CurrentWeapon != this && isAbilityAnimation))
+            bool isCurrentWeapon = CoreContainer.Inventory.CurrentWeapon == this;
+
+            if (WasThrown)
             {
                 return;
             }
 
             base.InitWeapon(animationBoolName, value);
 
-            if (isAbilityAnimation)
+            if (isAbilityAnimation && isCurrentWeapon && value)
             {
-                Debug.Log(WasThrown);
                 WasThrown = true;
             }
         }
