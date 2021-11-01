@@ -26,5 +26,13 @@ namespace NowakArtur97.LoopedDungeon.Core
             AnimatorSynchronizer = GetComponentInChildren<AnimatorSynchronizer>();
             Inventory = GetComponentInParent<Inventory>();
         }
+
+        public override void LogicUpdate()
+        {
+            base.LogicUpdate();
+
+            Animation.SetNumberOfWeaponsVariable(Inventory.Weapons.Count); // TODO: REMOVE
+            AnimatorSynchronizer.LogicUpdate();
+        }
     }
 }
