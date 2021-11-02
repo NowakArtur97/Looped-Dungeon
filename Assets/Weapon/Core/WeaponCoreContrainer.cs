@@ -31,7 +31,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             base.LogicUpdate();
 
-            Animation.SetNumberOfWeaponsVariable(Inventory.Weapons.Count); // TODO: REMOVE
+            Animation.SetNumberOfWeaponsVariable(Inventory.Weapons.Count);
             AnimatorSynchronizer.LogicUpdate();
         }
     }
