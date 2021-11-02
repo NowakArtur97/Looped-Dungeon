@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeca6000520d6ce43b481de6926af035, type: 3}
   m_Name: ShieldBearer_Data
   m_EditorClassIdentifier: 
-  moveVelocity: 10
-  jumpVelocity: 8
+  moveVelocity: 3
+  jumpVelocity: 5
