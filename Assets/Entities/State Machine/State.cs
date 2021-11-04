@@ -46,5 +46,6 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         public virtual void DoChecks() { }
 
         public virtual void AnimationFinishedTrigger() => IsAnimationFinished = true;
+        public virtual void AnimationTrigger() { }
     }
 }

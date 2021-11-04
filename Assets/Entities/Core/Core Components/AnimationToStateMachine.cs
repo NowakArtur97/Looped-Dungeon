@@ -8,5 +8,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         public State CurrentState;
 
         public void AnimationFinishedTrigger() => CurrentState.AnimationFinishedTrigger();
+
+        public void AnimationTrigger() => CurrentState.AnimationTrigger();
     }
 }
