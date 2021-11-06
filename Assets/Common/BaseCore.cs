@@ -28,6 +28,14 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _animation = value;
         }
 
+        private AnimatorSynchronizer _animatorSynchronizer;
+
+        public AnimatorSynchronizer AnimatorSynchronizer
+        {
+            get => GenericNotImplementedError<AnimatorSynchronizer>.TryGet(_animatorSynchronizer, transform.parent.name);
+            private set => _animatorSynchronizer = value;
+        }
+
         private Inventory _inventory;
 
         public Inventory Inventory
@@ -41,6 +49,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             Animation = GetComponentInChildren<Animation>();
             Movement = GetComponentInChildren<Movement>();
             CollisionSenses = GetComponentInChildren<CollisionSenses>();
+            AnimatorSynchronizer = GetComponentInChildren<AnimatorSynchronizer>();
         }
 
         public virtual void LogicUpdate()

@@ -7,13 +7,18 @@ namespace NowakArtur97.LoopedDungeon.Core
         [SerializeField] private Animator _masterAnimator;
         [SerializeField] private Animator _childAnimator;
 
+        public bool IsSynchronized;
+
         public void Synchronize() => _childAnimator.Play(0, -1, _masterAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime);
 
         public override void LogicUpdate()
         {
             base.LogicUpdate();
 
-            Synchronize();
+            if (IsSynchronized)
+            {
+                Synchronize();
+            }
         }
     }
 }

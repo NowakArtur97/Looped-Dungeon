@@ -42,6 +42,9 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             base.AnimationTrigger();
 
             _isCrouching = true;
+            Player.CoreContainer.AnimatorSynchronizer.IsSynchronized = false;
         }
+
+        public override void AnimationFinishedTrigger() => Player.CoreContainer.AnimatorSynchronizer.IsSynchronized = true;
     }
 }
