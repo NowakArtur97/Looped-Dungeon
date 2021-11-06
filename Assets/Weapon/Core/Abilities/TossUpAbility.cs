@@ -12,7 +12,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         public void DetectTarget(Collider2D collision)
         {
             ITossable tossable = collision.GetComponentInChildren<ITossable>();
-            if (tossable != null)
+            if (tossable != null && !_tossable.Contains(tossable))
             {
                 _tossable.Add(tossable);
             }

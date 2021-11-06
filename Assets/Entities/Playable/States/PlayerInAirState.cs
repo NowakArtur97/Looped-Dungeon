@@ -22,7 +22,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             SetupVelocityRelatedVariables();
 
-            if (IsGrounded)
+            if (!IsExitingState)
             {
                 if (IsGrounded && _currentVelocity.y < 0.01f)
                 {

@@ -6,10 +6,6 @@ namespace NowakArtur97.LoopedDungeon.Core
     {
         [SerializeField] private float tossedVelocity = 10f;
 
-        public void TossUp()
-        {
-            Debug.Log("TOSS");
-            CoreContainer.Movement.AddYForce(tossedVelocity);
-        }
+        public void TossUp() => CoreContainer.Movement.SetVelocityY(tossedVelocity);
     }
 }

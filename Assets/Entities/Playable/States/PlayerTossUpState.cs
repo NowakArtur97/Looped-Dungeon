@@ -1,12 +1,11 @@
 using NowakArtur97.LoopedDungeon.Core;
-using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
     public class PlayerTossUpState : PlayerAbilityState
     {
         private bool _isCrouching;
-        private bool _isStandingOn;
+        private bool _abilityInput;
 
         public PlayerTossUpState(Player entity, string animationBoolName) : base(entity, animationBoolName)
         { }
@@ -23,22 +22,19 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             base.Exit();
 
             _isCrouching = false;
-            _isStandingOn = false;
+            _abilityInput = true;
         }
 
         public override void LogicUpdate()
         {
             base.LogicUpdate();
 
-            if (_isCrouching && _isStandingOn)
-            {
-                Debug.Log("ABILITY");
-            }
-        }
+            _abilityInput = Player.CoreContainer.Input.SecondaryAbilityInput;
 
-        public override void DoChecks()
-        {
-            base.DoChecks();
+            if (_isCrouching && !_abilityInput)
+            {
+                IsAbilityFinished = true;
+            }
         }
 
         public override void AnimationTrigger()
