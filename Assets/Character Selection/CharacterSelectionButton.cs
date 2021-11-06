@@ -12,7 +12,7 @@ namespace NowakArtur97.LoopedDungeon.UI
 
         public void OnSelectCharacter()
         {
-            OnSelectCharacterEvent.Invoke(_character);
+            OnSelectCharacterEvent?.Invoke(_character);
             _characterSelectionUI.gameObject.SetActive(false);
         }
     }
