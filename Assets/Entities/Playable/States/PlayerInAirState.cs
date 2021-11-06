@@ -24,7 +24,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             if (!IsExitingState)
             {
-                if (IsGrounded && _currentVelocity.y < 0.01f)
+                if (IsGrounded && _currentVelocity.y < 0.01f && !_player.CoreContainer.Input.JumpInput)
                 {
                     _player.StateMachine.ChangeState(_player.LandState);
                 }

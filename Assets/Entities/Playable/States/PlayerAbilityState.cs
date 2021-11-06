@@ -19,7 +19,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             {
                 if (IsAbilityFinished)
                 {
-                    if (IsGrounded)
+                    if (IsGrounded && Player.CoreContainer.Movement.CurrentVelocity.y < 0.01)
                     {
                         Player.StateMachine.ChangeState(Player.IdleState);
                     }
