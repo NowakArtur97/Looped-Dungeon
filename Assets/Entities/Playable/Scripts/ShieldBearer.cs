@@ -10,7 +10,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
             // TODO: ShieldBearer: Create Protect and Toss Up states
             //MainAbilityState = new PlayerAttackState(this, "mainAbility");
-            SecondaryAbilityState = new TossUpState(this, "secondaryAbility");
+            SecondaryAbilityState = new PlayerTossUpState(this, "secondaryAbility");
         }
     }
 }
