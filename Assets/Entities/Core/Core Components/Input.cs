@@ -37,7 +37,6 @@ namespace NowakArtur97.LoopedDungeon.Core
             }
         }
 
-        // TODO: REFACTOR
         public void SetMovement(PlayerInputFrame playerInput)
         {
             MovementInput = playerInput.MovementInput;

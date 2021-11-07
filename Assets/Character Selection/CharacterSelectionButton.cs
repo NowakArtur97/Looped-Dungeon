@@ -1,3 +1,4 @@
+using NowakArtur97.LoopedDungeon.Input;
 using System;
 using UnityEngine;
 
@@ -6,14 +7,26 @@ namespace NowakArtur97.LoopedDungeon.UI
     public class CharacterSelectionButton : MonoBehaviour
     {
         [SerializeField] private GameObject _character;
-        [SerializeField] private GameObject _characterSelectionUI;
+
+        private bool _wasSelected;
+        private InputPlayer _inputPlayer;
 
         public Action<GameObject> OnSelectCharacterEvent;
 
+        private void Awake()
+        {
+            _inputPlayer = FindObjectOfType<InputPlayer>();
+            _inputPlayer.OnReplayedEvent += EnableButton;
+        }
+
+        private void OnDestroy() => _inputPlayer.OnReplayedEvent -= EnableButton;
+
         public void OnSelectCharacter()
         {
+            _wasSelected = true;
             OnSelectCharacterEvent?.Invoke(_character);
-            _characterSelectionUI.gameObject.SetActive(false);
         }
+
+        private void EnableButton() => gameObject.SetActive(!_wasSelected);
     }
 }
