@@ -1,5 +1,4 @@
 using NowakArtur97.LoopedDungeon.Core;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,11 +10,9 @@ namespace NowakArtur97.LoopedDungeon.Input
 
         private CharacterSpawner _characterSpawner;
         private Core.Input _characterInput;
-        private Coroutine _recordCoroutine;
-        private Coroutine _replayCoroutine;
         private List<PlayerInputFrame> _inputs = new List<PlayerInputFrame>();
-        private int replayIndex;
-        private bool _isReplaying;
+        private int _replayIndex;
+        private bool _isRecording;
         private float _startTime;
 
         private void Awake()
@@ -25,40 +22,42 @@ namespace NowakArtur97.LoopedDungeon.Input
         }
 
         // TODO: REFACTOR
-        private void Update()
+        private void FixedUpdate()
         {
+            if (_isRecording)
+            {
+                Record();
+            }
+            else if (_inputs.Count > 0)
+            {
+                _characterInput.IsRecording = false;
+                Replay();
+            }
+
             if (Time.time > _recordingTime + _startTime)
             {
-                _isReplaying = true;
-                StopCoroutine(_recordCoroutine);
-                _characterInput.IsRecording = false;
-                _replayCoroutine = StartCoroutine(Replay());
+                _isRecording = false;
             }
         }
 
         private void StartRecording(GameObject character)
         {
             _startTime = Time.time;
+            _replayIndex = 0;
             _characterInput = character.GetComponentInChildren<Core.Input>();
-            _recordCoroutine = StartCoroutine(Record());
+            _isRecording = true;
         }
 
-        private IEnumerator Record()
-        {
-            while (true)
-            {
-                _inputs.Add(new PlayerInputFrame(_characterInput.MovementInput, _characterInput.JumpInput,
-                    _characterInput.MainAbilityInput, _characterInput.SecondaryAbilityInput));
-                yield return new WaitForEndOfFrame();
-            }
-        }
+        private void Record() => _inputs.Add(new PlayerInputFrame(_characterInput.MovementInput, _characterInput.JumpInput,
+                _characterInput.MainAbilityInput, _characterInput.SecondaryAbilityInput));
 
-        private IEnumerator Replay()
+        private void Replay()
         {
-            while (true && replayIndex < _inputs.Count)
+            if (_replayIndex < _inputs.Count)
             {
-                _characterInput.SetMovement(_inputs[replayIndex++]);
-                yield return new WaitForEndOfFrame();
+                PlayerInputFrame frame = _inputs[_replayIndex];
+                _characterInput.SetMovement(frame);
+                _replayIndex++;
             }
         }
 
