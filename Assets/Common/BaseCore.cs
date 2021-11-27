@@ -56,7 +56,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             Movement.LogicUpdate();
             Animation.LogicUpdate();
-            Inventory.LogicUpdate();
+            Inventory?.LogicUpdate();
         }
     }
 }

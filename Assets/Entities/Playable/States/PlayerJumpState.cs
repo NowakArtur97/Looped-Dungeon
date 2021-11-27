@@ -6,15 +6,18 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
     public class PlayerJumpState : PlayerAbilityState
     {
         private Vector2 _currentVelocity;
+        private Player _player;
 
         public PlayerJumpState(Player entity, string animationBoolName) : base(entity, animationBoolName)
-        { }
+        {
+            _player = entity;
+        }
 
         public override void Enter()
         {
             base.Enter();
 
-            Player.CoreContainer.Movement.SetVelocityY(Entity.Data.jumpVelocity);
+            Player.CoreContainer.Movement.SetVelocityY(_player.PlayerData.jumpVelocity);
 
             Entity.CoreContainer.Animation
                            .SetVelocityVariable(Mathf.Abs(Entity.CoreContainer.Input.MovementInput.x),

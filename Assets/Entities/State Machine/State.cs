@@ -24,7 +24,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             Entity.CoreContainer.AnimationToStateMachine.CurrentState = this;
 
-            Entity.CoreContainer.Inventory.Weapons.ForEach(weapon => weapon.InitWeapon(_animationBoolName, true));
+            Entity.CoreContainer.Inventory?.Weapons?.ForEach(weapon => weapon.InitWeapon(_animationBoolName, true));
 
             Entity.CoreContainer.Animation.SetBoolVariable(_animationBoolName, true);
 

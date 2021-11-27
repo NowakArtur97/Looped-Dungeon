@@ -12,9 +12,16 @@ namespace NowakArtur97.LoopedDungeon.Core
         public PlayerAbilityState MainAbilityState { get; protected set; }
         public PlayerAbilityState SecondaryAbilityState { get; protected set; }
 
+        public D_PlayerEntity PlayerData { get; private set; }
+
         protected override void Awake()
         {
             base.Awake();
+
+            if (Data.GetType() == typeof(D_EnemyEntity))
+            {
+                PlayerData = (D_PlayerEntity)Data;
+            }
 
             IdleState = new PlayerIdleState(this, "idle");
             MoveState = new PlayerMoveState(this, "move");

@@ -11,8 +11,6 @@ namespace NowakArtur97.LoopedDungeon.Core
                 return value;
             }
 
-            Debug.LogError(typeof(T) + " not implemented on " + name);
-
             return default;
         }
     }
