@@ -20,7 +20,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _groundCheck = value;
         }
 
-        public bool Grounded => Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _whatIsGround);
+        public bool IsGrounded => Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _whatIsGround);
 
         // TODO: CollisionSenses: Remove GET?
         public Transform WallCheck
@@ -29,7 +29,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _wallCheck = value;
         }
 
-        public bool WallCircle => Physics2D.OverlapCircle(_wallCheck.position, _wallCheckRadius, _whatIsGround);
-        public bool WallDistance => Physics2D.Raycast(_wallCheck.position, transform.right, _wallCheckDistance, _whatIsGround);
+        public bool IsTouchingWall => Physics2D.OverlapCircle(_wallCheck.position, _wallCheckRadius, _whatIsGround);
+        public bool IsCloseToWall => Physics2D.Raycast(_wallCheck.position, transform.right, _wallCheckDistance, _whatIsGround);
     }
 }

@@ -1,5 +1,4 @@
 using NowakArtur97.LoopedDungeon.Core;
-using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
@@ -24,7 +23,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             Entity.CoreContainer.AnimationToStateMachine.CurrentState = this;
 
-            Entity.CoreContainer.Inventory?.Weapons?.ForEach(weapon => weapon.InitWeapon(_animationBoolName, true));
+            Entity.CoreContainer.Inventory?.Weapons.ForEach(weapon => weapon.InitWeapon(_animationBoolName, true));
 
             Entity.CoreContainer.Animation.SetBoolVariable(_animationBoolName, true);
 
@@ -39,7 +38,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             Entity.CoreContainer.Animation.SetBoolVariable(_animationBoolName, false);
 
-            Entity.CoreContainer.Inventory.Weapons.ForEach(weapon => weapon.InitWeapon(_animationBoolName, false));
+            Entity.CoreContainer.Inventory?.Weapons.ForEach(weapon => weapon.InitWeapon(_animationBoolName, false));
 
             IsExitingState = true;
         }

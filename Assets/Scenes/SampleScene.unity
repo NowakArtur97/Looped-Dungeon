@@ -4144,7 +4144,7 @@ MonoBehaviour:
   _groundCheckRadius: 0.05
   _whatIsGround:
     serializedVersion: 2
-    m_Bits: 1088
+    m_Bits: 64
   _wallCheck: {fileID: 988583546}
   _wallCheckRadius: 0.25
   _wallCheckDistance: 0.25
@@ -4170,7 +4170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1107755674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4777,7 +4777,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199039144}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.979, y: 0.045, z: 0}
+  m_LocalPosition: {x: 3.143, y: -0.955, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1979497374}

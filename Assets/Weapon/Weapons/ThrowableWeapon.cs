@@ -52,7 +52,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             base.DoChecks();
 
-            _isTouchingWall = CoreContainer.CollisionSenses.WallCircle;
+            _isTouchingWall = CoreContainer.CollisionSenses.IsTouchingWall;
         }
     }
 }

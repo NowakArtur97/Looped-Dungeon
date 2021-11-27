@@ -5,7 +5,7 @@ namespace NowakArtur97.LoopedDungeon.Core
     public abstract class Enemy : Entity
     {
         public EnemyIdleState IdleState { get; private set; }
-        //public EnemyMoveState MoveState { get; private set; }
+        public EnemyMoveState MoveState { get; private set; }
 
         public D_EnemyEntity EnemyData { get; private set; }
 
@@ -19,7 +19,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             }
 
             IdleState = new EnemyIdleState(this, "idle");
-            //MoveState = new EnemyMoveState(this, "move");
+            MoveState = new EnemyMoveState(this, "move");
         }
 
         private void Start() => StateMachine.Initialize(IdleState);

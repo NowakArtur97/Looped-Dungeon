@@ -30,7 +30,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             {
                 if (_currentNumberOfIdleCycles >= _enemy.EnemyData.numberOfIdleCycles)
                 {
-                    Debug.Log("Enter Move");
+                    Entity.CoreContainer.Movement.Flip();
+                    Entity.StateMachine.ChangeState(_enemy.MoveState);
                 }
             }
         }

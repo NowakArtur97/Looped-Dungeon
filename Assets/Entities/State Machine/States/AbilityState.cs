@@ -22,7 +22,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             base.DoChecks();
 
-            IsGrounded = Entity.CoreContainer.CollisionSenses.Grounded;
+            IsGrounded = Entity.CoreContainer.CollisionSenses.IsGrounded;
         }
     }
 }

@@ -14,8 +14,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             base.DoChecks();
 
-            IsGrounded = Entity.CoreContainer.CollisionSenses.Grounded;
-            IsTouchingWall = Entity.CoreContainer.CollisionSenses.WallDistance;
+            IsGrounded = Entity.CoreContainer.CollisionSenses.IsGrounded;
+            IsTouchingWall = Entity.CoreContainer.CollisionSenses.IsCloseToWall;
         }
     }
 }
