@@ -28,6 +28,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             base.LogicUpdate();
 
+            // TODO: Input: After recording input do not move
             if (IsRecording)
             {
                 MovementInput = _inputManager.MovementInput;

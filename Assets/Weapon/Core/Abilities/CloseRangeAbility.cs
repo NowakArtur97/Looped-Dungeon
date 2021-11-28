@@ -20,7 +20,9 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public void DetectTarget(Collider2D collision)
         {
-            if (collision.TryGetComponent(out IDamagable damagable))
+            IDamagable damagable = collision.gameObject.GetComponentInChildren<IDamagable>();
+
+            if (damagable != null && !_toDamage.Contains(damagable))
             {
                 _toDamage.Add(damagable);
             }
@@ -28,7 +30,9 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public void IgnoreTarget(Collider2D collision)
         {
-            if (collision.TryGetComponent(out IDamagable damagable))
+            IDamagable damagable = collision.gameObject.GetComponentInChildren<IDamagable>();
+
+            if (damagable != null && _toDamage.Contains(damagable))
             {
                 _toDamage.Remove(damagable);
             }

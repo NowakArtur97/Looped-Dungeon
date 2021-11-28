@@ -1,5 +1,4 @@
 using NowakArtur97.LoopedDungeon.Core;
-using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {

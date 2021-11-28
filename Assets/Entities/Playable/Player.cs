@@ -18,7 +18,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             base.Awake();
 
-            if (Data.GetType() == typeof(D_EnemyEntity))
+            if (Data.GetType() == typeof(D_PlayerEntity))
             {
                 PlayerData = (D_PlayerEntity)Data;
             }
@@ -30,6 +30,11 @@ namespace NowakArtur97.LoopedDungeon.Core
             LandState = new PlayerLandState(this, "land");
         }
 
-        private void Start() => StateMachine.Initialize(IdleState);
+        protected override void Start()
+        {
+            base.Start();
+
+            StateMachine.Initialize(IdleState);
+        }
     }
 }

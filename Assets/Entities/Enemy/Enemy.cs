@@ -22,6 +22,11 @@ namespace NowakArtur97.LoopedDungeon.Core
             MoveState = new EnemyMoveState(this, "move");
         }
 
-        private void Start() => StateMachine.Initialize(IdleState);
+        protected override void Start()
+        {
+            base.Start();
+
+            StateMachine.Initialize(IdleState);
+        }
     }
 }

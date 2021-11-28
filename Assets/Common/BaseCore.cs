@@ -44,12 +44,21 @@ namespace NowakArtur97.LoopedDungeon.Core
             protected set => _inventory = value;
         }
 
+        private Combat _combat;
+
+        public Combat Combat
+        {
+            get => GenericNotImplementedError<Combat>.TryGet(_combat, transform.parent.name);
+            protected set => _combat = value;
+        }
+
         protected virtual void Awake()
         {
             Animation = GetComponentInChildren<Animation>();
             Movement = GetComponentInChildren<Movement>();
             CollisionSenses = GetComponentInChildren<CollisionSenses>();
             AnimatorSynchronizer = GetComponentInChildren<AnimatorSynchronizer>();
+            Combat = GetComponentInChildren<Combat>();
         }
 
         public virtual void LogicUpdate()

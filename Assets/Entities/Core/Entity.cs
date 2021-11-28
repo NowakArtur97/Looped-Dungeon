@@ -14,13 +14,17 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public CoreContainer CoreContainer { get; private set; }
         public FiniteStateMachine StateMachine { get; private set; }
+        public EntityStats EntityStats { get; private set; }
 
         protected virtual void Awake()
         {
             CoreContainer = GetComponentInChildren<CoreContainer>();
 
             StateMachine = new FiniteStateMachine();
+            EntityStats = new EntityStats(_data);
         }
+
+        protected virtual void Start() => CoreContainer.Combat.InitEntityStats(EntityStats);
 
         private void Update()
         {
