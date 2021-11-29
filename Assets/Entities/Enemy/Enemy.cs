@@ -7,12 +7,17 @@ namespace NowakArtur97.LoopedDungeon.Core
         public EnemyIdleState IdleState { get; private set; }
         public EnemyMoveState MoveState { get; private set; }
 
+        public EnemyCoreContainer EnemyCoreContainer { get; private set; }
         public D_EnemyEntity EnemyData { get; private set; }
 
         protected override void Awake()
         {
             base.Awake();
 
+            if (CoreContainer.GetType() == typeof(EnemyCoreContainer))
+            {
+                EnemyCoreContainer = (EnemyCoreContainer)CoreContainer;
+            }
             if (Data.GetType() == typeof(D_EnemyEntity))
             {
                 EnemyData = (D_EnemyEntity)Data;

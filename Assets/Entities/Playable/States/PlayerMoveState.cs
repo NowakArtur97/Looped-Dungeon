@@ -16,7 +16,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             base.LogicUpdate();
 
-            _xMovementInput = _player.CoreContainer.Input.MovementInput.x;
+            _xMovementInput = _player.PlayerCoreContainer.Input.MovementInput.x;
 
             Entity.CoreContainer.Movement.CheckIfShouldFlip((int)_xMovementInput);
             Entity.CoreContainer.Inventory.Weapons.ForEach(weapon =>
@@ -30,15 +30,15 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 {
                     Entity.StateMachine.ChangeState(_player.InAirState);
                 }
-                else if (_player.CoreContainer.Input.MainAbilityInput && _player.CoreContainer.Inventory.CurrentWeapon)
+                else if (_player.PlayerCoreContainer.Input.MainAbilityInput && _player.CoreContainer.Inventory.CurrentWeapon)
                 {
                     Entity.StateMachine.ChangeState(_player.MainAbilityState);
                 }
-                else if (_player.CoreContainer.Input.SecondaryAbilityInput && _player.CoreContainer.Inventory.CurrentWeapon)
+                else if (_player.PlayerCoreContainer.Input.SecondaryAbilityInput && _player.CoreContainer.Inventory.CurrentWeapon)
                 {
                     Entity.StateMachine.ChangeState(_player.SecondaryAbilityState);
                 }
-                else if (_player.CoreContainer.Input.JumpInput)
+                else if (_player.PlayerCoreContainer.Input.JumpInput)
                 {
                     Entity.StateMachine.ChangeState(_player.JumpState);
                 }

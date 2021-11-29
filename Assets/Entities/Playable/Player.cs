@@ -12,12 +12,17 @@ namespace NowakArtur97.LoopedDungeon.Core
         public PlayerAbilityState MainAbilityState { get; protected set; }
         public PlayerAbilityState SecondaryAbilityState { get; protected set; }
 
+        public PlayerCoreContainer PlayerCoreContainer { get; private set; }
         public D_PlayerEntity PlayerData { get; private set; }
 
         protected override void Awake()
         {
             base.Awake();
 
+            if (CoreContainer.GetType() == typeof(PlayerCoreContainer))
+            {
+                PlayerCoreContainer = (PlayerCoreContainer)CoreContainer;
+            }
             if (Data.GetType() == typeof(D_PlayerEntity))
             {
                 PlayerData = (D_PlayerEntity)Data;

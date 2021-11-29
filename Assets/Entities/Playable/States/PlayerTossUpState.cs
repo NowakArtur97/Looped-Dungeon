@@ -4,11 +4,14 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 {
     public class PlayerTossUpState : PlayerAbilityState
     {
+        private Player _player;
         private bool _isCrouching;
         private bool _abilityInput;
 
         public PlayerTossUpState(Player entity, string animationBoolName) : base(entity, animationBoolName)
-        { }
+        {
+            _player = entity;
+        }
 
         public override void Enter()
         {
@@ -29,7 +32,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             base.LogicUpdate();
 
-            _abilityInput = Player.CoreContainer.Input.SecondaryAbilityInput;
+            _abilityInput = _player.PlayerCoreContainer.Input.SecondaryAbilityInput;
 
             if (_isCrouching && !_abilityInput)
             {

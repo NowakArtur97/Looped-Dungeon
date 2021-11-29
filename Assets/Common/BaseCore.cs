@@ -36,6 +36,14 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _animatorSynchronizer = value;
         }
 
+        private AnimationToStateMachine _animationToStateMachine;
+
+        public AnimationToStateMachine AnimationToStateMachine
+        {
+            get => GenericNotImplementedError<AnimationToStateMachine>.TryGet(_animationToStateMachine, transform.parent.name);
+            private set => _animationToStateMachine = value;
+        }
+
         private Inventory _inventory;
 
         public Inventory Inventory
@@ -57,7 +65,9 @@ namespace NowakArtur97.LoopedDungeon.Core
             Animation = GetComponentInChildren<Animation>();
             Movement = GetComponentInChildren<Movement>();
             CollisionSenses = GetComponentInChildren<CollisionSenses>();
+            AnimationToStateMachine = GetComponentInChildren<AnimationToStateMachine>();
             AnimatorSynchronizer = GetComponentInChildren<AnimatorSynchronizer>();
+            Inventory = GetComponentInChildren<Inventory>();
             Combat = GetComponentInChildren<Combat>();
         }
 

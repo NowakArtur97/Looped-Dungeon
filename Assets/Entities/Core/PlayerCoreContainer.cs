@@ -1,15 +1,7 @@
 namespace NowakArtur97.LoopedDungeon.Core
 {
-    public class CoreContainer : BaseCore
+    public class PlayerCoreContainer : BaseCore
     {
-        private AnimationToStateMachine _animationToStateMachine;
-
-        public AnimationToStateMachine AnimationToStateMachine
-        {
-            get => GenericNotImplementedError<AnimationToStateMachine>.TryGet(_animationToStateMachine, transform.parent.name);
-            private set => _animationToStateMachine = value;
-        }
-
         private Input _input;
 
         public Input Input
@@ -23,8 +15,6 @@ namespace NowakArtur97.LoopedDungeon.Core
             base.Awake();
 
             Input = GetComponentInChildren<Input>();
-            AnimationToStateMachine = GetComponentInChildren<AnimationToStateMachine>();
-            Inventory = GetComponentInChildren<Inventory>();
         }
 
         public override void LogicUpdate()

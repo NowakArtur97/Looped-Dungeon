@@ -20,7 +20,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             Player.CoreContainer.Movement.SetVelocityY(_player.PlayerData.jumpVelocity);
 
             Entity.CoreContainer.Animation
-                           .SetVelocityVariable(Mathf.Abs(Entity.CoreContainer.Input.MovementInput.x),
+                           .SetVelocityVariable(Mathf.Abs(_player.PlayerCoreContainer.Input.MovementInput.x),
                            Entity.CoreContainer.Movement.CurrentVelocity.y);
             _currentVelocity = Entity.CoreContainer.Movement.CurrentVelocity;
             Entity.CoreContainer.Inventory.Weapons.ForEach(weapon => weapon.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y));

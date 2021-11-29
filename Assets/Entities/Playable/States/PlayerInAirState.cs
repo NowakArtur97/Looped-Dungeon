@@ -17,14 +17,14 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             base.LogicUpdate();
 
-            Entity.CoreContainer.Movement.CheckIfShouldFlip((int)_player.CoreContainer.Input.MovementInput.x);
-            Entity.CoreContainer.Inventory.Weapons.ForEach(weapon => weapon.CoreContainer.Movement.CheckIfShouldFlipWithoutRotating((int)_player.CoreContainer.Input.MovementInput.x));
+            Entity.CoreContainer.Movement.CheckIfShouldFlip((int)_player.PlayerCoreContainer.Input.MovementInput.x);
+            Entity.CoreContainer.Inventory.Weapons.ForEach(weapon => weapon.CoreContainer.Movement.CheckIfShouldFlipWithoutRotating((int)_player.PlayerCoreContainer.Input.MovementInput.x));
 
             SetupVelocityRelatedVariables();
 
             if (!IsExitingState)
             {
-                if (IsGrounded && _currentVelocity.y < 0.01f && !_player.CoreContainer.Input.JumpInput)
+                if (IsGrounded && _currentVelocity.y < 0.01f && !_player.PlayerCoreContainer.Input.JumpInput)
                 {
                     _player.StateMachine.ChangeState(_player.LandState);
                 }
@@ -42,8 +42,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             }
             else
             {
-                Entity.CoreContainer.Movement.SetVelocityX(Entity.Data.moveVelocity * _player.CoreContainer.Input.MovementInput.x);
-                _currentVelocity.Set(Mathf.Abs(Entity.CoreContainer.Input.MovementInput.x), Entity.CoreContainer.Movement.CurrentVelocity.y);
+                Entity.CoreContainer.Movement.SetVelocityX(Entity.Data.moveVelocity * _player.PlayerCoreContainer.Input.MovementInput.x);
+                _currentVelocity.Set(Mathf.Abs(_player.PlayerCoreContainer.Input.MovementInput.x), Entity.CoreContainer.Movement.CurrentVelocity.y);
                 Entity.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y);
                 Entity.CoreContainer.Inventory.Weapons.ForEach(weapon => weapon.CoreContainer.Animation.SetVelocityVariable(_currentVelocity.x, _currentVelocity.y));
             }
