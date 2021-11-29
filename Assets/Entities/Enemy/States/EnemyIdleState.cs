@@ -2,10 +2,10 @@ using NowakArtur97.LoopedDungeon.Core;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
-    public class EnemyIdleState : GroundedState
+    public class EnemyIdleState : EnemyGroundedState
     {
-        private int _currentNumberOfIdleCycles;
         private Enemy _enemy;
+        private int _currentNumberOfIdleCycles;
 
         public EnemyIdleState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
         {
@@ -27,6 +27,10 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             if (!IsExitingState)
             {
+                if (IsPlayerInMinAgro)
+                {
+                    Entity.StateMachine.ChangeState(_enemy.PlayerDetectedState);
+                }
                 if (_currentNumberOfIdleCycles >= _enemy.EnemyData.numberOfIdleCycles)
                 {
                     Entity.CoreContainer.Movement.Flip();

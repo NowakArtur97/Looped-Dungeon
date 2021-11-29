@@ -1,3 +1,5 @@
+using NowakArtur97.LoopedDungeon.Util;
+
 namespace NowakArtur97.LoopedDungeon.Core
 {
     public class PlayerCoreContainer : BaseCore
@@ -6,7 +8,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public Input Input
         {
-            get => GenericNotImplementedError<Input>.TryGet(_input, transform.parent.name);
+            get => GenericUtil<Input>.GetOrDefault(_input, transform.parent.name);
             private set => _input = value;
         }
 

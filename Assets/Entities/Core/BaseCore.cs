@@ -1,3 +1,4 @@
+using NowakArtur97.LoopedDungeon.Util;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
@@ -8,7 +9,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public CollisionSenses CollisionSenses
         {
-            get => GenericNotImplementedError<CollisionSenses>.TryGet(_collisionSenses, transform.parent.name);
+            get => GenericUtil<CollisionSenses>.GetOrDefault(_collisionSenses, transform.parent.name);
             private set => _collisionSenses = value;
         }
 
@@ -16,7 +17,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public Movement Movement
         {
-            get => GenericNotImplementedError<Movement>.TryGet(_movement, transform.parent.name);
+            get => GenericUtil<Movement>.GetOrDefault(_movement, transform.parent.name);
             private set => _movement = value;
         }
 
@@ -24,7 +25,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public Animation Animation
         {
-            get => GenericNotImplementedError<Animation>.TryGet(_animation, transform.parent.name);
+            get => GenericUtil<Animation>.GetOrDefault(_animation, transform.parent.name);
             private set => _animation = value;
         }
 
@@ -32,7 +33,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public AnimatorSynchronizer AnimatorSynchronizer
         {
-            get => GenericNotImplementedError<AnimatorSynchronizer>.TryGet(_animatorSynchronizer, transform.parent.name);
+            get => GenericUtil<AnimatorSynchronizer>.GetOrDefault(_animatorSynchronizer, transform.parent.name);
             private set => _animatorSynchronizer = value;
         }
 
@@ -40,7 +41,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public AnimationToStateMachine AnimationToStateMachine
         {
-            get => GenericNotImplementedError<AnimationToStateMachine>.TryGet(_animationToStateMachine, transform.parent.name);
+            get => GenericUtil<AnimationToStateMachine>.GetOrDefault(_animationToStateMachine, transform.parent.name);
             private set => _animationToStateMachine = value;
         }
 
@@ -48,7 +49,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public Inventory Inventory
         {
-            get => GenericNotImplementedError<Inventory>.TryGet(_inventory, transform.parent.name);
+            get => GenericUtil<Inventory>.GetOrDefault(_inventory, transform.parent.name);
             protected set => _inventory = value;
         }
 
@@ -56,7 +57,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public Combat Combat
         {
-            get => GenericNotImplementedError<Combat>.TryGet(_combat, transform.parent.name);
+            get => GenericUtil<Combat>.GetOrDefault(_combat, transform.parent.name);
             protected set => _combat = value;
         }
 

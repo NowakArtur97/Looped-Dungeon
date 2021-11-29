@@ -6,5 +6,7 @@ namespace NowakArtur97.LoopedDungeon.Core
     public class D_EnemyEntity : D_Entity
     {
         public int numberOfIdleCycles = 5;
+        public float maxAgroRange = 5;
+        public float minAgroRange = 2;
     }
 }

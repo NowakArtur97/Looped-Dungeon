@@ -1,3 +1,4 @@
+using NowakArtur97.LoopedDungeon.Util;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
@@ -16,7 +17,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         // TODO: CollisionSenses: Remove GET?
         public Transform GroundCheck
         {
-            get => GenericNotImplementedError<Transform>.TryGet(_groundCheck, CoreContainer.transform.name);
+            get => GenericUtil<Transform>.GetOrDefault(_groundCheck, CoreContainer.transform.name);
             private set => _groundCheck = value;
         }
 
@@ -25,7 +26,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         // TODO: CollisionSenses: Remove GET?
         public Transform WallCheck
         {
-            get => GenericNotImplementedError<Transform>.TryGet(_wallCheck, CoreContainer.transform.name);
+            get => GenericUtil<Transform>.GetOrDefault(_wallCheck, CoreContainer.transform.name);
             private set => _wallCheck = value;
         }
 

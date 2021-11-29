@@ -1,3 +1,5 @@
+using NowakArtur97.LoopedDungeon.Util;
+
 namespace NowakArtur97.LoopedDungeon.Core
 {
     public class WeaponCoreContrainer : BaseCore
@@ -6,7 +8,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public AnimationToWeapon AnimationToWeapon
         {
-            get => GenericNotImplementedError<AnimationToWeapon>.TryGet(_animationToWeapon, transform.parent.name);
+            get => GenericUtil<AnimationToWeapon>.GetOrDefault(_animationToWeapon, transform.parent.name);
             private set => _animationToWeapon = value;
         }
 

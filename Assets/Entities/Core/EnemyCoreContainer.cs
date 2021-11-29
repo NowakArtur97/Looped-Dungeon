@@ -1,3 +1,5 @@
+using NowakArtur97.LoopedDungeon.Util;
+
 namespace NowakArtur97.LoopedDungeon.Core
 {
     public class EnemyCoreContainer : BaseCore
@@ -6,7 +8,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public EnemySenses EnemySenses
         {
-            get => GenericNotImplementedError<EnemySenses>.TryGet(_enemySenses, transform.parent.name);
+            get => GenericUtil<EnemySenses>.GetOrDefault(_enemySenses, transform.parent.name);
             private set => _enemySenses = value;
         }
 

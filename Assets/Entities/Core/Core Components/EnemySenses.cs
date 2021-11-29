@@ -1,3 +1,4 @@
+using NowakArtur97.LoopedDungeon.Util;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
@@ -9,7 +10,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public Transform PlayerCheck
         {
-            get => GenericNotImplementedError<Transform>.TryGet(_playerCheck, CoreContainer.transform.name);
+            get => GenericUtil<Transform>.GetOrDefault(_playerCheck, CoreContainer.transform.name);
             private set => _playerCheck = value;
         }
 

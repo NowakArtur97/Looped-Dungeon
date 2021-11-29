@@ -1,4 +1,5 @@
 using NowakArtur97.LoopedDungeon.StateMachine;
+using NowakArtur97.LoopedDungeon.Util;
 
 namespace NowakArtur97.LoopedDungeon.Core
 {

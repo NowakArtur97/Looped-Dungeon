@@ -2,7 +2,7 @@ using NowakArtur97.LoopedDungeon.Core;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
-    public class EnemyMoveState : GroundedState
+    public class EnemyMoveState : EnemyGroundedState
     {
         private Enemy _enemy;
 
@@ -19,7 +19,11 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             if (!IsExitingState)
             {
-                if (!IsGrounded || IsTouchingWall)
+                if (IsPlayerInMinAgro)
+                {
+                    Entity.StateMachine.ChangeState(_enemy.PlayerDetectedState);
+                }
+                else if (!IsGrounded || IsTouchingWall)
                 {
                     Entity.StateMachine.ChangeState(_enemy.IdleState);
                 }
