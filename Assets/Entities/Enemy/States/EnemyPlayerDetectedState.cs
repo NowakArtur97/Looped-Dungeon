@@ -4,12 +4,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 {
     public class EnemyPlayerDetectedState : EnemyGroundedState
     {
-        private Enemy _enemy;
-
         public EnemyPlayerDetectedState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
-        {
-            _enemy = entity;
-        }
+        { }
 
         public override void LogicUpdate()
         {
@@ -17,10 +13,9 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             if (!IsExitingState)
             {
-                if (!IsPlayerInMaxAgro || !IsPlayerInMinAgro)
+                if (!IsPlayerInMaxAgro)
                 {
-                    // TODO: EnemyPlayerDetectedState: Look for Player State
-                    _enemy.StateMachine.ChangeState(_enemy.IdleState);
+                    Entity.StateMachine.ChangeState(Enemy.LookForPlayerState);
                 }
             }
         }

@@ -2,11 +2,11 @@ using NowakArtur97.LoopedDungeon.Core;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
-    public class EnemyIdleState : EnemyGroundedState
+    public class EnemyLookForPlayerState : EnemyGroundedState
     {
         private int _currentNumberOfIdleCycles;
 
-        public EnemyIdleState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
+        public EnemyLookForPlayerState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
         { }
 
         public override void Enter()
@@ -30,7 +30,6 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 }
                 else if (_currentNumberOfIdleCycles >= Enemy.EnemyData.numberOfIdleCycles)
                 {
-                    Entity.CoreContainer.Movement.Flip();
                     Entity.StateMachine.ChangeState(Enemy.MoveState);
                 }
             }
@@ -41,7 +40,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             base.AnimationFinishedTrigger();
 
             _currentNumberOfIdleCycles++;
+
+            Entity.CoreContainer.Movement.Flip();
         }
     }
 }
-

@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Walker_Data
   m_EditorClassIdentifier: 
   moveVelocity: 1
-  numberOfIdleCycles: 5
+  maxHealth: 30
+  numberOfIdleCycles: 6
+  maxAgroRange: 5
+  minAgroRange: 2

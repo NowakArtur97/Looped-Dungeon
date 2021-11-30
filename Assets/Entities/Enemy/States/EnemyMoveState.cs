@@ -4,12 +4,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 {
     public class EnemyMoveState : EnemyGroundedState
     {
-        private Enemy _enemy;
-
         public EnemyMoveState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
-        {
-            _enemy = entity;
-        }
+        { }
 
         public override void LogicUpdate()
         {
@@ -21,11 +17,11 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             {
                 if (IsPlayerInMinAgro)
                 {
-                    Entity.StateMachine.ChangeState(_enemy.PlayerDetectedState);
+                    Entity.StateMachine.ChangeState(Enemy.PlayerDetectedState);
                 }
                 else if (!IsGrounded || IsTouchingWall)
                 {
-                    Entity.StateMachine.ChangeState(_enemy.IdleState);
+                    Entity.StateMachine.ChangeState(Enemy.IdleState);
                 }
             }
         }
