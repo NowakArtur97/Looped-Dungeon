@@ -5,8 +5,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
     public class EnemyGroundedState : GroundedState
     {
         protected Enemy Enemy { get; private set; }
-        protected bool IsPlayerInMinAgro { get; private set; }
-        protected bool IsPlayerInMaxAgro { get; private set; }
+        protected bool IsPlayerInMinAgroRange { get; private set; }
+        protected bool IsPlayerInMaxAgroRange { get; private set; }
 
         public EnemyGroundedState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
         {
@@ -17,8 +17,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             base.DoChecks();
 
-            IsPlayerInMinAgro = Enemy.EnemyCoreContainer.EnemySenses.IsPlayerInAgroRange(Enemy.EnemyData.minAgroRange);
-            IsPlayerInMaxAgro = Enemy.EnemyCoreContainer.EnemySenses.IsPlayerInAgroRange(Enemy.EnemyData.maxAgroRange);
+            IsPlayerInMinAgroRange = Enemy.EnemyCoreContainer.EnemySenses.IsPlayerInAgroRange(Enemy.EnemyData.minAgroRange);
+            IsPlayerInMaxAgroRange = Enemy.EnemyCoreContainer.EnemySenses.IsPlayerInAgroRange(Enemy.EnemyData.maxAgroRange);
         }
     }
 }

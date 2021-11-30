@@ -8,6 +8,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         public EnemyMoveState MoveState { get; private set; }
         public EnemyPlayerDetectedState PlayerDetectedState { get; private set; }
         public EnemyLookForPlayerState LookForPlayerState { get; private set; }
+        public EnemyChargePlayerState ChargePlayerState { get; private set; }
 
         public EnemyCoreContainer EnemyCoreContainer { get; private set; }
         public D_EnemyEntity EnemyData { get; private set; }
@@ -29,6 +30,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             MoveState = new EnemyMoveState(this, "move");
             PlayerDetectedState = new EnemyPlayerDetectedState(this, "playerDetected");
             LookForPlayerState = new EnemyLookForPlayerState(this, "lookForPlayer");
+            ChargePlayerState = new EnemyChargePlayerState(this, "chargePlayer");
         }
 
         protected override void Start()

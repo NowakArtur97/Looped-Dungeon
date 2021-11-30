@@ -2,9 +2,9 @@ using NowakArtur97.LoopedDungeon.Core;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
-    public class EnemyMoveState : EnemyGroundedState
+    public class EnemyChargePlayerState : EnemyGroundedState
     {
-        public EnemyMoveState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
+        public EnemyChargePlayerState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
         { }
 
         public override void LogicUpdate()
@@ -19,9 +19,9 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 {
                     Entity.StateMachine.ChangeState(Enemy.PlayerDetectedState);
                 }
-                else if (!IsGrounded || IsTouchingWall)
+                else if (!IsPlayerInMaxAgroRange)
                 {
-                    Entity.StateMachine.ChangeState(Enemy.IdleState);
+                    Entity.StateMachine.ChangeState(Enemy.LookForPlayerState);
                 }
             }
         }
