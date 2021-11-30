@@ -257,7 +257,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -269,7 +269,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 8192
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -281,7 +281,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 8192
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -300,7 +300,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -319,9 +319,9 @@ TextureImporter:
       name: Walker_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 41
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -340,9 +340,9 @@ TextureImporter:
       name: Walker_2
       rect:
         serializedVersion: 2
-        x: 72
+        x: 82
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -361,9 +361,9 @@ TextureImporter:
       name: Walker_3
       rect:
         serializedVersion: 2
-        x: 108
+        x: 123
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -382,9 +382,9 @@ TextureImporter:
       name: Walker_4
       rect:
         serializedVersion: 2
-        x: 144
+        x: 164
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -403,9 +403,9 @@ TextureImporter:
       name: Walker_5
       rect:
         serializedVersion: 2
-        x: 180
+        x: 205
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -424,9 +424,9 @@ TextureImporter:
       name: Walker_6
       rect:
         serializedVersion: 2
-        x: 216
+        x: 246
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -445,9 +445,9 @@ TextureImporter:
       name: Walker_7
       rect:
         serializedVersion: 2
-        x: 252
+        x: 287
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -466,9 +466,9 @@ TextureImporter:
       name: Walker_8
       rect:
         serializedVersion: 2
-        x: 288
+        x: 328
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -487,9 +487,9 @@ TextureImporter:
       name: Walker_9
       rect:
         serializedVersion: 2
-        x: 324
+        x: 369
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -508,9 +508,9 @@ TextureImporter:
       name: Walker_10
       rect:
         serializedVersion: 2
-        x: 360
+        x: 410
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -529,9 +529,9 @@ TextureImporter:
       name: Walker_11
       rect:
         serializedVersion: 2
-        x: 396
+        x: 451
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -550,9 +550,9 @@ TextureImporter:
       name: Walker_12
       rect:
         serializedVersion: 2
-        x: 432
+        x: 492
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -571,9 +571,9 @@ TextureImporter:
       name: Walker_13
       rect:
         serializedVersion: 2
-        x: 468
+        x: 533
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -592,9 +592,9 @@ TextureImporter:
       name: Walker_14
       rect:
         serializedVersion: 2
-        x: 504
+        x: 574
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -613,9 +613,9 @@ TextureImporter:
       name: Walker_15
       rect:
         serializedVersion: 2
-        x: 540
+        x: 615
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -634,9 +634,9 @@ TextureImporter:
       name: Walker_16
       rect:
         serializedVersion: 2
-        x: 576
+        x: 656
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -655,9 +655,9 @@ TextureImporter:
       name: Walker_17
       rect:
         serializedVersion: 2
-        x: 612
+        x: 697
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -676,9 +676,9 @@ TextureImporter:
       name: Walker_18
       rect:
         serializedVersion: 2
-        x: 648
+        x: 738
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -697,9 +697,9 @@ TextureImporter:
       name: Walker_19
       rect:
         serializedVersion: 2
-        x: 684
+        x: 779
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -718,9 +718,9 @@ TextureImporter:
       name: Walker_20
       rect:
         serializedVersion: 2
-        x: 720
+        x: 820
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -739,9 +739,9 @@ TextureImporter:
       name: Walker_21
       rect:
         serializedVersion: 2
-        x: 756
+        x: 861
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -760,9 +760,9 @@ TextureImporter:
       name: Walker_22
       rect:
         serializedVersion: 2
-        x: 792
+        x: 902
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -781,9 +781,9 @@ TextureImporter:
       name: Walker_23
       rect:
         serializedVersion: 2
-        x: 828
+        x: 943
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -802,9 +802,9 @@ TextureImporter:
       name: Walker_24
       rect:
         serializedVersion: 2
-        x: 864
+        x: 984
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -823,9 +823,9 @@ TextureImporter:
       name: Walker_25
       rect:
         serializedVersion: 2
-        x: 900
+        x: 1025
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -844,9 +844,9 @@ TextureImporter:
       name: Walker_26
       rect:
         serializedVersion: 2
-        x: 936
+        x: 1066
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -865,9 +865,9 @@ TextureImporter:
       name: Walker_27
       rect:
         serializedVersion: 2
-        x: 972
+        x: 1107
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -886,9 +886,9 @@ TextureImporter:
       name: Walker_28
       rect:
         serializedVersion: 2
-        x: 1008
+        x: 1148
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -907,9 +907,9 @@ TextureImporter:
       name: Walker_29
       rect:
         serializedVersion: 2
-        x: 1044
+        x: 1189
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -928,9 +928,9 @@ TextureImporter:
       name: Walker_30
       rect:
         serializedVersion: 2
-        x: 1080
+        x: 1230
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -949,9 +949,9 @@ TextureImporter:
       name: Walker_31
       rect:
         serializedVersion: 2
-        x: 1116
+        x: 1271
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -970,9 +970,9 @@ TextureImporter:
       name: Walker_32
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 1312
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -991,9 +991,9 @@ TextureImporter:
       name: Walker_33
       rect:
         serializedVersion: 2
-        x: 1188
+        x: 1353
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1012,9 +1012,9 @@ TextureImporter:
       name: Walker_34
       rect:
         serializedVersion: 2
-        x: 1224
+        x: 1394
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1033,9 +1033,9 @@ TextureImporter:
       name: Walker_35
       rect:
         serializedVersion: 2
-        x: 1260
+        x: 1435
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1054,9 +1054,9 @@ TextureImporter:
       name: Walker_36
       rect:
         serializedVersion: 2
-        x: 1296
+        x: 1476
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1075,9 +1075,9 @@ TextureImporter:
       name: Walker_37
       rect:
         serializedVersion: 2
-        x: 1332
+        x: 1517
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1096,9 +1096,9 @@ TextureImporter:
       name: Walker_38
       rect:
         serializedVersion: 2
-        x: 1368
+        x: 1558
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1117,9 +1117,9 @@ TextureImporter:
       name: Walker_39
       rect:
         serializedVersion: 2
-        x: 1404
+        x: 1599
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1138,9 +1138,9 @@ TextureImporter:
       name: Walker_40
       rect:
         serializedVersion: 2
-        x: 1440
+        x: 1640
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1159,9 +1159,9 @@ TextureImporter:
       name: Walker_41
       rect:
         serializedVersion: 2
-        x: 1476
+        x: 1681
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1180,9 +1180,9 @@ TextureImporter:
       name: Walker_42
       rect:
         serializedVersion: 2
-        x: 1512
+        x: 1722
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1201,9 +1201,9 @@ TextureImporter:
       name: Walker_43
       rect:
         serializedVersion: 2
-        x: 1548
+        x: 1763
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1222,9 +1222,9 @@ TextureImporter:
       name: Walker_44
       rect:
         serializedVersion: 2
-        x: 1584
+        x: 1804
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1243,9 +1243,9 @@ TextureImporter:
       name: Walker_45
       rect:
         serializedVersion: 2
-        x: 1620
+        x: 1845
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1264,9 +1264,9 @@ TextureImporter:
       name: Walker_46
       rect:
         serializedVersion: 2
-        x: 1656
+        x: 1886
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1285,9 +1285,9 @@ TextureImporter:
       name: Walker_47
       rect:
         serializedVersion: 2
-        x: 1692
+        x: 1927
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1306,9 +1306,9 @@ TextureImporter:
       name: Walker_48
       rect:
         serializedVersion: 2
-        x: 1728
+        x: 1968
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1327,9 +1327,9 @@ TextureImporter:
       name: Walker_49
       rect:
         serializedVersion: 2
-        x: 1764
+        x: 2009
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1348,9 +1348,9 @@ TextureImporter:
       name: Walker_50
       rect:
         serializedVersion: 2
-        x: 1800
+        x: 2050
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1369,9 +1369,9 @@ TextureImporter:
       name: Walker_51
       rect:
         serializedVersion: 2
-        x: 1836
+        x: 2091
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1390,9 +1390,9 @@ TextureImporter:
       name: Walker_52
       rect:
         serializedVersion: 2
-        x: 1872
+        x: 2132
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1411,9 +1411,9 @@ TextureImporter:
       name: Walker_53
       rect:
         serializedVersion: 2
-        x: 1908
+        x: 2173
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1432,9 +1432,9 @@ TextureImporter:
       name: Walker_54
       rect:
         serializedVersion: 2
-        x: 1944
+        x: 2214
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1453,9 +1453,9 @@ TextureImporter:
       name: Walker_55
       rect:
         serializedVersion: 2
-        x: 1980
+        x: 2255
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1474,9 +1474,9 @@ TextureImporter:
       name: Walker_56
       rect:
         serializedVersion: 2
-        x: 2016
+        x: 2296
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1495,9 +1495,9 @@ TextureImporter:
       name: Walker_57
       rect:
         serializedVersion: 2
-        x: 2052
+        x: 2337
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1516,9 +1516,9 @@ TextureImporter:
       name: Walker_58
       rect:
         serializedVersion: 2
-        x: 2088
+        x: 2378
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1537,9 +1537,9 @@ TextureImporter:
       name: Walker_59
       rect:
         serializedVersion: 2
-        x: 2124
+        x: 2419
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1558,9 +1558,9 @@ TextureImporter:
       name: Walker_60
       rect:
         serializedVersion: 2
-        x: 2160
+        x: 2460
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1579,9 +1579,9 @@ TextureImporter:
       name: Walker_61
       rect:
         serializedVersion: 2
-        x: 2196
+        x: 2501
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1600,9 +1600,9 @@ TextureImporter:
       name: Walker_62
       rect:
         serializedVersion: 2
-        x: 2232
+        x: 2542
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1621,9 +1621,9 @@ TextureImporter:
       name: Walker_63
       rect:
         serializedVersion: 2
-        x: 2268
+        x: 2583
         y: 0
-        width: 36
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}

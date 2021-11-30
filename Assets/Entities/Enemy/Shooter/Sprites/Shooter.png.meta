@@ -299,7 +299,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -311,7 +311,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -323,7 +323,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -342,7 +342,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -361,9 +361,9 @@ TextureImporter:
       name: Shooter_1
       rect:
         serializedVersion: 2
-        x: 26
+        x: 27
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -382,9 +382,9 @@ TextureImporter:
       name: Shooter_2
       rect:
         serializedVersion: 2
-        x: 52
+        x: 54
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -403,9 +403,9 @@ TextureImporter:
       name: Shooter_3
       rect:
         serializedVersion: 2
-        x: 78
+        x: 81
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -424,9 +424,9 @@ TextureImporter:
       name: Shooter_4
       rect:
         serializedVersion: 2
-        x: 104
+        x: 108
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -445,9 +445,9 @@ TextureImporter:
       name: Shooter_5
       rect:
         serializedVersion: 2
-        x: 130
+        x: 135
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -466,9 +466,9 @@ TextureImporter:
       name: Shooter_6
       rect:
         serializedVersion: 2
-        x: 156
+        x: 162
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -487,9 +487,9 @@ TextureImporter:
       name: Shooter_7
       rect:
         serializedVersion: 2
-        x: 182
+        x: 189
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -508,9 +508,9 @@ TextureImporter:
       name: Shooter_8
       rect:
         serializedVersion: 2
-        x: 208
+        x: 216
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -529,9 +529,9 @@ TextureImporter:
       name: Shooter_9
       rect:
         serializedVersion: 2
-        x: 234
+        x: 243
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -550,9 +550,9 @@ TextureImporter:
       name: Shooter_10
       rect:
         serializedVersion: 2
-        x: 260
+        x: 270
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -571,9 +571,9 @@ TextureImporter:
       name: Shooter_11
       rect:
         serializedVersion: 2
-        x: 286
+        x: 297
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -592,9 +592,9 @@ TextureImporter:
       name: Shooter_12
       rect:
         serializedVersion: 2
-        x: 312
+        x: 324
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -613,9 +613,9 @@ TextureImporter:
       name: Shooter_13
       rect:
         serializedVersion: 2
-        x: 338
+        x: 351
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -634,9 +634,9 @@ TextureImporter:
       name: Shooter_14
       rect:
         serializedVersion: 2
-        x: 364
+        x: 378
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -655,9 +655,9 @@ TextureImporter:
       name: Shooter_15
       rect:
         serializedVersion: 2
-        x: 390
+        x: 405
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -676,9 +676,9 @@ TextureImporter:
       name: Shooter_16
       rect:
         serializedVersion: 2
-        x: 416
+        x: 432
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -697,9 +697,9 @@ TextureImporter:
       name: Shooter_17
       rect:
         serializedVersion: 2
-        x: 442
+        x: 459
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -718,9 +718,9 @@ TextureImporter:
       name: Shooter_18
       rect:
         serializedVersion: 2
-        x: 468
+        x: 486
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -739,9 +739,9 @@ TextureImporter:
       name: Shooter_19
       rect:
         serializedVersion: 2
-        x: 494
+        x: 513
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -760,9 +760,9 @@ TextureImporter:
       name: Shooter_20
       rect:
         serializedVersion: 2
-        x: 520
+        x: 540
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -781,9 +781,9 @@ TextureImporter:
       name: Shooter_21
       rect:
         serializedVersion: 2
-        x: 546
+        x: 567
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -802,9 +802,9 @@ TextureImporter:
       name: Shooter_22
       rect:
         serializedVersion: 2
-        x: 572
+        x: 594
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -823,9 +823,9 @@ TextureImporter:
       name: Shooter_23
       rect:
         serializedVersion: 2
-        x: 598
+        x: 621
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -844,9 +844,9 @@ TextureImporter:
       name: Shooter_24
       rect:
         serializedVersion: 2
-        x: 624
+        x: 648
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -865,9 +865,9 @@ TextureImporter:
       name: Shooter_25
       rect:
         serializedVersion: 2
-        x: 650
+        x: 675
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -886,9 +886,9 @@ TextureImporter:
       name: Shooter_26
       rect:
         serializedVersion: 2
-        x: 676
+        x: 702
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -907,9 +907,9 @@ TextureImporter:
       name: Shooter_27
       rect:
         serializedVersion: 2
-        x: 702
+        x: 729
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -928,9 +928,9 @@ TextureImporter:
       name: Shooter_28
       rect:
         serializedVersion: 2
-        x: 728
+        x: 756
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -949,9 +949,9 @@ TextureImporter:
       name: Shooter_29
       rect:
         serializedVersion: 2
-        x: 754
+        x: 783
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -970,9 +970,9 @@ TextureImporter:
       name: Shooter_30
       rect:
         serializedVersion: 2
-        x: 780
+        x: 810
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -991,9 +991,9 @@ TextureImporter:
       name: Shooter_31
       rect:
         serializedVersion: 2
-        x: 806
+        x: 837
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1012,9 +1012,9 @@ TextureImporter:
       name: Shooter_32
       rect:
         serializedVersion: 2
-        x: 832
+        x: 864
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1033,9 +1033,9 @@ TextureImporter:
       name: Shooter_33
       rect:
         serializedVersion: 2
-        x: 858
+        x: 891
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1054,9 +1054,9 @@ TextureImporter:
       name: Shooter_34
       rect:
         serializedVersion: 2
-        x: 884
+        x: 918
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1075,9 +1075,9 @@ TextureImporter:
       name: Shooter_35
       rect:
         serializedVersion: 2
-        x: 910
+        x: 945
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1096,9 +1096,9 @@ TextureImporter:
       name: Shooter_36
       rect:
         serializedVersion: 2
-        x: 936
+        x: 972
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1117,9 +1117,9 @@ TextureImporter:
       name: Shooter_37
       rect:
         serializedVersion: 2
-        x: 962
+        x: 999
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1138,9 +1138,9 @@ TextureImporter:
       name: Shooter_38
       rect:
         serializedVersion: 2
-        x: 988
+        x: 1026
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1159,9 +1159,9 @@ TextureImporter:
       name: Shooter_39
       rect:
         serializedVersion: 2
-        x: 1014
+        x: 1053
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1180,9 +1180,9 @@ TextureImporter:
       name: Shooter_40
       rect:
         serializedVersion: 2
-        x: 1040
+        x: 1080
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1201,9 +1201,9 @@ TextureImporter:
       name: Shooter_41
       rect:
         serializedVersion: 2
-        x: 1066
+        x: 1107
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1222,9 +1222,9 @@ TextureImporter:
       name: Shooter_42
       rect:
         serializedVersion: 2
-        x: 1092
+        x: 1134
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1243,9 +1243,9 @@ TextureImporter:
       name: Shooter_43
       rect:
         serializedVersion: 2
-        x: 1118
+        x: 1161
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1264,9 +1264,9 @@ TextureImporter:
       name: Shooter_44
       rect:
         serializedVersion: 2
-        x: 1144
+        x: 1188
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1285,9 +1285,9 @@ TextureImporter:
       name: Shooter_45
       rect:
         serializedVersion: 2
-        x: 1170
+        x: 1215
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1306,9 +1306,9 @@ TextureImporter:
       name: Shooter_46
       rect:
         serializedVersion: 2
-        x: 1196
+        x: 1242
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1327,9 +1327,9 @@ TextureImporter:
       name: Shooter_47
       rect:
         serializedVersion: 2
-        x: 1222
+        x: 1269
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1348,9 +1348,9 @@ TextureImporter:
       name: Shooter_48
       rect:
         serializedVersion: 2
-        x: 1248
+        x: 1296
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1369,9 +1369,9 @@ TextureImporter:
       name: Shooter_49
       rect:
         serializedVersion: 2
-        x: 1274
+        x: 1323
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1390,9 +1390,9 @@ TextureImporter:
       name: Shooter_50
       rect:
         serializedVersion: 2
-        x: 1300
+        x: 1350
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1411,9 +1411,9 @@ TextureImporter:
       name: Shooter_51
       rect:
         serializedVersion: 2
-        x: 1326
+        x: 1377
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1432,9 +1432,9 @@ TextureImporter:
       name: Shooter_52
       rect:
         serializedVersion: 2
-        x: 1352
+        x: 1404
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1453,9 +1453,9 @@ TextureImporter:
       name: Shooter_53
       rect:
         serializedVersion: 2
-        x: 1378
+        x: 1431
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1474,9 +1474,9 @@ TextureImporter:
       name: Shooter_54
       rect:
         serializedVersion: 2
-        x: 1404
+        x: 1458
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1495,9 +1495,9 @@ TextureImporter:
       name: Shooter_55
       rect:
         serializedVersion: 2
-        x: 1430
+        x: 1485
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1516,9 +1516,9 @@ TextureImporter:
       name: Shooter_56
       rect:
         serializedVersion: 2
-        x: 1456
+        x: 1512
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1537,9 +1537,9 @@ TextureImporter:
       name: Shooter_57
       rect:
         serializedVersion: 2
-        x: 1482
+        x: 1539
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1558,9 +1558,9 @@ TextureImporter:
       name: Shooter_58
       rect:
         serializedVersion: 2
-        x: 1508
+        x: 1566
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1579,9 +1579,9 @@ TextureImporter:
       name: Shooter_59
       rect:
         serializedVersion: 2
-        x: 1534
+        x: 1593
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1600,9 +1600,9 @@ TextureImporter:
       name: Shooter_60
       rect:
         serializedVersion: 2
-        x: 1560
+        x: 1620
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1621,9 +1621,9 @@ TextureImporter:
       name: Shooter_61
       rect:
         serializedVersion: 2
-        x: 1586
+        x: 1647
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1642,9 +1642,9 @@ TextureImporter:
       name: Shooter_62
       rect:
         serializedVersion: 2
-        x: 1612
+        x: 1674
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1663,9 +1663,9 @@ TextureImporter:
       name: Shooter_63
       rect:
         serializedVersion: 2
-        x: 1638
+        x: 1701
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1684,9 +1684,9 @@ TextureImporter:
       name: Shooter_64
       rect:
         serializedVersion: 2
-        x: 1664
+        x: 1728
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1705,9 +1705,9 @@ TextureImporter:
       name: Shooter_65
       rect:
         serializedVersion: 2
-        x: 1690
+        x: 1755
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1726,9 +1726,9 @@ TextureImporter:
       name: Shooter_66
       rect:
         serializedVersion: 2
-        x: 1716
+        x: 1782
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1747,9 +1747,9 @@ TextureImporter:
       name: Shooter_67
       rect:
         serializedVersion: 2
-        x: 1742
+        x: 1809
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1768,9 +1768,9 @@ TextureImporter:
       name: Shooter_68
       rect:
         serializedVersion: 2
-        x: 1768
+        x: 1836
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1789,9 +1789,9 @@ TextureImporter:
       name: Shooter_69
       rect:
         serializedVersion: 2
-        x: 1794
+        x: 1863
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1810,9 +1810,9 @@ TextureImporter:
       name: Shooter_70
       rect:
         serializedVersion: 2
-        x: 1820
+        x: 1890
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1831,9 +1831,9 @@ TextureImporter:
       name: Shooter_71
       rect:
         serializedVersion: 2
-        x: 1846
+        x: 1917
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1852,9 +1852,9 @@ TextureImporter:
       name: Shooter_72
       rect:
         serializedVersion: 2
-        x: 1872
+        x: 1944
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1873,9 +1873,9 @@ TextureImporter:
       name: Shooter_73
       rect:
         serializedVersion: 2
-        x: 1898
+        x: 1971
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1894,9 +1894,9 @@ TextureImporter:
       name: Shooter_74
       rect:
         serializedVersion: 2
-        x: 1924
+        x: 1998
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1915,9 +1915,9 @@ TextureImporter:
       name: Shooter_75
       rect:
         serializedVersion: 2
-        x: 1950
+        x: 2025
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1936,9 +1936,9 @@ TextureImporter:
       name: Shooter_76
       rect:
         serializedVersion: 2
-        x: 1976
+        x: 2052
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1957,9 +1957,9 @@ TextureImporter:
       name: Shooter_77
       rect:
         serializedVersion: 2
-        x: 2002
+        x: 2079
         y: 0
-        width: 26
+        width: 27
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
