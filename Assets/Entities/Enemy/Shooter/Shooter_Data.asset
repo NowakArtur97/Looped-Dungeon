@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Shooter_Data
   m_EditorClassIdentifier: 
   moveVelocity: 2
-  numberOfIdleCycles: 3
+  maxHealth: 30
+  numberOfIdleCycles: 4
+  maxAgroRange: 5
+  minAgroRange: 2

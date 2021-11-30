@@ -28,7 +28,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             IdleState = new EnemyIdleState(this, "idle");
             MoveState = new EnemyMoveState(this, "move");
             PlayerDetectedState = new EnemyPlayerDetectedState(this, "playerDetected");
-            LookForPlayerState = new EnemyLookForPlayerState(this, "lokForPlayer");
+            LookForPlayerState = new EnemyLookForPlayerState(this, "lookForPlayer");
         }
 
         protected override void Start()
