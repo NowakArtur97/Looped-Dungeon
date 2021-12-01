@@ -5628,7 +5628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1251756588
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6914,6 +6914,7 @@ GameObject:
   - component: {fileID: 1879159955}
   - component: {fileID: 1879159959}
   - component: {fileID: 1879159958}
+  - component: {fileID: 1879159960}
   - component: {fileID: 1879159957}
   - component: {fileID: 1879159956}
   m_Layer: 8
@@ -7030,6 +7031,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c8c56b2ea8d97146bf0c01efa3cf473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1879159960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879159954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a53348f9dcf07418b646cb45a8c1fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1894089854
@@ -7227,9 +7240,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1943009884}
+  - component: {fileID: 1943009886}
   - component: {fileID: 1943009885}
-  m_Layer: 7
-  m_Name: Inventory
+  m_Layer: 8
+  m_Name: Damage Hitboxes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7249,7 +7263,48 @@ Transform:
   m_Father: {fileID: 1979497374}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1943009885
+--- !u!60 &1943009885
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943009883}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.6172476, y: 0.35826182}
+      - {x: 0.4597783, y: 0.5382794}
+      - {x: 0.1140244, y: 0.635738}
+      - {x: -0.3266015, y: 0.41796952}
+      - {x: -0.5233643, y: 0.23462701}
+      - {x: -0.63730764, y: 0.05857253}
+      - {x: -0.6132221, y: -1.0231878}
+      - {x: -0.49490643, y: 0.011766553}
+      - {x: 0.13723087, y: 0.49933028}
+      - {x: 0.6657461, y: -0.067189395}
+      - {x: 0.5953218, y: -0.6328924}
+      - {x: 0.48444057, y: -0.8184551}
+      - {x: 0.3850975, y: -1.0166336}
+      - {x: 0.6556492, y: -1.0121446}
+      - {x: 0.82629704, y: -0.78908813}
+      - {x: 0.95776784, y: -0.18514472}
+--- !u!114 &1943009886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7258,7 +7313,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1943009883}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be13a9f3d5080f84f9106f3be4fdc728, type: 3}
+  m_Script: {fileID: 11500000, guid: f37bd6c91f57be1458bb2b3c7926a9d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1979497373

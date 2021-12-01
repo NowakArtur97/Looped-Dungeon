@@ -16,7 +16,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 // TODO: EnemyPlayerDetectedState: Change based on Enemy
                 if (IsPlayerInMinAgroRange)
                 {
-
+                    Entity.StateMachine.ChangeState(Enemy.MeleeAttackState);
                 }
                 // TODO: EnemyPlayerDetectedState: Change based on Enemy
                 else if (IsPlayerInMaxAgroRange)
