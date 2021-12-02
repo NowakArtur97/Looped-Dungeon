@@ -44,5 +44,12 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         }
 
         public abstract void TriggerAttack();
+
+        public override void AnimationFinishedTrigger()
+        {
+            base.AnimationFinishedTrigger();
+
+            IsAbilityFinished = true;
+        }
     }
 }

@@ -4,18 +4,16 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 {
     public class EnemyMeleeAttackState : EnemyAttackState
     {
-        private CloseRangeAbility _mainAbility;
+        private CloseCombatEnemy _closeCombatEnemy;
 
-        public EnemyMeleeAttackState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
-        { }
-
-        public override void TriggerAttack() => Enemy.HitboxesToEnemyAttackState.ToDamage.ForEach(damagable => damagable.Damage(Enemy.EnemyData.meleeAttackDamage));
-
-        public override void AnimationFinishedTrigger()
+        public EnemyMeleeAttackState(CloseCombatEnemy entity, string animationBoolName) : base(entity, animationBoolName)
         {
-            base.AnimationFinishedTrigger();
-
-            IsAbilityFinished = true;
+            _closeCombatEnemy = entity;
         }
+
+        public override void TriggerAttack() => DamageEnemies();
+
+        private void DamageEnemies() => Enemy.HitboxesToEnemyAttackState.ToDamage
+            .ForEach(damagable => damagable.Damage(_closeCombatEnemy.MeleeAttackDamage));
     }
 }

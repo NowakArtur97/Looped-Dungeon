@@ -15,5 +15,5 @@ MonoBehaviour:
   moveVelocity: 2
   maxHealth: 30
   numberOfIdleCycles: 4
-  maxAgroRange: 5
-  minAgroRange: 2
+  maxAgroRange: 10
+  minAgroRange: 5
