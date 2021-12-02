@@ -14,7 +14,10 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
         public override void TriggerAttack() => SpawnProjectile();
 
-        private void SpawnProjectile() => GameObject.Instantiate(_rangedCombatEnemy.Projectile,
-            _rangedCombatEnemy.ProjectileSpawnPosition.position, Quaternion.identity);
+        private void SpawnProjectile()
+        {
+            GameObject projectile = GameObject.Instantiate(_rangedCombatEnemy.Projectile, _rangedCombatEnemy.ProjectileSpawnPosition.position, Quaternion.identity);
+            projectile.GetComponent<Projectile>().CheckIfShouldFlip(Entity.CoreContainer.Movement.FacingDirection);
+        }
     }
 }

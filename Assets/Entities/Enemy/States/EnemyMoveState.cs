@@ -15,7 +15,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             if (!IsExitingState)
             {
-                if (IsPlayerInMinAgroRange)
+                if (IsPlayerInMaxAgroRange)
                 {
                     Entity.StateMachine.ChangeState(Enemy.PlayerDetectedState);
                 }

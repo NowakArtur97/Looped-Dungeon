@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1827537977900376388}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Player Check
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2030239674961014275}
   - component: {fileID: 5707531287814218960}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Collision Senses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,13 +81,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _wallCheck: {fileID: 8714763027692245782}
-  _wallCheckRadius: 0.25
-  _wallCheckDistance: 0.25
+  _wallCheckRadius: 0.05
+  _wallCheckDistance: 0.05
   _whatIsWall:
     serializedVersion: 2
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 1827537977900376388}
-  _enemyCollisonCheckRadius: 2
+  _enemyCollisonCheckRadius: 0.05
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 3867917569829882505}
   - component: {fileID: 6283839809684538239}
   - component: {fileID: 814369000831249064}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ Animator:
   m_GameObject: {fileID: 2669653872400981946}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 07b602ef93ddf6a459dd8578b9823324, type: 2}
+  m_Controller: {fileID: 9100000, guid: dfbd996d80b07574ab0f74739ed788ec, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1728030815968394530}
   - component: {fileID: 1314781128098379731}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8714763027692245782}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Wall Check
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
@@ -290,7 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6885133847985752885}
   - component: {fileID: 8476688168720993699}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Core Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,8 +337,8 @@ GameObject:
   - component: {fileID: 9020110962671438681}
   - component: {fileID: 4182870323754794595}
   - component: {fileID: 5922072752446415406}
-  - component: {fileID: 4105001554410401322}
-  m_Layer: 0
+  - component: {fileID: 7441722934472312190}
+  m_Layer: 11
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &4105001554410401322
+--- !u!61 &7441722934472312190
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -404,10 +404,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.38752222, y: 0.21395597}
+  m_Offset: {x: 0.56758636, y: -0.15808791}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -418,5 +418,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.31762385, y: 0.058199823}
+  m_Size: {x: 0.20111191, y: 0.062336028}
   m_EdgeRadius: 0

@@ -21,29 +21,27 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             // TODO: Projectile: Weapon: Enemy Move State: rb.angularVelocity = 0; rb.gravityScale = 0; in Awake instead of setting every frame
             _coreContainer.Movement.SetVelocityX(_coreContainer.Movement.FacingDirection * _data.moveSpeed);
-
-            if (_colidedEnemy)
-            {
-                IDamagable toDamage = _colidedEnemy.GetComponentInChildren<IDamagable>();
-                if (toDamage != null)
-                {
-                    toDamage.Damage(_data.damageAmount);
-                    Destroy(gameObject);
-                }
-            }
-            if (_isTouchingWall)
-            {
-                Destroy(gameObject);
-            }
         }
 
         private void FixedUpdate() => DoChecks();
 
         private void DoChecks()
         {
-            Debug.Log(_coreContainer.CollisionSenses);
             _isTouchingWall = _coreContainer.CollisionSenses.IsTouchingWall;
-            _colidedEnemy = _coreContainer.CollisionSenses.ColidedEnemy.gameObject;
+            _colidedEnemy = _coreContainer.CollisionSenses.ColidedEnemy?.gameObject;
         }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            IDamagable toDamage = collision.gameObject.GetComponentInChildren<IDamagable>();
+            if (toDamage != null)
+            {
+                toDamage.Damage(_data.damageAmount);
+            }
+
+            Destroy(gameObject);
+        }
+
+        public void CheckIfShouldFlip(int facingDirection) => _coreContainer.Movement.CheckIfShouldFlip(facingDirection);
     }
 }
