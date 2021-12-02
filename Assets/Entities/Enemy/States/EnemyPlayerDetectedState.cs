@@ -7,6 +7,13 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         public EnemyPlayerDetectedState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
         { }
 
+        public override void Enter()
+        {
+            base.Enter();
+
+            Entity.CoreContainer.Movement.SetVelocityZero();
+        }
+
         public override void LogicUpdate()
         {
             base.LogicUpdate();

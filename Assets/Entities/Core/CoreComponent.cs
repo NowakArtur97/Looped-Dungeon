@@ -4,11 +4,11 @@ namespace NowakArtur97.LoopedDungeon.Core
 {
     public class CoreComponent : MonoBehaviour
     {
-        protected BaseCore CoreContainer { get; private set; }
+        protected BaseCoreContainer CoreContainer { get; private set; }
 
         protected virtual void Awake()
         {
-            CoreContainer = transform.parent.GetComponent<BaseCore>();
+            CoreContainer = transform.parent.GetComponent<BaseCoreContainer>();
 
             if (CoreContainer == null)
             {

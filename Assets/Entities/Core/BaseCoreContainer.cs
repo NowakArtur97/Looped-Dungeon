@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
 {
-    public abstract class BaseCore : MonoBehaviour
+    public class BaseCoreContainer : MonoBehaviour
     {
         private CollisionSenses _collisionSenses;
 

@@ -6,13 +6,6 @@ namespace NowakArtur97.LoopedDungeon.Core
 {
     public abstract class RangedCombatEnemy : Enemy
     {
-        // TODO: RangedCombatEnemy: Move to scriptable object 
-        [SerializeField] private float _rangedAttackDamage = 8;
-        public float RangedAttackDamage
-        {
-            get => _rangedAttackDamage;
-            private set => _rangedAttackDamage = value;
-        }
         [SerializeField] private GameObject _projectile;
         public GameObject Projectile
         {
@@ -32,6 +25,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             base.Awake();
 
+            PlayerDetectedState = new RangedCombatEnemyPlayerDetectedState(this, "playerDetected");
             RangedAttackState = new EnemyRangedAttackState(this, "rangedAttack");
         }
     }

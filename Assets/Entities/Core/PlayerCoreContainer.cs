@@ -2,7 +2,7 @@ using NowakArtur97.LoopedDungeon.Util;
 
 namespace NowakArtur97.LoopedDungeon.Core
 {
-    public class PlayerCoreContainer : BaseCore
+    public class PlayerCoreContainer : BaseCoreContainer
     {
         private Input _input;
 

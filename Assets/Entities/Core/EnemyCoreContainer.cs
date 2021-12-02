@@ -2,7 +2,7 @@ using NowakArtur97.LoopedDungeon.Util;
 
 namespace NowakArtur97.LoopedDungeon.Core
 {
-    public class EnemyCoreContainer : BaseCore
+    public class EnemyCoreContainer : BaseCoreContainer
     {
         private EnemySenses _enemySenses;
 

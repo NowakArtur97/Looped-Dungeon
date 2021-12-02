@@ -2,7 +2,7 @@ using NowakArtur97.LoopedDungeon.Util;
 
 namespace NowakArtur97.LoopedDungeon.Core
 {
-    public class WeaponCoreContrainer : BaseCore
+    public class WeaponCoreContrainer : BaseCoreContainer
     {
         private AnimationToWeapon _animationToWeapon;
 

@@ -1,6 +1,4 @@
 using NowakArtur97.LoopedDungeon.Core;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine

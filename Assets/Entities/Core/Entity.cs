@@ -12,13 +12,13 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _data = value;
         }
 
-        public BaseCore CoreContainer { get; private set; }
+        public BaseCoreContainer CoreContainer { get; private set; }
         public FiniteStateMachine StateMachine { get; private set; }
         public EntityStats EntityStats { get; private set; }
 
         protected virtual void Awake()
         {
-            CoreContainer = GetComponentInChildren<BaseCore>();
+            CoreContainer = GetComponentInChildren<BaseCoreContainer>();
 
             StateMachine = new FiniteStateMachine();
             EntityStats = new EntityStats(_data);
