@@ -4,6 +4,8 @@ namespace NowakArtur97.LoopedDungeon.Core
 {
     public class Shield : Weapon
     {
+        [SerializeField] private GameObject _tossUpHitColliderGameObject;
+
         private TossUpAbility _secondaryAbility;
 
         protected override void InitializeAbilities()
@@ -24,6 +26,13 @@ namespace NowakArtur97.LoopedDungeon.Core
             base.OnTriggerExit2D(collision);
 
             _secondaryAbility.IgnoreTarget(collision);
+        }
+
+        public override void AnimationTrigger()
+        {
+            base.AnimationTrigger();
+
+            _tossUpHitColliderGameObject.SetActive(!_tossUpHitColliderGameObject.activeSelf);
         }
     }
 }
