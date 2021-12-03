@@ -13,11 +13,18 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             _rangedCombatEnemy = entity;
         }
 
+        public override void Exit()
+        {
+            base.Exit();
+
+            ShouldIgnoreClosePlayer = false;
+        }
+
         public override void LogicUpdate()
         {
-            Entity.CoreContainer.Movement.SetVelocityX(_rangedCombatEnemy.BackOffVelocity * Entity.CoreContainer.Movement.FacingDirection);
-
             base.LogicUpdate();
+
+            Entity.CoreContainer.Movement.SetVelocityX(_rangedCombatEnemy.BackOffVelocity * Entity.CoreContainer.Movement.FacingDirection);
 
             if (!IsExitingState)
             {
