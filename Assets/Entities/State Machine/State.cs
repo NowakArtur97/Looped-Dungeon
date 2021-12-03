@@ -1,4 +1,5 @@
 using NowakArtur97.LoopedDungeon.Core;
+using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
@@ -8,6 +9,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
         protected bool IsExitingState { get; private set; }
         protected bool IsAnimationFinished { get; private set; }
+        protected float StateEnterTime { get; private set; }
         private string _animationBoolName;
 
         public State(Entity entity, string animationBoolName)
@@ -20,6 +22,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             IsExitingState = false;
             IsAnimationFinished = false;
+            StateEnterTime = Time.time;
 
             Entity.CoreContainer.AnimationToStateMachine.CurrentState = this;
 

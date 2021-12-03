@@ -3430,7 +3430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813ddec91a92adf428ab3e6c04d33a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recordingTime: 10
+  _recordingTime: 100
 --- !u!4 &716811599
 Transform:
   m_ObjectHideFlags: 0
@@ -5743,6 +5743,8 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: d8c9dc8be70a1db44a5456c2c7b214ec, type: 2}
   _projectile: {fileID: 9119815843116936243, guid: 7026db52964304c45831816cbe373c79, type: 3}
   _projectileSpawnPosition: {fileID: 2140345101}
+  _backOffVelocity: 2
+  _backOffTime: 4
 --- !u!4 &1251756591
 Transform:
   m_ObjectHideFlags: 0
@@ -5751,7 +5753,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251756587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.47, y: -1.497, z: 0}
+  m_LocalPosition: {x: 4.43, y: -1.497, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1144258011}
@@ -6273,7 +6275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7891f9b52bfaab047a8ae913612c5e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _replayingTime: 10
+  _replayingTime: 100
 --- !u!4 &1567839813
 Transform:
   m_ObjectHideFlags: 0

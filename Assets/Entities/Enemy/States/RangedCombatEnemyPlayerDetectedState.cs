@@ -17,12 +17,12 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             if (!IsExitingState)
             {
-                //if (IsPlayerInMinAgroRange)
-                //{
-                //    //Entity.StateMachine.ChangeState(_rangedCombatEnemy.BackOffState);
-                //}
-                //else 
-                if (IsPlayerInMaxAgroRange)
+                if (IsPlayerInMinAgroRange)
+                {
+                    Entity.CoreContainer.Movement.Flip();
+                    Entity.StateMachine.ChangeState(_rangedCombatEnemy.BackOffState);
+                }
+                else if (IsPlayerInMaxAgroRange)
                 {
                     Entity.StateMachine.ChangeState(_rangedCombatEnemy.RangedAttackState);
                 }
