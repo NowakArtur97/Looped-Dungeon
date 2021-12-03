@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15714685bef3beb49ad75f8616f7c976, type: 3}
   m_Name: Sword_ThrowableData
   m_EditorClassIdentifier: 
-  damageAmount: 10
+  damageAmount: 8
   throwableLayerName: Throwable
   thrownSpeed: 10

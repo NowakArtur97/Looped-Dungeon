@@ -22,7 +22,6 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 {
                     if (IsCloseToWallBehind || !IsGroundedBehind)
                     {
-                        Debug.Log(!IsGroundedBehind);
                         _rangedCombatEnemy.BackOffState.ShouldIgnoreClosePlayer = true;
                     }
                     else
