@@ -13,18 +13,5 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             Entity.CoreContainer.Movement.SetVelocityZero();
         }
-
-        public override void LogicUpdate()
-        {
-            base.LogicUpdate();
-
-            if (!IsExitingState)
-            {
-                if (!IsPlayerInMaxAgroRange)
-                {
-                    Entity.StateMachine.ChangeState(Enemy.LookForPlayerState);
-                }
-            }
-        }
     }
 }

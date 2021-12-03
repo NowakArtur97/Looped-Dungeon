@@ -25,6 +25,10 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 {
                     Entity.StateMachine.ChangeState(_closeCombatEnemy.ChargePlayerState);
                 }
+                else if (!IsPlayerInMaxAgroRange)
+                {
+                    Entity.StateMachine.ChangeState(Enemy.LookForPlayerState);
+                }
             }
         }
     }

@@ -1,4 +1,5 @@
 using NowakArtur97.LoopedDungeon.Core;
+using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
@@ -19,12 +20,24 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             {
                 if (IsPlayerInMinAgroRange)
                 {
-                    Entity.CoreContainer.Movement.Flip();
+                    if (IsCloseToWallBehind || !IsGroundedBehind)
+                    {
+                        Debug.Log(!IsGroundedBehind);
+                        _rangedCombatEnemy.BackOffState.ShouldIgnoreClosePlayer = true;
+                    }
+                    else
+                    {
+                        Entity.CoreContainer.Movement.Flip();
+                    }
                     Entity.StateMachine.ChangeState(_rangedCombatEnemy.BackOffState);
                 }
                 else if (IsPlayerInMaxAgroRange)
                 {
                     Entity.StateMachine.ChangeState(_rangedCombatEnemy.RangedAttackState);
+                }
+                else if (!IsPlayerInMaxAgroRange)
+                {
+                    Entity.StateMachine.ChangeState(Enemy.LookForPlayerState);
                 }
             }
         }

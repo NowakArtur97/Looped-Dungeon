@@ -5,7 +5,9 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
     public abstract class GroundedState : State
     {
         protected bool IsGrounded { get; private set; }
-        protected bool IsTouchingWall { get; private set; }
+        protected bool IsGroundedBehind { get; private set; }
+        protected bool IsCloseToWall { get; private set; }
+        protected bool IsCloseToWallBehind { get; private set; }
 
         public GroundedState(Entity entity, string animationBoolName) : base(entity, animationBoolName)
         { }
@@ -15,7 +17,9 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             base.DoChecks();
 
             IsGrounded = Entity.CoreContainer.CollisionSenses.IsGrounded;
-            IsTouchingWall = Entity.CoreContainer.CollisionSenses.IsCloseToWall;
+            IsGroundedBehind = Entity.CoreContainer.CollisionSenses.IsGroundedBehind;
+            IsCloseToWall = Entity.CoreContainer.CollisionSenses.IsCloseToWall;
+            IsCloseToWallBehind = Entity.CoreContainer.CollisionSenses.IsCloseToWallBehind;
         }
     }
 }

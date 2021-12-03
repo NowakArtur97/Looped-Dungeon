@@ -19,9 +19,11 @@ namespace NowakArtur97.LoopedDungeon.Core
         [SerializeField] private LayerMask _whatIsEnemy;
 
         public bool IsGrounded => Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _whatIsGround);
+        public bool IsGroundedBehind => Physics2D.OverlapCircle(new Vector2(-_groundCheck.position.x, _groundCheck.position.y), _groundCheckRadius, _whatIsGround);
 
         public bool IsTouchingWall => Physics2D.OverlapCircle(_wallCheck.position, _wallCheckRadius, _whatIsGround);
         public bool IsCloseToWall => Physics2D.Raycast(_wallCheck.position, transform.right, _wallCheckDistance, _whatIsGround);
+        public bool IsCloseToWallBehind => Physics2D.Raycast(new Vector2(-_wallCheck.position.x, _wallCheck.position.y), Vector2.right * -1, _wallCheckDistance, _whatIsGround);
 
         public Collider2D ColidedEnemy => Physics2D.OverlapCircle(_enemyCollisonCheck.position, _enemyCollisonCheckRadius, _whatIsEnemy);
     }

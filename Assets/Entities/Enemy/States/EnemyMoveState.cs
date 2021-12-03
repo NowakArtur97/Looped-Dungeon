@@ -19,7 +19,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 {
                     Entity.StateMachine.ChangeState(Enemy.PlayerDetectedState);
                 }
-                else if (!IsGrounded || IsTouchingWall)
+                else if (!IsGrounded || IsCloseToWall)
                 {
                     Entity.StateMachine.ChangeState(Enemy.IdleState);
                 }
