@@ -11,7 +11,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             // TODO: Combat: Spawn particle effect
             // TODO: Combat: If dead change to dead state
             // TODO: Combat: From time to time change to Hurt state
-            Debug.Log(damageAmount);
+            Debug.Log(gameObject.transform.parent.parent.gameObject.name);
             _entityStats.Damage(damageAmount);
         }
 
