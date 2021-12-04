@@ -2984,7 +2984,6 @@ GameObject:
   - component: {fileID: 542859256}
   - component: {fileID: 542859255}
   - component: {fileID: 542859254}
-  - component: {fileID: 542859253}
   m_Layer: 9
   m_Name: Animation
   m_TagString: Untagged
@@ -3006,32 +3005,6 @@ Transform:
   m_Father: {fileID: 649132815}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &542859253
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542859251}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.22264373, y: -0.1872293}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 3.0295858, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.32240748, y: 0.49623376}
-  m_EdgeRadius: 0
 --- !u!212 &542859254
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3457,7 +3430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813ddec91a92adf428ab3e6c04d33a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recordingTime: 10
+  _recordingTime: 15
 --- !u!4 &716811599
 Transform:
   m_ObjectHideFlags: 0
@@ -4319,7 +4292,7 @@ GameObject:
   - component: {fileID: 881729083}
   - component: {fileID: 881729085}
   - component: {fileID: 881729084}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Damage Hitboxes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4896,7 +4869,6 @@ GameObject:
   - component: {fileID: 1159967388}
   - component: {fileID: 1159967385}
   - component: {fileID: 1159967384}
-  - component: {fileID: 1159967389}
   m_Layer: 9
   m_Name: Animation
   m_TagString: Untagged
@@ -5028,32 +5000,6 @@ MonoBehaviour:
   _masterAnimator: {fileID: 1472407397}
   _childAnimator: {fileID: 1159967385}
   IsSynchronized: 0
---- !u!61 &1159967389
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159967382}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.030325413, y: -0.46816498}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 2}
-    newSize: {x: 3.0295858, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.81309175, y: 0.18860304}
-  m_EdgeRadius: 0
 --- !u!1 &1184744319
 GameObject:
   m_ObjectHideFlags: 0
@@ -5409,7 +5355,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199039144}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -6306,7 +6252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7891f9b52bfaab047a8ae913612c5e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _replayingTime: 10
+  _replayingTime: 15
 --- !u!4 &1567839813
 Transform:
   m_ObjectHideFlags: 0
@@ -7343,7 +7289,7 @@ GameObject:
   - component: {fileID: 1943009884}
   - component: {fileID: 1943009886}
   - component: {fileID: 1943009885}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Damage Hitboxes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
