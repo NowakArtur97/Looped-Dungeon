@@ -15,6 +15,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         public EnemySleepState EnemySleepState { get; private set; }
         public EnemyStartFallingState StartFallingState { get; private set; }
         public EnemyFallState FallState { get; private set; }
+        public EnemyLandState LandState { get; private set; }
 
         protected override void Awake()
         {
@@ -23,6 +24,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             EnemySleepState = new EnemySleepState(this, "sleep");
             StartFallingState = new EnemyStartFallingState(this, "startFalling");
             FallState = new EnemyFallState(this, "fall");
+            LandState = new EnemyLandState(this, "land");
 
             DefaultState = EnemySleepState;
         }

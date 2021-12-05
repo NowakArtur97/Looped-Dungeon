@@ -1,5 +1,4 @@
 using NowakArtur97.LoopedDungeon.Core;
-using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
@@ -22,8 +21,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             {
                 if (IsGrounded)
                 {
-                    Debug.Log("Land State");
-                    //Entity.StateMachine.ChangeState(_stalker.LandState);
+                    Entity.StateMachine.ChangeState(_stalker.LandState);
                 }
             }
         }

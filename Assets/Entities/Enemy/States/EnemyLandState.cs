@@ -2,14 +2,10 @@ using NowakArtur97.LoopedDungeon.Core;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
-    public class PlayerLandState : GroundedState
+    public class EnemyLandState : EnemyGroundedState
     {
-        private Player _player;
-
-        public PlayerLandState(Player entity, string animationBoolName) : base(entity, animationBoolName)
-        {
-            _player = entity;
-        }
+        public EnemyLandState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
+        { }
 
         public override void Enter()
         {
@@ -26,7 +22,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             {
                 if (IsAnimationFinished)
                 {
-                    Entity.StateMachine.ChangeState(_player.IdleState);
+                    Entity.StateMachine.ChangeState(Enemy.LookForPlayerState);
                 }
             }
         }

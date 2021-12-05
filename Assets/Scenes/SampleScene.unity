@@ -4011,6 +4011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 05217422f4f368b429ddb7d42089ab2c, type: 2}
   _meleeAttackDamage: 11
+  _fallVelocity: 4
 --- !u!1 &750387707
 GameObject:
   m_ObjectHideFlags: 0
@@ -6136,7 +6137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1251756588
 BoxCollider2D:
   m_ObjectHideFlags: 0
