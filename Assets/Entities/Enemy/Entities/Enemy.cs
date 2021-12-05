@@ -5,6 +5,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 {
     public abstract class Enemy : Entity
     {
+        public State DefaultState { get; protected set; }
         public EnemyIdleState IdleState { get; private set; }
         public EnemyMoveState MoveState { get; private set; }
         public EnemyPlayerDetectedState PlayerDetectedState { get; protected set; }
@@ -32,6 +33,8 @@ namespace NowakArtur97.LoopedDungeon.Core
             IdleState = new EnemyIdleState(this, "idle");
             MoveState = new EnemyMoveState(this, "move");
             LookForPlayerState = new EnemyLookForPlayerState(this, "lookForPlayer");
+
+            DefaultState = IdleState;
         }
 
         protected override void Start()
@@ -41,7 +44,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             HitboxesToEnemyAttackState = GetComponentInChildren<HitboxesToEnemyAttackState>();
             AnimationToAttackStateMachine = GetComponentInChildren<AnimationToAttackStateMachine>();
 
-            StateMachine.Initialize(IdleState);
+            StateMachine.Initialize(DefaultState);
         }
 
         public virtual void OnTriggerEnter2D(Collider2D collision) { }

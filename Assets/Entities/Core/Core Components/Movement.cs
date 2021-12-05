@@ -26,6 +26,10 @@ namespace NowakArtur97.LoopedDungeon.Core
             CurrentVelocity = _myRigidbody.velocity;
         }
 
+        public void DisableGravityScale() => _myRigidbody.gravityScale = 0;
+
+        public void ResetGravityScale() => _myRigidbody.gravityScale = 1;
+
         public void SetVelocityZero()
         {
             _workspace.Set(0, 0);

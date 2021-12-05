@@ -1587,6 +1587,7 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
+  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -1725,6 +1726,7 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
+  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -2423,7 +2425,7 @@ SpriteRenderer:
   m_SortingLayerID: 470007
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: -5003585857190123393, guid: 8933b3ee81c7314449969a07c0c6bcf0, type: 3}
+  m_Sprite: {fileID: 2389856339642955073, guid: 8933b3ee81c7314449969a07c0c6bcf0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2546,6 +2548,7 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
+  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -3330,6 +3333,36 @@ Transform:
   m_Father: {fileID: 188664443}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &602824768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 602824769}
+  m_Layer: 8
+  m_Name: Player Under Check
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &602824769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602824768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.491, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1240010027}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &603280222
 GameObject:
   m_ObjectHideFlags: 0
@@ -3693,6 +3726,7 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
+  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -3909,7 +3943,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738372618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.53, y: -1.491, z: 0}
+  m_LocalPosition: {x: 3.8, y: 1.544, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 603280223}
@@ -4747,6 +4781,7 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
+  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -5018,6 +5053,7 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
+  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -5901,6 +5937,7 @@ Transform:
   m_Children:
   - {fileID: 1619318149}
   - {fileID: 1657222430}
+  - {fileID: 602824769}
   m_Father: {fileID: 603280223}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5927,11 +5964,12 @@ MonoBehaviour:
   _whatIsWall:
     serializedVersion: 2
     m_Bits: 64
-  _enemyCollisonCheck: {fileID: 0}
+  _enemyCollisonCheck: {fileID: 602824769}
   _enemyCollisonCheckRadius: 2
+  _enemyCheckDistance: 15
   _whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!1 &1244104887
 GameObject:
   m_ObjectHideFlags: 0
@@ -7261,6 +7299,7 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
+  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -7322,6 +7361,7 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
+  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -9509,43 +9549,43 @@ Tilemap:
   - first: {x: 2, y: 2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 19
+      m_TileIndex: 0
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 1073741826
   - first: {x: 3, y: 2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 21
+      m_TileIndex: 0
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 1073741826
   - first: {x: 4, y: 2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 5
-      m_TileSpriteIndex: 20
+      m_TileIndex: 0
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 1073741826
   - first: {x: 5, y: 2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 19
+      m_TileIndex: 0
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 1073741826
   - first: {x: 6, y: 2, z: 0}
     second:
       serializedVersion: 2
@@ -9938,19 +9978,19 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 4
+    m_Data: {fileID: 11400000, guid: 45c429ce2ea58374a99bf5318b66fcea, type: 2}
   - m_RefCount: 30
     m_Data: {fileID: 11400000, guid: 68ab6ca509ecdad4abadf05b845561dd, type: 2}
   - m_RefCount: 30
     m_Data: {fileID: 11400000, guid: 6e75ada4e71d00e41ac7c11c5feecc70, type: 2}
   - m_RefCount: 30
     m_Data: {fileID: 11400000, guid: a6857dab18e39c7419a77a39575f42b2, type: 2}
-  - m_RefCount: 30
+  - m_RefCount: 28
     m_Data: {fileID: 11400000, guid: f83c20c10105ce34f9e2e776b248ba79, type: 2}
-  - m_RefCount: 30
+  - m_RefCount: 29
     m_Data: {fileID: 11400000, guid: 4341615eb7f577342ba20d0933b9b6a0, type: 2}
-  - m_RefCount: 30
+  - m_RefCount: 29
     m_Data: {fileID: 11400000, guid: cfbf31a911dcd3f49829705d37fafc17, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -9979,23 +10019,23 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -426537935249436663, guid: 3b57f018fc3968f409a2d24ab63ad89f, type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: -1067426129624721788, guid: 3b57f018fc3968f409a2d24ab63ad89f, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 7959395496975931083, guid: 3b57f018fc3968f409a2d24ab63ad89f, type: 3}
   - m_RefCount: 30
     m_Data: {fileID: 4467837661482252922, guid: 0c3a55225c64c304cba49fe63aad85f2, type: 3}
   - m_RefCount: 30
     m_Data: {fileID: -5493387271290724732, guid: 0c3a55225c64c304cba49fe63aad85f2, type: 3}
   - m_RefCount: 30
     m_Data: {fileID: -5577518338541143976, guid: 0c3a55225c64c304cba49fe63aad85f2, type: 3}
-  - m_RefCount: 30
+  - m_RefCount: 28
     m_Data: {fileID: 3882080322137692777, guid: 0c3a55225c64c304cba49fe63aad85f2, type: 3}
-  - m_RefCount: 30
+  - m_RefCount: 29
     m_Data: {fileID: 3804154623869208897, guid: 0c3a55225c64c304cba49fe63aad85f2, type: 3}
-  - m_RefCount: 30
+  - m_RefCount: 29
     m_Data: {fileID: -9184414214051064790, guid: 0c3a55225c64c304cba49fe63aad85f2, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 0
@@ -10360,6 +10400,7 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
+  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
