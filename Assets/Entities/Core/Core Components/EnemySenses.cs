@@ -7,6 +7,7 @@ namespace NowakArtur97.LoopedDungeon.Core
     {
         [SerializeField] private Transform _playerCheck;
         [SerializeField] private LayerMask _whatIsPlayer;
+        [SerializeField] private float _enemyCheckDistance = 15f;
 
         public Transform PlayerCheck
         {
@@ -14,6 +15,9 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _playerCheck = value;
         }
 
-        public bool IsPlayerInAgroRange(float range) => Physics2D.Raycast(_playerCheck.position, transform.right, range, _whatIsPlayer);
+        public bool IsPlayerInAgroRange(float range) => Physics2D.Raycast(_playerCheck.position, transform.right, range, _whatIsPlayer)
+            .transform?.gameObject.tag == "Player";
+        public bool IsPlayerUnder => Physics2D.Raycast(_playerCheck.position, transform.right, _enemyCheckDistance, _whatIsPlayer)
+            .transform?.gameObject.tag == "Player";
     }
 }
