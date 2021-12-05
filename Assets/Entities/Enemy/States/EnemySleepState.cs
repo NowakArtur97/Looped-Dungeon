@@ -2,7 +2,7 @@ using NowakArtur97.LoopedDungeon.Core;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
-    public class EnemySleepState : EnemyGroundedState
+    public class EnemySleepState : State
     {
         private Stalker _stalker;
         private bool _isEnemyUnder;
@@ -36,7 +36,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             base.DoChecks();
 
-            _isEnemyUnder = Enemy.EnemyCoreContainer.CollisionSenses.IsEnemyUnder;
+            _isEnemyUnder = _stalker.EnemyCoreContainer.CollisionSenses.IsEnemyUnder;
         }
     }
 }

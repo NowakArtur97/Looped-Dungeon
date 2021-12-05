@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using NowakArtur97.LoopedDungeon.Core;
-using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
-    public class EnemyStartFallingState : EnemyGroundedState
+    public class EnemyStartFallingState : State
     {
         private Stalker _stalker;
 
@@ -29,7 +26,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             {
                 if (IsAnimationFinished)
                 {
-                    //Entity.StateMachine.ChangeState(_stalker.FallState);
+                    Entity.StateMachine.ChangeState(_stalker.FallState);
                 }
             }
         }
