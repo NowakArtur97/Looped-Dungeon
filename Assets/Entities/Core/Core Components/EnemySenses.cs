@@ -17,7 +17,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public bool IsPlayerInAgroRange(float range) => Physics2D.Raycast(_playerCheck.position, transform.right, range, _whatIsPlayer)
             .transform?.gameObject.tag == "Player";
-        public bool IsPlayerUnder => Physics2D.Raycast(_playerCheck.position, transform.right, _enemyCheckDistance, _whatIsPlayer)
+        public bool IsPlayerUnder => Physics2D.Raycast(_playerCheck.position, Vector2.down, _enemyCheckDistance, _whatIsPlayer)
             .transform?.gameObject.tag == "Player";
     }
 }
