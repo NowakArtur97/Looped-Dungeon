@@ -16,4 +16,4 @@ MonoBehaviour:
   maxHealth: 30
   numberOfIdleCycles: 2
   maxAgroRange: 10
-  minAgroRange: 2
+  minAgroRange: 1

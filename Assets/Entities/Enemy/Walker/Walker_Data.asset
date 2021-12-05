@@ -16,6 +16,4 @@ MonoBehaviour:
   maxHealth: 30
   numberOfIdleCycles: 6
   maxAgroRange: 5
-  minAgroRange: 0.2
-  meleeAttackDamage: 10
-  rangedAttackDamage: 10
+  minAgroRange: 1
