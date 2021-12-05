@@ -1587,7 +1587,6 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
-  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -1726,7 +1725,6 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
-  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -1745,7 +1743,7 @@ GameObject:
   - component: {fileID: 193681539}
   - component: {fileID: 193681538}
   - component: {fileID: 193681537}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2155,7 +2153,7 @@ GameObject:
   - component: {fileID: 242260918}
   - component: {fileID: 242260917}
   - component: {fileID: 242260919}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Toss Up Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2548,7 +2546,6 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
-  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -2669,7 +2666,7 @@ GameObject:
   - component: {fileID: 426708408}
   m_Layer: 7
   m_Name: Shield Bearer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3726,7 +3723,6 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
-  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -4026,7 +4022,7 @@ GameObject:
   - component: {fileID: 750387708}
   m_Layer: 7
   m_Name: Assassin
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4153,7 +4149,8 @@ MonoBehaviour:
   _playerCheck: {fileID: 1796818423}
   _whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 192
+  _enemyCheckDistance: 15
 --- !u!1 &779656706
 GameObject:
   m_ObjectHideFlags: 0
@@ -4782,7 +4779,6 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
-  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -5054,7 +5050,6 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
-  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -5220,7 +5215,8 @@ MonoBehaviour:
   _playerCheck: {fileID: 1128162223}
   _whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 192
+  _enemyCheckDistance: 20
 --- !u!1 &1128162222
 GameObject:
   m_ObjectHideFlags: 0
@@ -5314,7 +5310,8 @@ GameObject:
   - component: {fileID: 1159967388}
   - component: {fileID: 1159967385}
   - component: {fileID: 1159967384}
-  m_Layer: 9
+  - component: {fileID: 1159967389}
+  m_Layer: 14
   m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5445,6 +5442,32 @@ MonoBehaviour:
   _masterAnimator: {fileID: 1472407397}
   _childAnimator: {fileID: 1159967385}
   IsSynchronized: 0
+--- !u!61 &1159967389
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159967382}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 2}
+    newSize: {x: 3.0295858, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.0001, y: 0.0001}
+  m_EdgeRadius: 0
 --- !u!1 &1184744319
 GameObject:
   m_ObjectHideFlags: 0
@@ -5607,11 +5630,11 @@ GameObject:
   - component: {fileID: 1186743112}
   m_Layer: 7
   m_Name: Swordmaster
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1186743110
 Transform:
   m_ObjectHideFlags: 0
@@ -5967,7 +5990,6 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 602824769}
   _enemyCollisonCheckRadius: 2
-  _enemyCheckDistance: 15
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
@@ -6994,7 +7016,8 @@ MonoBehaviour:
   _playerCheck: {fileID: 1367866752}
   _whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 192
+  _enemyCheckDistance: 15
 --- !u!1 &1593163895
 GameObject:
   m_ObjectHideFlags: 0
@@ -7300,7 +7323,6 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
-  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -7356,13 +7378,12 @@ MonoBehaviour:
     m_Bits: 1088
   _wallCheck: {fileID: 633680663}
   _wallCheckRadius: 0.25
-  _wallCheckDistance: 0.2
+  _wallCheckDistance: 0.22
   _whatIsWall:
     serializedVersion: 2
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
-  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -10153,7 +10174,7 @@ GameObject:
   - component: {fileID: 2052368297}
   - component: {fileID: 2052368296}
   - component: {fileID: 2052368295}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10401,7 +10422,6 @@ MonoBehaviour:
     m_Bits: 64
   _enemyCollisonCheck: {fileID: 0}
   _enemyCollisonCheckRadius: 2
-  _enemyCheckDistance: 2
   _whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0

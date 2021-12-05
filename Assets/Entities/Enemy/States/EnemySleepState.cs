@@ -5,7 +5,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
     public class EnemySleepState : State
     {
         private Stalker _stalker;
-        private bool _isEnemyUnder;
+        private bool _isPlayerUnder;
 
         public EnemySleepState(Stalker entity, string animationBoolName) : base(entity, animationBoolName)
         {
@@ -25,7 +25,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             if (!IsExitingState)
             {
-                if (_isEnemyUnder)
+                if (_isPlayerUnder)
                 {
                     Entity.StateMachine.ChangeState(_stalker.StartFallingState);
                 }
@@ -36,7 +36,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             base.DoChecks();
 
-            _isEnemyUnder = _stalker.EnemyCoreContainer.CollisionSenses.IsEnemyUnder;
+            _isPlayerUnder = _stalker.EnemyCoreContainer.EnemySenses.IsPlayerUnder;
         }
     }
 }
