@@ -4358,7 +4358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 05217422f4f368b429ddb7d42089ab2c, type: 2}
-  _meleeAttackDamage: 11
+  _closeCombatEnemyData: {fileID: 11400000, guid: 60bd7e8b1d879414d82d75cf08602dc6, type: 2}
+  _rangedCombatEnemyData: {fileID: 0}
   _fallVelocity: 4
 --- !u!1 &750387707
 GameObject:
@@ -4597,7 +4598,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 8f22415672fb24f4c8d9538045125b6a, type: 2}
-  _meleeAttackDamage: 13
+  _closeCombatEnemyData: {fileID: 11400000, guid: b35608ae71cde6844bb1c0c23df7774c, type: 2}
+  _rangedCombatEnemyData: {fileID: 11400000, guid: 719dc7eeb410b90429080e82d5e7e3b0, type: 2}
 --- !u!1 &779656706
 GameObject:
   m_ObjectHideFlags: 0
@@ -5771,7 +5773,6 @@ Transform:
   - {fileID: 188664443}
   - {fileID: 756021738}
   - {fileID: 1223246511}
-  - {fileID: 2140345101}
   m_Father: {fileID: 1251756591}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6290,7 +6291,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 06ae734211bf01d408e454b6a460b37b, type: 2}
-  _meleeAttackDamage: 10
+  _closeCombatEnemyData: {fileID: 11400000, guid: 000434df07ac7c64b867c1ccb36ffe3d, type: 2}
+  _rangedCombatEnemyData: {fileID: 0}
 --- !u!4 &1199039148
 Transform:
   m_ObjectHideFlags: 0
@@ -6741,10 +6743,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: d8c9dc8be70a1db44a5456c2c7b214ec, type: 2}
-  _projectile: {fileID: 9119815843116936243, guid: 7026db52964304c45831816cbe373c79, type: 3}
-  _projectileSpawnPosition: {fileID: 2140345101}
-  _backOffVelocity: 2
-  _backOffTime: 3
+  _closeCombatEnemyData: {fileID: 0}
+  _rangedCombatEnemyData: {fileID: 11400000, guid: a7ed5317ab65ac34d95dbec6832f4bb4, type: 2}
 --- !u!4 &1251756591
 Transform:
   m_ObjectHideFlags: 0
@@ -11156,33 +11156,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tossedVelocity: 12
---- !u!1 &2140345100
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2140345101}
-  m_Layer: 8
-  m_Name: Projectile Spawn Position
-  m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2140345101
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2140345100}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1144258011}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

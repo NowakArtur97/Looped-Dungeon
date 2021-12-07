@@ -11,8 +11,25 @@ namespace NowakArtur97.LoopedDungeon.Core
         public EnemyPlayerDetectedState PlayerDetectedState { get; protected set; }
         public EnemyLookForPlayerState LookForPlayerState { get; private set; }
 
+        public EnemyChargePlayerState ChargePlayerState { get; protected set; }
+        public EnemyMeleeAttackState MeleeAttackState { get; protected set; }
+        public EnemyRangedAttackState RangedAttackState { get; protected set; }
+        public EnemyBackOffState BackOffState { get; protected set; }
+
         public EnemyCoreContainer EnemyCoreContainer { get; private set; }
         public D_EnemyEntity EnemyData { get; private set; }
+        [SerializeField] private D_CloseCombatEnemyEntity _closeCombatEnemyData;
+        public D_CloseCombatEnemyEntity CloseCombatEnemyData
+        {
+            get => _closeCombatEnemyData;
+            private set => _closeCombatEnemyData = value;
+        }
+        [SerializeField] private D_RangedCombatEnemyEntity _rangedCombatEnemyData;
+        public D_RangedCombatEnemyEntity RangedCombatEnemyData
+        {
+            get => _rangedCombatEnemyData;
+            private set => _rangedCombatEnemyData = value;
+        }
 
         public AnimationToAttackStateMachine AnimationToAttackStateMachine { get; private set; }
         public HitboxesToEnemyAttackState HitboxesToEnemyAttackState { get; private set; }

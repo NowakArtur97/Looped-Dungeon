@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Projectile Move Animation
+  m_Name: Scorpion Projectile Move Animation
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,15 +20,15 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -7625868426772068096, guid: 0c3cff68b1e149d4a9c2989c82b340d6, type: 3}
+      value: {fileID: -4229902533650528234, guid: 0de763a14a747384a98984033922b251, type: 3}
     - time: 0.1
-      value: {fileID: -938413785402999996, guid: 0c3cff68b1e149d4a9c2989c82b340d6, type: 3}
+      value: {fileID: 6085880262478740931, guid: 0de763a14a747384a98984033922b251, type: 3}
     - time: 0.2
-      value: {fileID: -8378088974512960827, guid: 0c3cff68b1e149d4a9c2989c82b340d6, type: 3}
+      value: {fileID: -6456872016785045089, guid: 0de763a14a747384a98984033922b251, type: 3}
     - time: 0.3
-      value: {fileID: -1168057562927598237, guid: 0c3cff68b1e149d4a9c2989c82b340d6, type: 3}
+      value: {fileID: -8791281541653672361, guid: 0de763a14a747384a98984033922b251, type: 3}
     - time: 0.4
-      value: {fileID: 8133438649698994224, guid: 0c3cff68b1e149d4a9c2989c82b340d6, type: 3}
+      value: {fileID: 501145177357321518, guid: 0de763a14a747384a98984033922b251, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,11 +48,11 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -7625868426772068096, guid: 0c3cff68b1e149d4a9c2989c82b340d6, type: 3}
-    - {fileID: -938413785402999996, guid: 0c3cff68b1e149d4a9c2989c82b340d6, type: 3}
-    - {fileID: -8378088974512960827, guid: 0c3cff68b1e149d4a9c2989c82b340d6, type: 3}
-    - {fileID: -1168057562927598237, guid: 0c3cff68b1e149d4a9c2989c82b340d6, type: 3}
-    - {fileID: 8133438649698994224, guid: 0c3cff68b1e149d4a9c2989c82b340d6, type: 3}
+    - {fileID: -4229902533650528234, guid: 0de763a14a747384a98984033922b251, type: 3}
+    - {fileID: 6085880262478740931, guid: 0de763a14a747384a98984033922b251, type: 3}
+    - {fileID: -6456872016785045089, guid: 0de763a14a747384a98984033922b251, type: 3}
+    - {fileID: -8791281541653672361, guid: 0de763a14a747384a98984033922b251, type: 3}
+    - {fileID: 501145177357321518, guid: 0de763a14a747384a98984033922b251, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

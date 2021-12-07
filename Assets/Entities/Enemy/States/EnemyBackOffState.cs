@@ -24,7 +24,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             base.LogicUpdate();
 
-            Entity.CoreContainer.Movement.SetVelocityX(_rangedCombatEnemy.BackOffVelocity * Entity.CoreContainer.Movement.FacingDirection);
+            Entity.CoreContainer.Movement.SetVelocityX(_rangedCombatEnemy.RangedCombatEnemyData.backOffVelocity * Entity.CoreContainer.Movement.FacingDirection);
 
             if (!IsExitingState)
             {
@@ -37,7 +37,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 {
                     Entity.StateMachine.ChangeState(Enemy.PlayerDetectedState);
                 }
-                else if (!IsGrounded || IsCloseToWall || StateEnterTime + _rangedCombatEnemy.BackOffTime <= Time.time)
+                else if (!IsGrounded || IsCloseToWall || StateEnterTime + _rangedCombatEnemy.RangedCombatEnemyData.backOffTime <= Time.time)
                 {
                     Entity.CoreContainer.Movement.Flip();
                     Entity.StateMachine.ChangeState(Enemy.LookForPlayerState);

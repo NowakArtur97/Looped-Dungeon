@@ -2,9 +2,9 @@ using NowakArtur97.LoopedDungeon.Core;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
-    public class RangedCombatEnemyPlayerDetectedState : EnemyPlayerDetectedState
+    public class CloseAndRangedCombatEnemyPlayerDetectedState : EnemyPlayerDetectedState
     {
-        public RangedCombatEnemyPlayerDetectedState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
+        public CloseAndRangedCombatEnemyPlayerDetectedState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
         { }
 
         public override void LogicUpdate()
@@ -15,15 +15,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             {
                 if (IsPlayerInMinAgroRange)
                 {
-                    if (IsCloseToWallBehind || !IsGroundedBehind)
-                    {
-                        Enemy.BackOffState.ShouldIgnoreClosePlayer = true;
-                    }
-                    else
-                    {
-                        Entity.CoreContainer.Movement.Flip();
-                    }
-                    Entity.StateMachine.ChangeState(Enemy.BackOffState);
+                    Entity.StateMachine.ChangeState(Enemy.MeleeAttackState);
                 }
                 else if (IsPlayerInMaxAgroRange)
                 {

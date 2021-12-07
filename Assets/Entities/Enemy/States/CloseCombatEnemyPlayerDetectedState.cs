@@ -4,12 +4,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 {
     public class CloseCombatEnemyPlayerDetectedState : EnemyPlayerDetectedState
     {
-        private CloseCombatEnemy _closeCombatEnemy;
-
-        public CloseCombatEnemyPlayerDetectedState(CloseCombatEnemy entity, string animationBoolName) : base(entity, animationBoolName)
-        {
-            _closeCombatEnemy = entity;
-        }
+        public CloseCombatEnemyPlayerDetectedState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
+        { }
 
         public override void LogicUpdate()
         {
@@ -19,13 +15,13 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             {
                 if (IsPlayerInMinAgroRange)
                 {
-                    Entity.StateMachine.ChangeState(_closeCombatEnemy.MeleeAttackState);
+                    Entity.StateMachine.ChangeState(Enemy.MeleeAttackState);
                 }
                 else if (IsPlayerInMaxAgroRange)
                 {
-                    Entity.StateMachine.ChangeState(_closeCombatEnemy.ChargePlayerState);
+                    Entity.StateMachine.ChangeState(Enemy.ChargePlayerState);
                 }
-                else if (!IsPlayerInMaxAgroRange)
+                else
                 {
                     Entity.StateMachine.ChangeState(Enemy.LookForPlayerState);
                 }
