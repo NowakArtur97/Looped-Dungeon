@@ -1,4 +1,5 @@
 using NowakArtur97.LoopedDungeon.Core;
+using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
@@ -13,15 +14,16 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             if (!IsExitingState)
             {
-                if (IsPlayerInMinAgroRange)
+                if (IsPlayerInMinAgroRange
+                    && Enemy.MeleeAttackState.StateEnterTime + Enemy.CloseCombatEnemyData.timeToWaitBeforeMeleeAttack <= Time.time)
                 {
                     Entity.StateMachine.ChangeState(Enemy.MeleeAttackState);
                 }
-                else if (IsPlayerInMaxAgroRange)
+                else if (!IsPlayerInMinAgroRange && IsPlayerInMaxAgroRange)
                 {
                     Entity.StateMachine.ChangeState(Enemy.ChargePlayerState);
                 }
-                else
+                else if (!IsPlayerInMaxAgroRange)
                 {
                     Entity.StateMachine.ChangeState(Enemy.LookForPlayerState);
                 }

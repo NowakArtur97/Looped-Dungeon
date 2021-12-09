@@ -9,7 +9,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
         protected bool IsExitingState { get; private set; }
         protected bool IsAnimationFinished { get; private set; }
-        protected float StateEnterTime { get; private set; }
+        public float StateEnterTime { get; private set; }
         private string _animationBoolName;
 
         public State(Entity entity, string animationBoolName)

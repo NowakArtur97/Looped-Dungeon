@@ -15,3 +15,4 @@ MonoBehaviour:
   projectile: {fileID: 9119815843116936243, guid: 7026db52964304c45831816cbe373c79, type: 3}
   backOffVelocity: 2
   backOffTime: 2
+  timeToWaitBeforeRangedAttack: 2

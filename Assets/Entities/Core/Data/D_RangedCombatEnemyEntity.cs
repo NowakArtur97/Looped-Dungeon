@@ -8,6 +8,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         public GameObject projectile;
         public float backOffVelocity = 2;
         public float backOffTime = 2;
+        public float timeToWaitBeforeRangedAttack = 2;
     }
 }
 
