@@ -16,6 +16,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             Entity.CoreContainer.Movement.SetVelocityZero();
 
             _currentNumberOfIdleCycles = 0;
+
+            Enemy.EnemyCoreContainer.Animation.SetBattleMode(false);
         }
 
         public override void LogicUpdate()

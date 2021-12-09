@@ -8,6 +8,13 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         public CloseAndRangedCombatEnemyPlayerDetectedState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
         { }
 
+        public override void Enter()
+        {
+            base.Enter();
+
+            Enemy.EnemyCoreContainer.Animation.SetBattleMode(true);
+        }
+
         public override void LogicUpdate()
         {
             base.LogicUpdate();
@@ -19,7 +26,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 {
                     Entity.StateMachine.ChangeState(Enemy.MeleeAttackState);
                 }
-                else if (IsPlayerInMaxAgroRange
+                else if (IsPlayerInMaxAgroRange && !IsPlayerInMinAgroRange
                     && Enemy.RangedAttackState.StateEnterTime + Enemy.RangedCombatEnemyData.timeToWaitBeforeRangedAttack <= Time.time)
                 {
                     Entity.StateMachine.ChangeState(Enemy.RangedAttackState);

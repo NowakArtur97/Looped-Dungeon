@@ -4003,7 +4003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813ddec91a92adf428ab3e6c04d33a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recordingTime: 15
+  _recordingTime: 200
 --- !u!4 &716811599
 Transform:
   m_ObjectHideFlags: 0
@@ -6230,7 +6230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1199039145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7398,7 +7398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7891f9b52bfaab047a8ae913612c5e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _replayingTime: 15
+  _replayingTime: 200
 --- !u!4 &1567839813
 Transform:
   m_ObjectHideFlags: 0

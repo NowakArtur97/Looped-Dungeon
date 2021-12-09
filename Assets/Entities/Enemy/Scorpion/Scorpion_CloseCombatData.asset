@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Scorpion_CloseCombatData
   m_EditorClassIdentifier: 
   meleeAttackDamage: 13
+  timeToWaitBeforeMeleeAttack: 2

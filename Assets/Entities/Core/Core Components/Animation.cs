@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
@@ -8,6 +9,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         private readonly string VELOCITY_X = "velocityX";
         private readonly string VELOCITY_Y = "velocityY";
         private readonly string NUMBER_OF_WEAPONS = "numberOfWeapons";
+        private readonly string BATTLE_MODE = "battleMode";
 
         private Animator _animator;
 
@@ -27,5 +29,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         }
 
         public void SetNumberOfWeaponsVariable(int numberOfWeapons) => _animator.SetInteger(NUMBER_OF_WEAPONS, numberOfWeapons);
+
+        public void SetBattleMode(bool battleMode) => _animator.SetBool(BATTLE_MODE, battleMode);
     }
 }
