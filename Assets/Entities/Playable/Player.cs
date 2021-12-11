@@ -34,6 +34,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             JumpState = new PlayerJumpState(this, "inAir");
             InAirState = new PlayerInAirState(this, "inAir");
             LandState = new PlayerLandState(this, "land");
+            HurtState = new PlayerHurtState(this, "hurt");
         }
 
         protected override void Start()

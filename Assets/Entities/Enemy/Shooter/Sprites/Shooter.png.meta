@@ -293,6 +293,18 @@ TextureImporter:
   - first:
       213: 3490550556857731514
     second: Shooter_96
+  - first:
+      213: -163135597332028249
+    second: Shooter_97
+  - first:
+      213: -3386740036966911601
+    second: Shooter_98
+  - first:
+      213: 1529050065379423052
+    second: Shooter_99
+  - first:
+      213: 3161409439019748295
+    second: Shooter_100
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -2426,6 +2438,90 @@ TextureImporter:
       bones: []
       spriteID: ab90c0cdc3de07030800000000000000
       internalID: 3490550556857731514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_97
+      rect:
+        serializedVersion: 2
+        x: 2619
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4adced90d6cbdf0800000000000000
+      internalID: -163135597332028249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_98
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f817efd41e1eff0d0800000000000000
+      internalID: -3386740036966911601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_99
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c437ab6eee6483510800000000000000
+      internalID: 1529050065379423052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_100
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbc65a82259fdb20800000000000000
+      internalID: 3161409439019748295
       vertices: []
       indices: 
       edges: []

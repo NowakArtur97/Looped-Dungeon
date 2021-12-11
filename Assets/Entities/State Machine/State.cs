@@ -39,6 +39,16 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             {
                 Entity.StateMachine.ChangeState(Entity.DeadState);
             }
+            if (Entity.EntityStats.IsResistanceNegative())
+            {
+                Entity.EntityStats.ResetResistance();
+                Entity.StateMachine.ChangeState(Entity.HurtState);
+            }
+            //if (Entity.EntityStats.IsHurt() && Entity.HurtState.StateEnterTime + Entity.Data.damageResistanceResetTime <= Time.time)
+            //{
+            //    Debug.Log("ResetResistance");
+            //    Entity.EntityStats.ResetResistance();
+            //}
         }
 
         public virtual void PhysicsUpdate() => DoChecks();

@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveVelocity: 1
   maxHealth: 30
+  maxDamageResistance: 15
+  damageResistanceResetTime: 10
   numberOfIdleCycles: 6
   maxAgroRange: 8
   minAgroRange: 0.5

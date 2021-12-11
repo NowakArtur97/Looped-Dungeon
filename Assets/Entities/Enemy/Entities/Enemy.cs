@@ -50,6 +50,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             IdleState = new EnemyIdleState(this, "idle");
             MoveState = new EnemyMoveState(this, "move");
             LookForPlayerState = new EnemyLookForPlayerState(this, "lookForPlayer");
+            HurtState = new EnemyHurtState(this, "hurt");
 
             DefaultState = IdleState;
         }

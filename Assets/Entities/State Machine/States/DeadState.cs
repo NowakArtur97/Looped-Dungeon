@@ -7,9 +7,9 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         public DeadState(Entity entity, string animationBoolName) : base(entity, animationBoolName)
         { }
 
-        public override void LogicUpdate()
+        public override void Enter()
         {
-            base.LogicUpdate();
+            base.Enter();
 
             Entity.CoreContainer.Animation.SetBattleMode(false);
         }

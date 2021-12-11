@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Shooter_Data
   m_EditorClassIdentifier: 
   moveVelocity: 2
-  maxHealth: 2
+  maxHealth: 30
+  maxDamageResistance: 15
+  damageResistanceResetTime: 5
   numberOfIdleCycles: 2
   maxAgroRange: 10
   minAgroRange: 1

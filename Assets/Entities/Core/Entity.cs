@@ -12,6 +12,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _data = value;
         }
 
+        public HurtState HurtState { get; protected set; }
         public DeadState DeadState { get; private set; }
 
         public BaseCoreContainer CoreContainer { get; private set; }
