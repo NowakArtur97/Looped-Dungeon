@@ -28,11 +28,13 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 {
                     Entity.StateMachine.ChangeState(_player.InAirState);
                 }
-                else if (_player.PlayerCoreContainer.Input.MainAbilityInput && _player.CoreContainer.Inventory.CurrentWeapon)
+                else if (_player.PlayerCoreContainer.Input.MainAbilityInput && _player.CoreContainer.Inventory.CurrentWeapon
+                      && _player.MainAbilityState != null)
                 {
                     Entity.StateMachine.ChangeState(_player.MainAbilityState);
                 }
-                else if (_player.PlayerCoreContainer.Input.SecondaryAbilityInput && _player.CoreContainer.Inventory.CurrentWeapon)
+                else if (_player.PlayerCoreContainer.Input.SecondaryAbilityInput && _player.CoreContainer.Inventory.CurrentWeapon
+                      && _player.SecondaryAbilityState != null)
                 {
                     Entity.StateMachine.ChangeState(_player.SecondaryAbilityState);
                 }
