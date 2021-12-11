@@ -13,6 +13,13 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             _rangedCombatEnemy = entity;
         }
 
+        public override void Enter()
+        {
+            base.Enter();
+
+            Enemy.EnemyCoreContainer.Animation.SetBattleMode(false);
+        }
+
         public override void Exit()
         {
             base.Exit();

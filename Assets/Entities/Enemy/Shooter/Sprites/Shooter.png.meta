@@ -236,6 +236,21 @@ TextureImporter:
   - first:
       213: -2076459448465300917
     second: Shooter_77
+  - first:
+      213: -117610898445829239
+    second: Shooter_78
+  - first:
+      213: 7456652025724622447
+    second: Shooter_79
+  - first:
+      213: -5549503614341748782
+    second: Shooter_80
+  - first:
+      213: -379080969949287020
+    second: Shooter_81
+  - first:
+      213: 2429562654729094717
+    second: Shooter_82
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1970,6 +1985,111 @@ TextureImporter:
       bones: []
       spriteID: b42e8b7122fee23e0800000000000000
       internalID: -2076459448465300917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_78
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bfb60d2892e5ef0800000000000000
+      internalID: -117610898445829239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_79
+      rect:
+        serializedVersion: 2
+        x: 2133
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f665307a2895b7760800000000000000
+      internalID: 7456652025724622447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_80
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7e9638dd33cf2b0800000000000000
+      internalID: -5549503614341748782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_81
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49def05cddb3dbaf0800000000000000
+      internalID: -379080969949287020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_82
+      rect:
+        serializedVersion: 2
+        x: 2214
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36cea2bc5a87b120800000000000000
+      internalID: 2429562654729094717
       vertices: []
       indices: 
       edges: []

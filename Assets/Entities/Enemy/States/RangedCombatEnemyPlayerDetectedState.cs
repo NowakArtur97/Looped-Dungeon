@@ -27,7 +27,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                     Entity.StateMachine.ChangeState(Enemy.BackOffState);
                 }
                 else if (IsPlayerInMaxAgroRange
-                    && Enemy.RangedAttackState.StateEnterTime + Enemy.RangedCombatEnemyData.timeToWaitBeforeRangedAttack <= Time.time)
+                 && Enemy.RangedAttackState.StateEnterTime + Enemy.RangedCombatEnemyData.timeToWaitBeforeRangedAttack <= Time.time)
                 {
                     Entity.StateMachine.ChangeState(Enemy.RangedAttackState);
                 }

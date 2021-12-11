@@ -17,6 +17,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             base.Enter();
 
             Enemy.AnimationToAttackStateMachine.EnemyAttackState = this;
+
+            Entity.CoreContainer.Movement.SetVelocityZero();
         }
 
         public override void LogicUpdate()

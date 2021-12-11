@@ -8,13 +8,6 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         public CloseAndRangedCombatEnemyPlayerDetectedState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
         { }
 
-        public override void Enter()
-        {
-            base.Enter();
-
-            Enemy.EnemyCoreContainer.Animation.SetBattleMode(true);
-        }
-
         public override void LogicUpdate()
         {
             base.LogicUpdate();

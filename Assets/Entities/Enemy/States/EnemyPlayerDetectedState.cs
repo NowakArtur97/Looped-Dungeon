@@ -12,6 +12,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             base.Enter();
 
             Entity.CoreContainer.Movement.SetVelocityZero();
+
+            Enemy.EnemyCoreContainer.Animation.SetBattleMode(true);
         }
     }
 }
