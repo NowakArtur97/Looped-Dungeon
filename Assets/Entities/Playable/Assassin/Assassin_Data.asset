@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Assassin_Data
   m_EditorClassIdentifier: 
   moveVelocity: 4
+  maxHealth: 3000
   jumpVelocity: 6

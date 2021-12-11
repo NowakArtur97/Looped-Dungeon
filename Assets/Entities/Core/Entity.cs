@@ -12,6 +12,8 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _data = value;
         }
 
+        public DeadState DeadState { get; private set; }
+
         public BaseCoreContainer CoreContainer { get; private set; }
         public FiniteStateMachine StateMachine { get; private set; }
         public EntityStats EntityStats { get; private set; }
@@ -22,6 +24,8 @@ namespace NowakArtur97.LoopedDungeon.Core
 
             StateMachine = new FiniteStateMachine();
             EntityStats = new EntityStats(_data);
+
+            DeadState = new DeadState(this, "dead");
         }
 
         protected virtual void Start() => CoreContainer.Combat.InitEntityStats(EntityStats);

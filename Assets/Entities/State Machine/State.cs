@@ -33,7 +33,13 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             DoChecks();
         }
 
-        public virtual void LogicUpdate() { }
+        public virtual void LogicUpdate()
+        {
+            if (Entity.EntityStats.IsDead())
+            {
+                Entity.StateMachine.ChangeState(Entity.DeadState);
+            }
+        }
 
         public virtual void PhysicsUpdate() => DoChecks();
 

@@ -251,6 +251,48 @@ TextureImporter:
   - first:
       213: 2429562654729094717
     second: Shooter_82
+  - first:
+      213: 6908684900053388154
+    second: Shooter_83
+  - first:
+      213: -193858202400174163
+    second: Shooter_84
+  - first:
+      213: -6551176172646359364
+    second: Shooter_85
+  - first:
+      213: -8740820108924669201
+    second: Shooter_86
+  - first:
+      213: -8223400511787336882
+    second: Shooter_87
+  - first:
+      213: 5862392432622416133
+    second: Shooter_88
+  - first:
+      213: -8413646966475607706
+    second: Shooter_89
+  - first:
+      213: -3432115056125441798
+    second: Shooter_90
+  - first:
+      213: -1679588534068443113
+    second: Shooter_91
+  - first:
+      213: -4541972353810336649
+    second: Shooter_92
+  - first:
+      213: 4836199202912237832
+    second: Shooter_93
+  - first:
+      213: -8337192120990882854
+    second: Shooter_94
+  - first:
+      213: 1402442599932169305
+    second: Shooter_95
+  - first:
+      213: 3490550556857731514
+    second: Shooter_96
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -2090,6 +2132,300 @@ TextureImporter:
       bones: []
       spriteID: d36cea2bc5a87b120800000000000000
       internalID: 2429562654729094717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_83
+      rect:
+        serializedVersion: 2
+        x: 2241
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b89c4105490ef50800000000000000
+      internalID: 6908684900053388154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_84
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf4425fdf64f4df0800000000000000
+      internalID: -193858202400174163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_85
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe19680bfb8515a0800000000000000
+      internalID: -6551176172646359364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_86
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe234f9fb6e52b680800000000000000
+      internalID: -8740820108924669201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_87
+      rect:
+        serializedVersion: 2
+        x: 2349
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b7621ddcc90ed80800000000000000
+      internalID: -8223400511787336882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_88
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501b5607bd66b5150800000000000000
+      internalID: 5862392432622416133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_89
+      rect:
+        serializedVersion: 2
+        x: 2403
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661bda159a8bc3b80800000000000000
+      internalID: -8413646966475607706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_90
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af88f536a8dae50d0800000000000000
+      internalID: -3432115056125441798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_91
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718080a8027e0b8e0800000000000000
+      internalID: -1679588534068443113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_92
+      rect:
+        serializedVersion: 2
+        x: 2484
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7747d77653ca7f0c0800000000000000
+      internalID: -4541972353810336649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_93
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8097c904d81ad1340800000000000000
+      internalID: 4836199202912237832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_94
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3272430f75c4c80800000000000000
+      internalID: -8337192120990882854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_95
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c05da3d1a767310800000000000000
+      internalID: 1402442599932169305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_96
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab90c0cdc3de07030800000000000000
+      internalID: 3490550556857731514
       vertices: []
       indices: 
       edges: []

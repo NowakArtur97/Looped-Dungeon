@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Swordmaster_Data
   m_EditorClassIdentifier: 
   moveVelocity: 2
+  maxHealth: 3000
   jumpVelocity: 5

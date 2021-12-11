@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: ShieldBearer_Data
   m_EditorClassIdentifier: 
   moveVelocity: 3
+  maxHealth: 3000
   jumpVelocity: 5

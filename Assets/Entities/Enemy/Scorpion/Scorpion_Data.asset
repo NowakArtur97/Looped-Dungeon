@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scorpion_Data
   m_EditorClassIdentifier: 
   moveVelocity: 1
-  maxHealth: 30
+  maxHealth: 2
   numberOfIdleCycles: 6
   maxAgroRange: 5
   minAgroRange: 0.6
