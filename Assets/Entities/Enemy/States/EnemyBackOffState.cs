@@ -7,6 +7,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
     {
         private RangedCombatEnemy _rangedCombatEnemy;
         public bool ShouldIgnoreClosePlayer;
+        public bool ShouldStartMoving;
 
         public EnemyBackOffState(RangedCombatEnemy entity, string animationBoolName) : base(entity, animationBoolName)
         {
@@ -18,6 +19,15 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             base.Enter();
 
             Enemy.EnemyCoreContainer.Animation.SetBattleMode(false);
+
+            if (IsCloseToWallBehind || !IsGroundedBehind)
+            {
+                Enemy.BackOffState.ShouldIgnoreClosePlayer = true;
+            }
+            else
+            {
+                Entity.CoreContainer.Movement.Flip();
+            }
         }
 
         public override void Exit()
@@ -25,13 +35,17 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             base.Exit();
 
             ShouldIgnoreClosePlayer = false;
+            ShouldStartMoving = false;
         }
 
         public override void LogicUpdate()
         {
             base.LogicUpdate();
 
-            Entity.CoreContainer.Movement.SetVelocityX(_rangedCombatEnemy.RangedCombatEnemyData.backOffVelocity * Entity.CoreContainer.Movement.FacingDirection);
+            if (ShouldStartMoving)
+            {
+                Entity.CoreContainer.Movement.SetVelocityX(_rangedCombatEnemy.RangedCombatEnemyData.backOffVelocity * Entity.CoreContainer.Movement.FacingDirection);
+            }
 
             if (!IsExitingState)
             {
@@ -50,6 +64,13 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                     Entity.StateMachine.ChangeState(Enemy.LookForPlayerState);
                 }
             }
+        }
+
+        public override void AnimationFinishedTrigger()
+        {
+            base.AnimationFinishedTrigger();
+
+            ShouldStartMoving = true;
         }
     }
 }

@@ -1,6 +1,4 @@
 using NowakArtur97.LoopedDungeon.StateMachine;
-using NowakArtur97.LoopedDungeon.Util;
-using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
 {
@@ -10,9 +8,13 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             base.Awake();
 
+            IdleState = new RangedCombatEnemyIdleState(this, "idle");
+            MoveState = new RangedCombatEnemyMoveState(this, "move");
             PlayerDetectedState = new RangedCombatEnemyPlayerDetectedState(this, "playerDetected");
             RangedAttackState = new EnemyRangedAttackState(this, "rangedAttack");
             BackOffState = new EnemyBackOffState(this, "backOff");
+
+            DefaultState = IdleState;
         }
     }
 }

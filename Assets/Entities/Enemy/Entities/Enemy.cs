@@ -6,8 +6,8 @@ namespace NowakArtur97.LoopedDungeon.Core
     public abstract class Enemy : Entity
     {
         public State DefaultState { get; protected set; }
-        public EnemyIdleState IdleState { get; private set; }
-        public EnemyMoveState MoveState { get; private set; }
+        public EnemyGroundedState IdleState { get; protected set; }
+        public EnemyGroundedState MoveState { get; protected set; }
         public EnemyPlayerDetectedState PlayerDetectedState { get; protected set; }
         public EnemyLookForPlayerState LookForPlayerState { get; private set; }
 

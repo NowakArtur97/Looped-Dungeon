@@ -16,14 +16,6 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             {
                 if (IsPlayerInMinAgroRange)
                 {
-                    if (IsCloseToWallBehind || !IsGroundedBehind)
-                    {
-                        Enemy.BackOffState.ShouldIgnoreClosePlayer = true;
-                    }
-                    else
-                    {
-                        Entity.CoreContainer.Movement.Flip();
-                    }
                     Entity.StateMachine.ChangeState(Enemy.BackOffState);
                 }
                 else if (IsPlayerInMaxAgroRange
