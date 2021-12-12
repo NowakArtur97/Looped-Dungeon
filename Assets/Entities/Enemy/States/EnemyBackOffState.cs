@@ -6,7 +6,8 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
     public class EnemyBackOffState : EnemyGroundedState
     {
         private RangedCombatEnemy _rangedCombatEnemy;
-        public bool ShouldIgnoreClosePlayer;
+        private bool _shouldIgnoreClosePlayer;
+        private bool _hasEscaped;
         public bool ShouldStartMoving;
 
         public EnemyBackOffState(RangedCombatEnemy entity, string animationBoolName) : base(entity, animationBoolName)
@@ -22,7 +23,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             if (IsCloseToWallBehind || !IsGroundedBehind)
             {
-                Enemy.BackOffState.ShouldIgnoreClosePlayer = true;
+                _shouldIgnoreClosePlayer = true;
             }
             else
             {
@@ -34,7 +35,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             base.Exit();
 
-            ShouldIgnoreClosePlayer = false;
+            _shouldIgnoreClosePlayer = false;
             ShouldStartMoving = false;
         }
 
@@ -47,18 +48,20 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 Entity.CoreContainer.Movement.SetVelocityX(_rangedCombatEnemy.RangedCombatEnemyData.backOffVelocity * Entity.CoreContainer.Movement.FacingDirection);
             }
 
+            _hasEscaped = StateEnterTime + _rangedCombatEnemy.RangedCombatEnemyData.backOffTime <= Time.time;
+
             if (!IsExitingState)
             {
-                if (!IsPlayerInMinAgroRange && ShouldIgnoreClosePlayer)
+                if (!IsPlayerInMinAgroRange && _shouldIgnoreClosePlayer)
                 {
-                    ShouldIgnoreClosePlayer = false;
+                    _shouldIgnoreClosePlayer = false;
                 }
 
-                if (IsPlayerInMaxAgroRange && !IsPlayerInMinAgroRange && !ShouldIgnoreClosePlayer)
+                if (IsPlayerInMaxAgroRange && !IsPlayerInMinAgroRange && !_shouldIgnoreClosePlayer && _hasEscaped)
                 {
                     Entity.StateMachine.ChangeState(Enemy.PlayerDetectedState);
                 }
-                else if (!IsGrounded || IsCloseToWall || StateEnterTime + _rangedCombatEnemy.RangedCombatEnemyData.backOffTime <= Time.time)
+                else if (!IsGrounded || IsCloseToWall || _hasEscaped)
                 {
                     Entity.CoreContainer.Movement.Flip();
                     Entity.StateMachine.ChangeState(Enemy.LookForPlayerState);
