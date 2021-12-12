@@ -12,7 +12,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             MoveState = new RangedCombatEnemyMoveState(this, "move");
             PlayerDetectedState = new RangedCombatEnemyPlayerDetectedState(this, "playerDetected");
             RangedAttackState = new EnemyRangedAttackState(this, "rangedAttack");
-            BackOffState = new EnemyBackOffState(this, "backOff");
+            BackOffState = new RangedCombatEnemyBackOffState(this, "backOff");
             HurtState = new RangedCombatEnemyHurtState(this, "hurt");
 
             DefaultState = IdleState;

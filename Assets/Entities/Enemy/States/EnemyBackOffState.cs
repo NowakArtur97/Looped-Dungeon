@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.StateMachine
 {
-    public class EnemyBackOffState : EnemyGroundedState
+    public abstract class EnemyBackOffState : EnemyGroundedState
     {
-        private bool _shouldIgnoreClosePlayer;
-        private bool _hasEscaped;
+        protected bool ShouldIgnoreClosePlayer { get; private set; }
+        protected bool HasEscaped { get; private set; }
         public bool ShouldStartMoving;
 
         public EnemyBackOffState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
@@ -20,7 +20,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             if (IsCloseToWallBehind || !IsGroundedBehind)
             {
-                _shouldIgnoreClosePlayer = true;
+                ShouldIgnoreClosePlayer = true;
             }
             else
             {
@@ -32,7 +32,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
         {
             base.Exit();
 
-            _shouldIgnoreClosePlayer = false;
+            ShouldIgnoreClosePlayer = false;
             ShouldStartMoving = false;
         }
 
@@ -44,26 +44,12 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
             {
                 Entity.CoreContainer.Movement.SetVelocityX(Enemy.RangedCombatEnemyData.backOffVelocity * Entity.CoreContainer.Movement.FacingDirection);
             }
-
-            _hasEscaped = StateEnterTime + Enemy.RangedCombatEnemyData.backOffTime <= Time.time;
-
-            if (!IsExitingState)
+            if (!IsPlayerInMinAgroRange && ShouldIgnoreClosePlayer)
             {
-                if (!IsPlayerInMinAgroRange && _shouldIgnoreClosePlayer)
-                {
-                    _shouldIgnoreClosePlayer = false;
-                }
-
-                if (IsPlayerInMaxAgroRange && !IsPlayerInMinAgroRange && !_shouldIgnoreClosePlayer && _hasEscaped)
-                {
-                    Entity.StateMachine.ChangeState(Enemy.PlayerDetectedState);
-                }
-                else if (!IsGrounded || IsCloseToWall || _hasEscaped)
-                {
-                    Entity.CoreContainer.Movement.Flip();
-                    Entity.StateMachine.ChangeState(Enemy.LookForPlayerState);
-                }
+                ShouldIgnoreClosePlayer = false;
             }
+
+            HasEscaped = StateEnterTime + Enemy.RangedCombatEnemyData.backOffTime <= Time.time;
         }
 
         public override void AnimationFinishedTrigger()

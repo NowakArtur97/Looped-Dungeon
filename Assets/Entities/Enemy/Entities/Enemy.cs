@@ -15,6 +15,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         public EnemyMeleeAttackState MeleeAttackState { get; protected set; }
         public EnemyRangedAttackState RangedAttackState { get; protected set; }
         public EnemyBackOffState BackOffState { get; protected set; }
+        public EnemyTransformState TransformState { get; protected set; }
 
         public EnemyCoreContainer EnemyCoreContainer { get; private set; }
         public D_EnemyEntity EnemyData { get; private set; }

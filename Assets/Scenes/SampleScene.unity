@@ -8222,6 +8222,8 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: 41a2153f7d98d2041bb8d5b333c82aec, type: 2}
   _closeCombatEnemyData: {fileID: 11400000, guid: 8b3d09929ceee744988620c49ea05a28, type: 2}
   _rangedCombatEnemyData: {fileID: 11400000, guid: 71b85e86612ce064f88e5caa7f84bc67, type: 2}
+  _transformSprite:
+  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1657222429
 GameObject:
   m_ObjectHideFlags: 0
