@@ -5,15 +5,12 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 {
     public class EnemyBackOffState : EnemyGroundedState
     {
-        private RangedCombatEnemy _rangedCombatEnemy;
         private bool _shouldIgnoreClosePlayer;
         private bool _hasEscaped;
         public bool ShouldStartMoving;
 
-        public EnemyBackOffState(RangedCombatEnemy entity, string animationBoolName) : base(entity, animationBoolName)
-        {
-            _rangedCombatEnemy = entity;
-        }
+        public EnemyBackOffState(Enemy entity, string animationBoolName) : base(entity, animationBoolName)
+        { }
 
         public override void Enter()
         {
@@ -45,10 +42,10 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             if (ShouldStartMoving)
             {
-                Entity.CoreContainer.Movement.SetVelocityX(_rangedCombatEnemy.RangedCombatEnemyData.backOffVelocity * Entity.CoreContainer.Movement.FacingDirection);
+                Entity.CoreContainer.Movement.SetVelocityX(Enemy.RangedCombatEnemyData.backOffVelocity * Entity.CoreContainer.Movement.FacingDirection);
             }
 
-            _hasEscaped = StateEnterTime + _rangedCombatEnemy.RangedCombatEnemyData.backOffTime <= Time.time;
+            _hasEscaped = StateEnterTime + Enemy.RangedCombatEnemyData.backOffTime <= Time.time;
 
             if (!IsExitingState)
             {
