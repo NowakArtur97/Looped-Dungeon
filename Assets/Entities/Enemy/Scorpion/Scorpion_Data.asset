@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scorpion_Data
   m_EditorClassIdentifier: 
   moveVelocity: 1
-  maxHealth: 3000
+  maxHealth: 30
   maxDamageResistance: 9
   damageResistanceResetTime: 10
   numberOfIdleCycles: 6

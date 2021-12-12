@@ -44,11 +44,10 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                 Entity.EntityStats.ResetResistance();
                 Entity.StateMachine.ChangeState(Entity.HurtState);
             }
-            //if (Entity.EntityStats.IsHurt() && Entity.HurtState.StateEnterTime + Entity.Data.damageResistanceResetTime <= Time.time)
-            //{
-            //    Debug.Log("ResetResistance");
-            //    Entity.EntityStats.ResetResistance();
-            //}
+            if (Entity.EntityStats.IsTimeToResetResistance(Entity.Data.damageResistanceResetTime))
+            {
+                Entity.EntityStats.ResetResistance();
+            }
         }
 
         public virtual void PhysicsUpdate() => DoChecks();
