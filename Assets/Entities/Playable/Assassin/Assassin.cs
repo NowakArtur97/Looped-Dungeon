@@ -9,7 +9,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             base.Awake();
 
             MainAbilityState = new PlayerTakeAimState(this, "takeAim");
-            ThrowState = new PlayerThrowState(this, "secondaryAbility");
+            ThrowState = new PlayerThrowState(this, "mainAbility");
         }
     }
 }
