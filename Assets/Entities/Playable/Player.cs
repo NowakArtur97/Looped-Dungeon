@@ -1,5 +1,4 @@
 using NowakArtur97.LoopedDungeon.StateMachine;
-using NowakArtur97.LoopedDungeon.Util;
 
 namespace NowakArtur97.LoopedDungeon.Core
 {
@@ -12,6 +11,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         public PlayerLandState LandState { get; private set; }
         public PlayerAbilityState MainAbilityState { get; protected set; }
         public PlayerAbilityState SecondaryAbilityState { get; protected set; }
+        public PlayerThrowState ThrowState { get; protected set; }
 
         public PlayerCoreContainer PlayerCoreContainer { get; private set; }
         public D_PlayerEntity PlayerData { get; private set; }
