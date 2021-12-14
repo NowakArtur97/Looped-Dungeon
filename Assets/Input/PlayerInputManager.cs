@@ -12,6 +12,7 @@ namespace NowakArtur97.LoopedDungeon.Input
 
         public Vector2 MovementInput { get; private set; }
         public bool JumpInput { get; private set; }
+        public float JumpInputStartTime { get; private set; }
         public bool MainAbilityInput { get; private set; }
         public bool SecondaryAbilityInput { get; private set; }
 
@@ -29,6 +30,7 @@ namespace NowakArtur97.LoopedDungeon.Input
             if (context.started)
             {
                 JumpInput = true;
+                JumpInputStartTime = Time.time;
             }
             if (context.canceled)
             {

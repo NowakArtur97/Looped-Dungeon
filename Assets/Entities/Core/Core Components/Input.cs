@@ -10,6 +10,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public Vector2 MovementInput { get; private set; }
         public bool JumpInput { get; private set; }
+        public float JumpInputStartTime { get; private set; }
         public bool MainAbilityInput { get; private set; }
         public bool SecondaryAbilityInput { get; private set; }
 
@@ -33,15 +34,17 @@ namespace NowakArtur97.LoopedDungeon.Core
             {
                 MovementInput = _inputManager.MovementInput;
                 JumpInput = _inputManager.JumpInput;
+                JumpInputStartTime = _inputManager.JumpInputStartTime;
                 MainAbilityInput = _inputManager.MainAbilityInput;
                 SecondaryAbilityInput = _inputManager.SecondaryAbilityInput;
             }
         }
 
-        public void SetMovement(PlayerInputFrame playerInput)
+        public void SetMovement(PlayerInputFrame playerInput, float recordingStartTime)
         {
             MovementInput = playerInput.MovementInput;
             JumpInput = playerInput.JumpInput;
+            JumpInputStartTime = playerInput.JumpInputStartTime + recordingStartTime;
             MainAbilityInput = playerInput.MainAbilityInput;
             SecondaryAbilityInput = playerInput.SecondaryAbilityInput;
         }

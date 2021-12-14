@@ -7,6 +7,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
     {
         private Player _player;
         private Vector2 _currentVelocity;
+        private readonly float _timeToPressButtonForJumpBeforeLanding = 0.2f;
 
         public PlayerInAirState(Player entity, string animationBoolName) : base(entity, animationBoolName)
         {
@@ -24,7 +25,11 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
 
             if (!IsExitingState)
             {
-                if (IsGrounded && _currentVelocity.y < 0.01f && !_player.PlayerCoreContainer.Input.JumpInput)
+                if (IsGrounded && _timeToPressButtonForJumpBeforeLanding + _player.PlayerCoreContainer.Input.JumpInputStartTime >= Time.time)
+                {
+                    _player.StateMachine.ChangeState(_player.JumpState);
+                }
+                else if (IsGrounded && _currentVelocity.y < 0.01f && !_player.PlayerCoreContainer.Input.JumpInput)
                 {
                     _player.StateMachine.ChangeState(_player.LandState);
                 }

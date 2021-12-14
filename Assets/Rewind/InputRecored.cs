@@ -53,7 +53,6 @@ namespace NowakArtur97.LoopedDungeon.Input
             _isRecording = true;
         }
 
-        private void Record() => _inputs.Add(new PlayerInputFrame(_characterInput.MovementInput, _characterInput.JumpInput,
-                _characterInput.MainAbilityInput, _characterInput.SecondaryAbilityInput));
+        private void Record() => _inputs.Add(new PlayerInputFrame(_characterInput.MovementInput, _characterInput.JumpInput, _characterInput.JumpInput ? Time.time : 0, _characterInput.MainAbilityInput, _characterInput.SecondaryAbilityInput));
     }
 }

@@ -12,7 +12,7 @@ namespace NowakArtur97.LoopedDungeon.Input
 
         private CharacterSpawner _characterSpawner;
         private InputRecored _inputRecored;
-        private int _replayIndex;
+        private int _frameIndex;
         private Dictionary<Core.Input, List<PlayerInputFrame>> _characterInputs;
         private bool _isReplaying;
         private float _startTime;
@@ -36,7 +36,7 @@ namespace NowakArtur97.LoopedDungeon.Input
                 {
                     Replay(characterInput.Key);
                 }
-                _replayIndex++;
+                _frameIndex++;
             }
 
             if (_isReplaying && Time.time > _replayingTime + _startTime)
@@ -48,7 +48,7 @@ namespace NowakArtur97.LoopedDungeon.Input
 
         private void StartReplaying(GameObject character)
         {
-            _replayIndex = 0;
+            _frameIndex = 0;
             _characterInputs = _inputRecored.CharacterInputs;
             _startTime = Time.time;
             _isReplaying = true;
@@ -56,10 +56,10 @@ namespace NowakArtur97.LoopedDungeon.Input
 
         private void Replay(Core.Input characterInput)
         {
-            if (_replayIndex < _characterInputs[characterInput].Count)
+            if (_frameIndex < _characterInputs[characterInput].Count)
             {
-                PlayerInputFrame frame = _characterInputs[characterInput][_replayIndex];
-                characterInput.SetMovement(frame);
+                PlayerInputFrame frame = _characterInputs[characterInput][_frameIndex];
+                characterInput.SetMovement(frame, _startTime);
             }
         }
     }
