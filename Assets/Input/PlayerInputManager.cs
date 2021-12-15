@@ -6,17 +6,21 @@ namespace NowakArtur97.LoopedDungeon.Input
     [RequireComponent(typeof(PlayerInput))]
     public class PlayerInputManager : MonoBehaviour
     {
+        private readonly float _pressedButtonTime = 0.2f;
+
         private PlayerInput _playerInput;
 
         private Vector2 _workspace;
 
         public Vector2 MovementInput { get; private set; }
         public bool JumpInput { get; private set; }
-        public float JumpInputStartTime { get; private set; }
+        public float JumpInputStartTime;
         public bool MainAbilityInput { get; private set; }
         public bool SecondaryAbilityInput { get; private set; }
 
         private void Awake() => _playerInput = GetComponent<PlayerInput>();
+
+        private void Update() => CheckJumpInput();
 
         public void OnMoveInput(InputAction.CallbackContext context)
         {
@@ -31,10 +35,6 @@ namespace NowakArtur97.LoopedDungeon.Input
             {
                 JumpInput = true;
                 JumpInputStartTime = Time.time;
-            }
-            if (context.canceled)
-            {
-                JumpInput = false;
             }
         }
 
@@ -59,6 +59,14 @@ namespace NowakArtur97.LoopedDungeon.Input
             if (context.canceled)
             {
                 SecondaryAbilityInput = false;
+            }
+        }
+
+        private void CheckJumpInput()
+        {
+            if (_pressedButtonTime + JumpInputStartTime <= Time.time)
+            {
+                JumpInput = false;
             }
         }
     }

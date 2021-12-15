@@ -28,7 +28,6 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             base.PhysicsUpdate();
 
-            // TODO: Input: After recording input do not move
             if (IsRecording)
             {
                 GetInputFromInputManager();
@@ -39,8 +38,13 @@ namespace NowakArtur97.LoopedDungeon.Core
             }
         }
 
-        public void SetMovement(PlayerInputFrame playerInput, float recordingStartTime) => SetInput(playerInput.MovementInput, playerInput.JumpInput,
-            playerInput.JumpInputStartTime + recordingStartTime, playerInput.MainAbilityInput, playerInput.SecondaryAbilityInput);
+        public void SetMovement(PlayerInputFrame inputFrame, float recordingStartTime)
+        {
+            float jumpInputStartTime = inputFrame.JumpInputStartTime + recordingStartTime;
+            SetInput(inputFrame.MovementInput, inputFrame.JumpInput, jumpInputStartTime,
+                inputFrame.MainAbilityInput, inputFrame.SecondaryAbilityInput);
+            _inputManager.JumpInputStartTime = jumpInputStartTime;
+        }
 
         private void GetInputFromInputManager() => SetInput(_inputManager.MovementInput, _inputManager.JumpInput, _inputManager.JumpInputStartTime,
             _inputManager.MainAbilityInput, _inputManager.SecondaryAbilityInput);

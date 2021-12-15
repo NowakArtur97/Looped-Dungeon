@@ -23,7 +23,7 @@ namespace NowakArtur97.LoopedDungeon.StateMachine
                     {
                         Player.StateMachine.ChangeState(Player.IdleState);
                     }
-                    else
+                    else if (!IsGrounded)
                     {
                         Player.StateMachine.ChangeState(Player.InAirState);
                     }
