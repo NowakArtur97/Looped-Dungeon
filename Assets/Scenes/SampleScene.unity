@@ -4240,7 +4240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813ddec91a92adf428ab3e6c04d33a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recordingTime: 5
+  _rewindData: {fileID: 11400000, guid: 9cb8953ecc77bb64483b69c89e748ec0, type: 2}
 --- !u!4 &716811599
 Transform:
   m_ObjectHideFlags: 0
@@ -7832,7 +7832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7891f9b52bfaab047a8ae913612c5e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _replayingTime: 5
+  _rewindData: {fileID: 11400000, guid: 9cb8953ecc77bb64483b69c89e748ec0, type: 2}
 --- !u!4 &1567839813
 Transform:
   m_ObjectHideFlags: 0

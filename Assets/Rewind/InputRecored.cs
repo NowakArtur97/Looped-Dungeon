@@ -8,8 +8,7 @@ namespace NowakArtur97.LoopedDungeon.Input
 {
     public class InputRecored : MonoBehaviour
     {
-        // TODO: REFACTOR
-        [SerializeField] private float _recordingTime = 10f;
+        [SerializeField] private D_Rewind _rewindData;
 
         private CharacterSpawner _characterSpawner;
         private Core.Input _characterInput;
@@ -37,7 +36,7 @@ namespace NowakArtur97.LoopedDungeon.Input
                 Record();
             }
 
-            if (_isRecording && Time.time > _recordingTime + _recordingStartTime)
+            if (_isRecording && Time.time > _rewindData.rewindTime + _recordingStartTime)
             {
                 _isRecording = false;
                 _characterInput.IsRecording = false;

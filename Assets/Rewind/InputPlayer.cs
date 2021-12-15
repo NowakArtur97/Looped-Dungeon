@@ -7,8 +7,7 @@ namespace NowakArtur97.LoopedDungeon.Input
 {
     public class InputPlayer : MonoBehaviour
     {
-        // TODO: REFACTOR
-        [SerializeField] private float _replayingTime = 10f;
+        [SerializeField] private D_Rewind _rewindData;
 
         private CharacterSpawner _characterSpawner;
         private InputRecored _inputRecored;
@@ -39,7 +38,7 @@ namespace NowakArtur97.LoopedDungeon.Input
                 _frameIndex++;
             }
 
-            if (Time.time > _replayingTime + _replayingStartTime)
+            if (Time.time > _rewindData.rewindTime + _replayingStartTime)
             {
                 _isReplaying = false;
                 OnReplayedEvent?.Invoke();
