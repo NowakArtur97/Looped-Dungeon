@@ -7,6 +7,8 @@ namespace NowakArtur97.LoopedDungeon.Core
     {
         private List<ITossable> _tossable = new List<ITossable>();
 
+        public void InitAbility(Weapon weapon) { }
+
         public void UseAbility(Weapon weapon) => _tossable.ForEach(damagable => damagable.TossUp());
 
         public void DetectTarget(Collider2D collision)

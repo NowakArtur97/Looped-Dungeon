@@ -5,17 +5,22 @@ namespace NowakArtur97.LoopedDungeon.Core
 {
     public class CloseRangeAbility : IAbility
     {
-        private D_ThrowableWeapon _data;
+        private D_ThrowableWeapon _throwableWeaponData;
         private List<IDamagable> _toDamage = new List<IDamagable>();
+        private float _damageAmount;
 
-        public void UseAbility(Weapon weapon)
+        public void InitAbility(Weapon weapon)
         {
             if (weapon.Data.GetType() == typeof(D_ThrowableWeapon))
             {
-                _data = (D_ThrowableWeapon)weapon.Data;
+                _throwableWeaponData = (D_ThrowableWeapon)weapon.Data;
+                _damageAmount = _throwableWeaponData.damageAmount;
             }
+        }
 
-            _toDamage.ForEach(damagable => damagable.Damage(_data.damageAmount));
+        public void UseAbility(Weapon weapon)
+        {
+            _toDamage.ForEach(damagable => damagable.Damage(_damageAmount));
         }
 
         public void DetectTarget(Collider2D collision)

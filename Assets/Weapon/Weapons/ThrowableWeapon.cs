@@ -1,3 +1,4 @@
+using NowakArtur97.LoopedDungeon.Util;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
@@ -5,9 +6,20 @@ namespace NowakArtur97.LoopedDungeon.Core
     public abstract class ThrowableWeapon : Weapon
     {
         [SerializeField] private AnimationAbilityState _throwBoolTrigger = AnimationAbilityState.mainAbility;
+        public D_ThrowableWeapon ThrowableWeaponData { get; private set; }
         private bool _isTouchingWall;
         protected bool WasThrown;
         private bool _hasStopped;
+
+        protected override void Awake()
+        {
+            if (Data.GetType() == typeof(D_ThrowableWeapon))
+            {
+                ThrowableWeaponData = (D_ThrowableWeapon)Data;
+            }
+
+            base.Awake();
+        }
 
         public override void InitWeapon(string animationBoolName, bool value)
         {
@@ -45,6 +57,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             {
                 _hasStopped = true;
                 CoreContainer.Movement.SetVelocityZero();
+                LayerUtil.ChangeLayer(gameObject, ThrowableWeaponData.platformLayerName);
             }
         }
 

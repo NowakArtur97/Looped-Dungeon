@@ -7,6 +7,7 @@ namespace NowakArtur97.LoopedDungeon.Core
     {
         public float damageAmount = 10;
         public string throwableLayerName = "Throwable";
+        public string platformLayerName = "Player Weapon Platform";
         public float thrownSpeed = 10;
     }
 }

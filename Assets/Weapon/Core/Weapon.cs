@@ -21,6 +21,9 @@ namespace NowakArtur97.LoopedDungeon.Core
             CoreContainer = GetComponentInChildren<WeaponCoreContrainer>();
 
             InitializeAbilities();
+
+            MainAbility?.InitAbility(this);
+            SecondaryAbility?.InitAbility(this);
         }
 
         public virtual void InitWeapon(string animationBoolName, bool value) => CoreContainer.Animation.SetBoolVariable(animationBoolName, value);
