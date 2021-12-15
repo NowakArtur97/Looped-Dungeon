@@ -17,5 +17,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         }
 
         public virtual void LogicUpdate() { }
+
+        public virtual void PhysicsUpdate() { }
     }
 }

@@ -420,8 +420,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81109297}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.21500015, y: -0.21000004, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 79245576}
@@ -4240,7 +4240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813ddec91a92adf428ab3e6c04d33a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recordingTime: 11
+  _recordingTime: 2
 --- !u!4 &716811599
 Transform:
   m_ObjectHideFlags: 0
@@ -4471,6 +4471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsRecording: 0
+  StoppedRecording: 0
 --- !u!1 &736119513
 GameObject:
   m_ObjectHideFlags: 0
@@ -7831,7 +7832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7891f9b52bfaab047a8ae913612c5e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _replayingTime: 11
+  _replayingTime: 2
 --- !u!4 &1567839813
 Transform:
   m_ObjectHideFlags: 0
@@ -8002,6 +8003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsRecording: 0
+  StoppedRecording: 0
 --- !u!1 &1580888016
 GameObject:
   m_ObjectHideFlags: 0
@@ -8456,6 +8458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsRecording: 0
+  StoppedRecording: 0
 --- !u!1 &1693554216
 GameObject:
   m_ObjectHideFlags: 0

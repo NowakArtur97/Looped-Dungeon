@@ -15,38 +15,45 @@ namespace NowakArtur97.LoopedDungeon.Core
         public bool SecondaryAbilityInput { get; private set; }
 
         public bool IsRecording;
+        public bool StoppedRecording;
 
         protected override void Awake()
         {
             base.Awake();
 
             _inputManager = GetComponent<PlayerInputManager>();
-
-            IsRecording = true;
         }
 
-        public override void LogicUpdate()
+        public override void PhysicsUpdate()
         {
-            base.LogicUpdate();
+            base.PhysicsUpdate();
 
             // TODO: Input: After recording input do not move
             if (IsRecording)
             {
-                MovementInput = _inputManager.MovementInput;
-                JumpInput = _inputManager.JumpInput;
-                JumpInputStartTime = _inputManager.JumpInputStartTime;
-                MainAbilityInput = _inputManager.MainAbilityInput;
-                SecondaryAbilityInput = _inputManager.SecondaryAbilityInput;
+                GetInputFromInputManager();
+            }
+            if (StoppedRecording)
+            {
+                ResetInput();
             }
         }
 
-        public void SetMovement(PlayerInputFrame playerInput, float recordingStartTime)
+        public void SetMovement(PlayerInputFrame playerInput, float recordingStartTime) => SetInput(playerInput.MovementInput, playerInput.JumpInput,
+            playerInput.JumpInputStartTime + recordingStartTime, playerInput.MainAbilityInput, playerInput.SecondaryAbilityInput);
+
+        private void GetInputFromInputManager() => SetInput(_inputManager.MovementInput, _inputManager.JumpInput, _inputManager.JumpInputStartTime,
+            _inputManager.MainAbilityInput, _inputManager.SecondaryAbilityInput);
+
+        private void ResetInput() => SetInput(Vector2.zero, false, 0, false, false);
+
+        private void SetInput(Vector2 movementInput, bool jumpInput, float jumpInputStartTime, bool mainAbilityInput, bool secondaryAbilityInput)
         {
-            MovementInput = playerInput.MovementInput;
-            JumpInput = playerInput.JumpInput;
-            JumpInputStartTime = playerInput.JumpInputStartTime + recordingStartTime;
-            MainAbilityInput = playerInput.MainAbilityInput;
-            SecondaryAbilityInput = playerInput.SecondaryAbilityInput;
+            MovementInput = movementInput;
+            JumpInput = jumpInput;
+            JumpInputStartTime = jumpInputStartTime;
+            MainAbilityInput = mainAbilityInput;
+            SecondaryAbilityInput = secondaryAbilityInput;
         }
     }
 }

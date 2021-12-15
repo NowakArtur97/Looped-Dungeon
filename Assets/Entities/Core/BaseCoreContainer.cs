@@ -72,11 +72,14 @@ namespace NowakArtur97.LoopedDungeon.Core
             Combat = GetComponentInChildren<Combat>();
         }
 
-        public virtual void LogicUpdate()
+        public virtual void Update()
         {
             Movement.LogicUpdate();
             Animation.LogicUpdate();
             Inventory?.LogicUpdate();
         }
+
+        public virtual void FixedUpdate()
+        { }
     }
 }

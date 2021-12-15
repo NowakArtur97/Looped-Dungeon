@@ -33,10 +33,14 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         private void Update()
         {
-            CoreContainer.LogicUpdate();
+            CoreContainer.Update();
             StateMachine.CurrentState.LogicUpdate();
         }
 
-        private void FixedUpdate() => StateMachine.CurrentState.PhysicsUpdate();
+        private void FixedUpdate()
+        {
+            CoreContainer.FixedUpdate();
+            StateMachine.CurrentState.PhysicsUpdate();
+        }
     }
 }

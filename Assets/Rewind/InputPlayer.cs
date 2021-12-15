@@ -15,7 +15,7 @@ namespace NowakArtur97.LoopedDungeon.Input
         private int _frameIndex;
         private Dictionary<Core.Input, List<PlayerInputFrame>> _characterInputs;
         private bool _isReplaying;
-        private float _startTime;
+        private float _replayingStartTime;
         public Action OnReplayedEvent;
 
         private void Awake()
@@ -39,7 +39,7 @@ namespace NowakArtur97.LoopedDungeon.Input
                 _frameIndex++;
             }
 
-            if (_isReplaying && Time.time > _replayingTime + _startTime)
+            if (Time.time > _replayingTime + _replayingStartTime)
             {
                 _isReplaying = false;
                 OnReplayedEvent?.Invoke();
@@ -50,7 +50,7 @@ namespace NowakArtur97.LoopedDungeon.Input
         {
             _frameIndex = 0;
             _characterInputs = _inputRecored.CharacterInputs;
-            _startTime = Time.time;
+            _replayingStartTime = Time.time;
             _isReplaying = true;
         }
 
@@ -58,8 +58,8 @@ namespace NowakArtur97.LoopedDungeon.Input
         {
             if (_frameIndex < _characterInputs[characterInput].Count)
             {
-                PlayerInputFrame frame = _characterInputs[characterInput][_frameIndex];
-                characterInput.SetMovement(frame, _startTime);
+                PlayerInputFrame inputFrame = _characterInputs[characterInput][_frameIndex];
+                characterInput.SetMovement(inputFrame, _replayingStartTime);
             }
         }
     }

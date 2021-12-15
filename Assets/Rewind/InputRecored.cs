@@ -2,6 +2,7 @@ using NowakArtur97.LoopedDungeon.Core;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace NowakArtur97.LoopedDungeon.Input
 {
@@ -12,9 +13,9 @@ namespace NowakArtur97.LoopedDungeon.Input
 
         private CharacterSpawner _characterSpawner;
         private Core.Input _characterInput;
-        private List<PlayerInputFrame> _inputs;
+        private List<PlayerInputFrame> _inputsFrames;
         private bool _isRecording;
-        private float _startTime;
+        private float _recordingStartTime;
 
         public Dictionary<Core.Input, List<PlayerInputFrame>> CharacterInputs { get; private set; }
         public Action OnRecordedEvent;
@@ -36,23 +37,27 @@ namespace NowakArtur97.LoopedDungeon.Input
                 Record();
             }
 
-            if (_isRecording && Time.time > _recordingTime + _startTime)
+            if (_isRecording && Time.time > _recordingTime + _recordingStartTime)
             {
                 _isRecording = false;
                 _characterInput.IsRecording = false;
-                CharacterInputs.Add(_characterInput, _inputs);
+                CharacterInputs.Add(_characterInput, _inputsFrames);
+                CharacterInputs.Keys.ToList().ForEach(input => input.StoppedRecording = true);
                 OnRecordedEvent?.Invoke();
             }
         }
 
         private void StartRecording(GameObject spawnedCharacter)
         {
-            _inputs = new List<PlayerInputFrame>();
+            CharacterInputs.Keys.ToList().ForEach(input => input.StoppedRecording = false);
+            _inputsFrames = new List<PlayerInputFrame>();
             _characterInput = spawnedCharacter.GetComponentInChildren<Core.Input>();
-            _startTime = Time.time;
+            _characterInput.IsRecording = true;
+            _recordingStartTime = Time.time;
             _isRecording = true;
         }
 
-        private void Record() => _inputs.Add(new PlayerInputFrame(_characterInput.MovementInput, _characterInput.JumpInput, _characterInput.JumpInput ? Time.time : 0, _characterInput.MainAbilityInput, _characterInput.SecondaryAbilityInput));
+        private void Record() => _inputsFrames.Add(new PlayerInputFrame(_characterInput.MovementInput, _characterInput.JumpInput,
+         _characterInput.JumpInputStartTime, _characterInput.MainAbilityInput, _characterInput.SecondaryAbilityInput));
     }
 }

@@ -19,11 +19,11 @@ namespace NowakArtur97.LoopedDungeon.Core
             Input = GetComponentInChildren<Input>();
         }
 
-        public override void LogicUpdate()
+        public override void FixedUpdate()
         {
-            base.LogicUpdate();
+            base.FixedUpdate();
 
-            Input?.LogicUpdate();
+            Input?.PhysicsUpdate();
         }
     }
 }
