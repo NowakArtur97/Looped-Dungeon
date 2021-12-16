@@ -15,7 +15,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         public bool SecondaryAbilityInput { get; private set; }
 
         public bool IsRecording;
-        public bool StoppedRecording;
+        public bool StoppedRewinding;
 
         protected override void Awake()
         {
@@ -32,7 +32,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             {
                 GetInputFromInputManager();
             }
-            if (StoppedRecording)
+            if (StoppedRewinding)
             {
                 ResetInput();
             }

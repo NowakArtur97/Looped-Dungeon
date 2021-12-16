@@ -1,5 +1,4 @@
 using NowakArtur97.LoopedDungeon.Core;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -17,7 +16,6 @@ namespace NowakArtur97.LoopedDungeon.Input
         private float _recordingStartTime;
 
         public Dictionary<Core.Input, List<PlayerInputFrame>> CharacterInputs { get; private set; }
-        public Action OnRecordedEvent;
 
         private void Awake()
         {
@@ -34,21 +32,19 @@ namespace NowakArtur97.LoopedDungeon.Input
             if (_isRecording)
             {
                 Record();
-            }
 
-            if (_isRecording && Time.time > _rewindData.rewindTime + _recordingStartTime)
-            {
-                _isRecording = false;
-                _characterInput.IsRecording = false;
-                CharacterInputs.Add(_characterInput, _inputsFrames);
-                CharacterInputs.Keys.ToList().ForEach(input => input.StoppedRecording = true);
-                OnRecordedEvent?.Invoke();
+                if (Time.time > _rewindData.rewindTime + _recordingStartTime)
+                {
+                    _isRecording = false;
+                    _characterInput.IsRecording = false;
+                    CharacterInputs.Add(_characterInput, _inputsFrames);
+                }
             }
         }
 
         private void StartRecording(GameObject spawnedCharacter)
         {
-            CharacterInputs.Keys.ToList().ForEach(input => input.StoppedRecording = false);
+            CharacterInputs.Keys.ToList().ForEach(input => input.StoppedRewinding = false);
             _inputsFrames = new List<PlayerInputFrame>();
             _characterInput = spawnedCharacter.GetComponentInChildren<Core.Input>();
             _characterInput.IsRecording = true;

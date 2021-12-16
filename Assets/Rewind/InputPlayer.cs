@@ -1,6 +1,7 @@
 using NowakArtur97.LoopedDungeon.Core;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Input
@@ -14,8 +15,10 @@ namespace NowakArtur97.LoopedDungeon.Input
         private int _frameIndex;
         private Dictionary<Core.Input, List<PlayerInputFrame>> _characterInputs;
         private bool _isReplaying;
+        private bool _isRewinding;
+        private bool _isFinished;
         private float _replayingStartTime;
-        public Action OnReplayedEvent;
+        public Action OnRewindedEvent;
 
         private void Awake()
         {
@@ -25,7 +28,10 @@ namespace NowakArtur97.LoopedDungeon.Input
             _inputRecored = FindObjectOfType<InputRecored>();
         }
 
-        private void OnDestroy() => _characterSpawner.OnSpawnCharacterEvent -= StartReplaying;
+        private void OnDestroy()
+        {
+            _characterSpawner.OnSpawnCharacterEvent -= StartReplaying;
+        }
 
         private void FixedUpdate()
         {
@@ -36,18 +42,40 @@ namespace NowakArtur97.LoopedDungeon.Input
                     Replay(characterInput.Key);
                 }
                 _frameIndex++;
+
+                if (Time.time > _rewindData.rewindTime + _replayingStartTime)
+                {
+                    _isReplaying = false;
+                    _isRewinding = true;
+                    _replayingStartTime = Time.time;
+                }
             }
 
-            if (Time.time > _rewindData.rewindTime + _replayingStartTime)
+            if (_isRewinding)
             {
-                _isReplaying = false;
-                OnReplayedEvent?.Invoke();
+                _frameIndex--;
+                foreach (var characterInput in _characterInputs)
+                {
+                    Rewind(characterInput.Key);
+                }
+
+                if (Time.time > _rewindData.rewindTime + _replayingStartTime)
+                {
+                    _characterInputs.Keys.ToList().ForEach(input => input.StoppedRewinding = true);
+                    _isRewinding = false;
+                    _isFinished = true;
+                }
+            }
+            if (_isFinished)
+            {
+                OnRewindedEvent?.Invoke();
             }
         }
 
         private void StartReplaying(GameObject character)
         {
             _frameIndex = 0;
+            _isFinished = false;
             _characterInputs = _inputRecored.CharacterInputs;
             _replayingStartTime = Time.time;
             _isReplaying = true;
@@ -59,6 +87,17 @@ namespace NowakArtur97.LoopedDungeon.Input
             {
                 PlayerInputFrame inputFrame = _characterInputs[characterInput][_frameIndex];
                 characterInput.SetMovement(inputFrame, _replayingStartTime);
+            }
+        }
+
+        private void Rewind(Core.Input characterInput)
+        {
+            if (_frameIndex >= 0)
+            {
+                PlayerInputFrame inputFrame = _characterInputs[characterInput][_frameIndex];
+                PlayerInputFrame rewindInputFrame = inputFrame.Clone();
+                rewindInputFrame.MovementInput.x = -inputFrame.MovementInput.x;
+                characterInput.SetMovement(rewindInputFrame, _replayingStartTime);
             }
         }
     }

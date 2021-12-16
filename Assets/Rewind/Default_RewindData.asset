@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de1ca36b1c42e26439aa2dd3a0827653, type: 3}
   m_Name: Default_RewindData
   m_EditorClassIdentifier: 
-  rewindTime: 11
+  rewindTime: 4

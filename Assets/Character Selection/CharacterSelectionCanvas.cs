@@ -12,7 +12,7 @@ namespace NowakArtur97.LoopedDungeon.UI
         private void Awake()
         {
             _inputPlayer = FindObjectOfType<InputPlayer>();
-            _inputPlayer.OnReplayedEvent += EnableUI;
+            _inputPlayer.OnRewindedEvent += EnableUI;
 
             _characterSelectionButtons = new List<CharacterSelectionButton>(FindObjectsOfType<CharacterSelectionButton>());
             _characterSelectionButtons.ForEach(selectionButton => selectionButton.OnSelectCharacterEvent += DisableUI);
@@ -20,7 +20,7 @@ namespace NowakArtur97.LoopedDungeon.UI
 
         private void OnDestroy()
         {
-            _inputPlayer.OnReplayedEvent -= EnableUI;
+            _inputPlayer.OnRewindedEvent -= EnableUI;
             _characterSelectionButtons.ForEach(selectionButton => selectionButton.OnSelectCharacterEvent -= DisableUI);
         }
 

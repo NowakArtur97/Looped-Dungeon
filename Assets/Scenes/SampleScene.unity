@@ -4458,6 +4458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d97ad733fe5d7dc40a194a670e10b81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JumpInputStartTime: 0
 --- !u!114 &730890853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5902,7 +5903,7 @@ GameObject:
   - component: {fileID: 1107755675}
   - component: {fileID: 1107755674}
   m_Layer: 5
-  m_Name: UI Canvas
+  m_Name: Character Selection Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7892,6 +7893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d97ad733fe5d7dc40a194a670e10b81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JumpInputStartTime: 0
 --- !u!114 &1574618861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8445,6 +8447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d97ad733fe5d7dc40a194a670e10b81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JumpInputStartTime: 0
 --- !u!114 &1687401091
 MonoBehaviour:
   m_ObjectHideFlags: 0
