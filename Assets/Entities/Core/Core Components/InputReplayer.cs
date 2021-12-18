@@ -1,5 +1,6 @@
 using NowakArtur97.LoopedDungeon.Input;
 using NowakArtur97.LoopedDungeon.Rewind;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,9 +13,10 @@ namespace NowakArtur97.LoopedDungeon.Core
         private Input _characterInput;
         private int _frameIndex;
         private List<PlayerInputFrame> _inputsFrames;
+        private float _replayingStartTime;
 
-        public bool IsReplaying;
-        public float ReplayingStartTime;
+        public bool IsReplaying { get; private set; }
+        public Action OnReplayed;
 
         protected override void Awake()
         {
@@ -30,23 +32,31 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             _rewindData = FindObjectOfType<RewindDataHolder>().RewindData;
             _inputsFrames = _playerCoreContainer.InputRecored.InputsFrames;
-            _characterInput = _playerCoreContainer.Input;
-            _characterInput.IsRecording = true;
         }
 
-        public override void PhysicsUpdate()
+        private void FixedUpdate()
         {
-            base.PhysicsUpdate();
-
             if (IsReplaying)
             {
                 Replay();
 
-                if (Time.time > _rewindData.rewindTime + ReplayingStartTime)
+                if (Time.time > _rewindData.rewindTime + _replayingStartTime)
                 {
                     IsReplaying = false;
+                    // TODO: InputReplayer: REMOVE
+                    _characterInput.StoppedRewinding = true;
+                    OnReplayed?.Invoke();
                 }
             }
+        }
+
+        public void StartReplaying()
+        {
+            _replayingStartTime = Time.time;
+            IsReplaying = true;
+            _characterInput = _playerCoreContainer.Input;
+            // TODO: InputReplayer: REMOVE
+            _characterInput.StoppedRewinding = false;
         }
 
         private void Replay()
@@ -54,7 +64,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             if (_frameIndex < _inputsFrames.Count)
             {
                 PlayerInputFrame inputFrame = _inputsFrames[_frameIndex];
-                _characterInput.SetMovement(inputFrame, ReplayingStartTime);
+                _characterInput.SetMovement(inputFrame, _replayingStartTime);
                 _frameIndex++;
             }
         }

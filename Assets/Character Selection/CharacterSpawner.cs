@@ -27,15 +27,17 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         private void SpawnCharacters(GameObject spawnedCharacter)
         {
-            _spawnIndex = 0;
+            spawnedCharacter.SetActive(true);
+            spawnedCharacter.GetComponentInChildren<InputRecorder>().StartRecording();
+
+            _spawnedCharacters.ForEach(character => character.GetComponentInChildren<InputReplayer>().StartReplaying());
+
             _spawnedCharacters.Add(spawnedCharacter);
-            spawnedCharacter.GetComponentInChildren<InputRecored>().IsRecording = true;
-            spawnedCharacter.GetComponentInChildren<Input>().IsRecording = true;
-            _spawnedCharacters.ForEach(character =>
-            {
-                character.SetActive(true);
-                character.transform.position = _spawnPositions[_spawnIndex++].position;
-            });
+            _spawnIndex = 0;
+
+            _spawnedCharacters.ForEach(character => character.transform.position = _spawnPositions[_spawnIndex++].position);
+
+            // TODO: CharacterSpawner: REFACTOR
             OnSpawnCharacterEvent?.Invoke(spawnedCharacter);
         }
     }

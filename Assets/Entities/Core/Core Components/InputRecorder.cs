@@ -1,26 +1,28 @@
 using NowakArtur97.LoopedDungeon.Input;
 using NowakArtur97.LoopedDungeon.Rewind;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.Core
 {
-    public class InputRecored : CoreComponent
+    public class InputRecorder : CoreComponent
     {
         private D_Rewind _rewindData;
         private Input _characterInput;
-        private InputReplayer _inputReplayer;
         private PlayerCoreContainer _playerCoreContainer;
+        private bool _isRecording;
+        private float _recordingStartTime;
 
-        public bool IsRecording;
         public List<PlayerInputFrame> InputsFrames { get; private set; }
+        public Action OnRecorded;
 
         protected override void Awake()
         {
             base.Awake();
 
             InputsFrames = new List<PlayerInputFrame>();
-            IsRecording = true;
+            _isRecording = true;
 
             if (CoreContainer is PlayerCoreContainer)
             {
@@ -28,29 +30,33 @@ namespace NowakArtur97.LoopedDungeon.Core
             }
         }
 
-        private void Start()
-        {
-            _rewindData = FindObjectOfType<RewindDataHolder>().RewindData;
-            _characterInput = _playerCoreContainer.Input;
-            _inputReplayer = _playerCoreContainer.InputReplayer;
-        }
+        private void Start() => _rewindData = FindObjectOfType<RewindDataHolder>().RewindData;
 
-        public override void PhysicsUpdate()
+        private void FixedUpdate()
         {
-            base.PhysicsUpdate();
-
-            if (IsRecording)
+            if (_isRecording)
             {
                 Record();
 
-                if (Time.time > _rewindData.rewindTime)
+                if (Time.time > _rewindData.rewindTime + _recordingStartTime)
                 {
-                    IsRecording = false;
+                    _isRecording = false;
                     _characterInput.IsRecording = false;
-                    _inputReplayer.IsReplaying = true;
-                    _inputReplayer.ReplayingStartTime = Time.time;
+                    // TODO: InputReplayer: REMOVE
+                    _characterInput.StoppedRewinding = true;
+                    OnRecorded?.Invoke();
                 }
             }
+        }
+
+        public void StartRecording()
+        {
+            _recordingStartTime = Time.time;
+            _characterInput = _playerCoreContainer.Input;
+            _characterInput.IsRecording = true;
+            // TODO: InputReplayer: REMOVE
+            _characterInput.StoppedRewinding = false;
+            _isRecording = true;
         }
 
         private void Record() => InputsFrames.Add(new PlayerInputFrame(_characterInput.MovementInput, _characterInput.JumpInput,

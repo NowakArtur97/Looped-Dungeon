@@ -12,11 +12,11 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _input = value;
         }
 
-        private InputRecored _inputRecored;
+        private InputRecorder _inputRecored;
 
-        public InputRecored InputRecored
+        public InputRecorder InputRecored
         {
-            get => GenericUtil<InputRecored>.GetOrDefault(_inputRecored, transform.parent.name);
+            get => GenericUtil<InputRecorder>.GetOrDefault(_inputRecored, transform.parent.name);
             private set => _inputRecored = value;
         }
 
@@ -33,7 +33,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             base.Awake();
 
             Input = GetComponentInChildren<Input>();
-            InputRecored = GetComponentInChildren<InputRecored>();
+            InputRecored = GetComponentInChildren<InputRecorder>();
             InputReplayer = GetComponentInChildren<InputReplayer>();
         }
 
