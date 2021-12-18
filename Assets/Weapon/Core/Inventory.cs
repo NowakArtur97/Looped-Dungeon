@@ -26,11 +26,6 @@ namespace NowakArtur97.LoopedDungeon.Core
             CurrentWeapon = newWeapon;
         }
 
-        public override void LogicUpdate()
-        {
-            base.LogicUpdate();
-
-            CoreContainer.Animation.SetNumberOfWeaponsVariable(Weapons.Count);
-        }
+        private void Update() => CoreContainer.Animation.SetNumberOfWeaponsVariable(Weapons.Count);
     }
 }

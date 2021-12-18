@@ -31,16 +31,8 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         protected virtual void Start() => CoreContainer.Combat.InitEntityStats(EntityStats);
 
-        private void Update()
-        {
-            CoreContainer.Update();
-            StateMachine.CurrentState.LogicUpdate();
-        }
+        private void Update() => StateMachine.CurrentState.LogicUpdate();
 
-        private void FixedUpdate()
-        {
-            CoreContainer.FixedUpdate();
-            StateMachine.CurrentState.PhysicsUpdate();
-        }
+        private void FixedUpdate() => StateMachine.CurrentState.PhysicsUpdate();
     }
 }

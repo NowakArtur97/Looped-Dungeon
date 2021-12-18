@@ -71,17 +71,5 @@ namespace NowakArtur97.LoopedDungeon.Core
             Inventory = GetComponentInChildren<Inventory>();
             Combat = GetComponentInChildren<Combat>();
         }
-
-        // TODO: CoreContainer: REMOVE?
-        public virtual void Update()
-        {
-            Movement.LogicUpdate();
-            Animation.LogicUpdate();
-            Inventory?.LogicUpdate();
-        }
-
-        // TODO: CoreContainer: REMOVE?
-        public virtual void FixedUpdate()
-        { }
     }
 }

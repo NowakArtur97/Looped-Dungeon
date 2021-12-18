@@ -24,10 +24,8 @@ namespace NowakArtur97.LoopedDungeon.Core
             _inputManager = GetComponent<PlayerInputManager>();
         }
 
-        public override void PhysicsUpdate()
+        private void FixedUpdate()
         {
-            base.PhysicsUpdate();
-
             if (IsRecording)
             {
                 GetInputFromInputManager();

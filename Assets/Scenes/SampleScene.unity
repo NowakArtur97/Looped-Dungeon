@@ -295,8 +295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31f938c237f7f14d930774a3778d5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsReplaying: 0
-  ReplayingStartTime: 0
 --- !u!1 &46365942
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,8 +383,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31f938c237f7f14d930774a3778d5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsReplaying: 0
-  ReplayingStartTime: 0
 --- !u!1 &75013139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,7 +2096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45398754f7865e48b9540b33ec9cb77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsRecording: 0
 --- !u!1 &188664442
 GameObject:
   m_ObjectHideFlags: 0
@@ -4349,49 +4344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f757a600689ab46a79ab0631aa071f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &716811597
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 716811599}
-  - component: {fileID: 716811598}
-  m_Layer: 0
-  m_Name: Input Recorder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &716811598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716811597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 813ddec91a92adf428ab3e6c04d33a56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &716811599
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716811597}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2061976485}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &726295479
 GameObject:
   m_ObjectHideFlags: 0
@@ -5694,8 +5646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31f938c237f7f14d930774a3778d5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsReplaying: 0
-  ReplayingStartTime: 0
 --- !u!1 &935669474
 GameObject:
   m_ObjectHideFlags: 0
@@ -5974,7 +5924,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45398754f7865e48b9540b33ec9cb77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsRecording: 0
 --- !u!1 &1032712467
 GameObject:
   m_ObjectHideFlags: 0
@@ -8032,49 +7981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37bd6c91f57be1458bb2b3c7926a9d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1567839811
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1567839813}
-  - component: {fileID: 1567839812}
-  m_Layer: 0
-  m_Name: Input Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1567839812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567839811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7891f9b52bfaab047a8ae913612c5e6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1567839813
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567839811}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2061976485}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1574618858
 GameObject:
   m_ObjectHideFlags: 0
@@ -8325,7 +8231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45398754f7865e48b9540b33ec9cb77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsRecording: 0
 --- !u!1 &1591952193
 GameObject:
   m_ObjectHideFlags: 0
@@ -9355,7 +9260,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2061976485}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1890985060
 MonoBehaviour:
@@ -11988,8 +11893,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 207489962}
-  - {fileID: 716811599}
-  - {fileID: 1567839813}
   - {fileID: 1890985059}
   m_Father: {fileID: 0}
   m_RootOrder: 5

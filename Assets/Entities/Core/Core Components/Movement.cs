@@ -19,12 +19,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             FacingDirection = 1;
         }
 
-        public override void LogicUpdate()
-        {
-            base.LogicUpdate();
-
-            CurrentVelocity = _myRigidbody.velocity;
-        }
+        private void Update() => CurrentVelocity = _myRigidbody.velocity;
 
         public void DisableGravityScale() => _myRigidbody.gravityScale = 0;
 

@@ -39,16 +39,6 @@ namespace NowakArtur97.LoopedDungeon.Core
             }
         }
 
-        protected override void Update()
-        {
-            if (WasThrown)
-            {
-                return;
-            }
-
-            base.Update();
-        }
-
         protected override void FixedUpdate()
         {
             base.FixedUpdate();

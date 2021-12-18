@@ -36,14 +36,5 @@ namespace NowakArtur97.LoopedDungeon.Core
             InputRecored = GetComponentInChildren<InputRecorder>();
             InputReplayer = GetComponentInChildren<InputReplayer>();
         }
-
-        public override void FixedUpdate()
-        {
-            base.FixedUpdate();
-
-            Input?.PhysicsUpdate();
-            InputRecored?.PhysicsUpdate();
-            InputReplayer?.PhysicsUpdate();
-        }
     }
 }
