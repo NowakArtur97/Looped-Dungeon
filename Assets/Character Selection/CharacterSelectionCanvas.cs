@@ -1,6 +1,5 @@
 using NowakArtur97.LoopedDungeon.Core;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace NowakArtur97.LoopedDungeon.UI

@@ -1,4 +1,3 @@
-using NowakArtur97.LoopedDungeon.Core;
 using System;
 using UnityEngine;
 
@@ -10,6 +9,10 @@ namespace NowakArtur97.LoopedDungeon.UI
 
         public Action<GameObject> OnSelectCharacterEvent;
 
-        public void OnSelectCharacter() => OnSelectCharacterEvent?.Invoke(_character);
+        public void OnSelectCharacter()
+        {
+            OnSelectCharacterEvent?.Invoke(_character);
+            Destroy(gameObject);
+        }
     }
 }

@@ -57,6 +57,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             _characterInput = _playerCoreContainer.Input;
             // TODO: InputReplayer: REMOVE
             _characterInput.StoppedRewinding = false;
+            _frameIndex = 0;
         }
 
         private void Replay()
