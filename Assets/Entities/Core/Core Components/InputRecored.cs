@@ -9,16 +9,18 @@ namespace NowakArtur97.LoopedDungeon.Core
     {
         private D_Rewind _rewindData;
         private Input _characterInput;
-        private List<PlayerInputFrame> _inputsFrames;
-        private bool _isRecording;
+        private InputReplayer _inputReplayer;
         private PlayerCoreContainer _playerCoreContainer;
+
+        public bool IsRecording;
+        public List<PlayerInputFrame> InputsFrames { get; private set; }
 
         protected override void Awake()
         {
             base.Awake();
 
-            _inputsFrames = new List<PlayerInputFrame>();
-            _isRecording = true;
+            InputsFrames = new List<PlayerInputFrame>();
+            IsRecording = true;
 
             if (CoreContainer is PlayerCoreContainer)
             {
@@ -30,24 +32,28 @@ namespace NowakArtur97.LoopedDungeon.Core
         {
             _rewindData = FindObjectOfType<RewindDataHolder>().RewindData;
             _characterInput = _playerCoreContainer.Input;
-            _characterInput.IsRecording = _isRecording;
+            _inputReplayer = _playerCoreContainer.InputReplayer;
         }
 
-        private void FixedUpdate()
+        public override void PhysicsUpdate()
         {
-            if (_isRecording)
+            base.PhysicsUpdate();
+
+            if (IsRecording)
             {
                 Record();
 
                 if (Time.time > _rewindData.rewindTime)
                 {
-                    _isRecording = false;
-                    _playerCoreContainer.Input.IsRecording = _isRecording;
+                    IsRecording = false;
+                    _characterInput.IsRecording = false;
+                    _inputReplayer.IsReplaying = true;
+                    _inputReplayer.ReplayingStartTime = Time.time;
                 }
             }
         }
 
-        private void Record() => _inputsFrames.Add(new PlayerInputFrame(_characterInput.MovementInput, _characterInput.JumpInput,
+        private void Record() => InputsFrames.Add(new PlayerInputFrame(_characterInput.MovementInput, _characterInput.JumpInput,
          _characterInput.JumpInputStartTime, _characterInput.MainAbilityInput, _characterInput.SecondaryAbilityInput));
     }
 }

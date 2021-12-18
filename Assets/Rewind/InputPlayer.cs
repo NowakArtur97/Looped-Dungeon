@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+// TODO: InputPlayer: REMOVE
 namespace NowakArtur97.LoopedDungeon.Input
 {
     public class InputPlayer : MonoBehaviour

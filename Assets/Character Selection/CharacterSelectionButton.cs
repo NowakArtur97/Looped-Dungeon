@@ -16,7 +16,7 @@ namespace NowakArtur97.LoopedDungeon.UI
         private void Awake()
         {
             _inputPlayer = FindObjectOfType<InputPlayer>();
-            _inputPlayer.OnRewindedEvent += EnableButton;
+            //_inputPlayer.OnRewindedEvent += EnableButton;
         }
 
         private void OnDestroy() => _inputPlayer.OnRewindedEvent -= EnableButton;

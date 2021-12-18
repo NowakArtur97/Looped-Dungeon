@@ -72,6 +72,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             Combat = GetComponentInChildren<Combat>();
         }
 
+        // TODO: CoreContainer: REMOVE?
         public virtual void Update()
         {
             Movement.LogicUpdate();
@@ -79,6 +80,7 @@ namespace NowakArtur97.LoopedDungeon.Core
             Inventory?.LogicUpdate();
         }
 
+        // TODO: CoreContainer: REMOVE?
         public virtual void FixedUpdate()
         { }
     }

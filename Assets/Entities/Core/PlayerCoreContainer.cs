@@ -20,12 +20,21 @@ namespace NowakArtur97.LoopedDungeon.Core
             private set => _inputRecored = value;
         }
 
+        private InputReplayer _inputReplayer;
+
+        public InputReplayer InputReplayer
+        {
+            get => GenericUtil<InputReplayer>.GetOrDefault(_inputReplayer, transform.parent.name);
+            private set => _inputReplayer = value;
+        }
+
         protected override void Awake()
         {
             base.Awake();
 
             Input = GetComponentInChildren<Input>();
             InputRecored = GetComponentInChildren<InputRecored>();
+            InputReplayer = GetComponentInChildren<InputReplayer>();
         }
 
         public override void FixedUpdate()
@@ -34,6 +43,7 @@ namespace NowakArtur97.LoopedDungeon.Core
 
             Input?.PhysicsUpdate();
             InputRecored?.PhysicsUpdate();
+            InputReplayer?.PhysicsUpdate();
         }
     }
 }

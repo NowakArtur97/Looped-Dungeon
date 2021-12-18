@@ -12,6 +12,7 @@ namespace NowakArtur97.LoopedDungeon.Core
         private List<CharacterSelectionButton> _characterSelectionButtons;
         private List<GameObject> _spawnedCharacters;
         private int _spawnIndex;
+        // TODO: CharacterSpawner: REMOVE
         public Action<GameObject> OnSpawnCharacterEvent;
 
         private void Awake()
@@ -27,9 +28,14 @@ namespace NowakArtur97.LoopedDungeon.Core
         private void SpawnCharacters(GameObject spawnedCharacter)
         {
             _spawnIndex = 0;
-            _spawnedCharacters.ForEach(character => Destroy(character));
             _spawnedCharacters.Add(spawnedCharacter);
-            _spawnedCharacters.ForEach(character => Instantiate(character, _spawnPositions[_spawnIndex++].position, Quaternion.identity));
+            spawnedCharacter.GetComponentInChildren<InputRecored>().IsRecording = true;
+            spawnedCharacter.GetComponentInChildren<Input>().IsRecording = true;
+            _spawnedCharacters.ForEach(character =>
+            {
+                character.SetActive(true);
+                character.transform.position = _spawnPositions[_spawnIndex++].position;
+            });
             OnSpawnCharacterEvent?.Invoke(spawnedCharacter);
         }
     }
