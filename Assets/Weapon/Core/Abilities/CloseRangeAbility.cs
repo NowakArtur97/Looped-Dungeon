@@ -11,17 +11,14 @@ namespace NowakArtur97.LoopedDungeon.Core
 
         public void InitAbility(Weapon weapon)
         {
-            if (weapon.Data.GetType() == typeof(D_ThrowableWeapon))
+            if (weapon.Data is D_ThrowableWeapon)
             {
                 _throwableWeaponData = (D_ThrowableWeapon)weapon.Data;
                 _damageAmount = _throwableWeaponData.damageAmount;
             }
         }
 
-        public void UseAbility(Weapon weapon)
-        {
-            _toDamage.ForEach(damagable => damagable.Damage(_damageAmount));
-        }
+        public void UseAbility(Weapon weapon) => _toDamage.ForEach(damagable => damagable.Damage(_damageAmount));
 
         public void DetectTarget(Collider2D collision)
         {

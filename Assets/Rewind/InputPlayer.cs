@@ -1,4 +1,5 @@
 using NowakArtur97.LoopedDungeon.Core;
+using NowakArtur97.LoopedDungeon.Rewind;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ namespace NowakArtur97.LoopedDungeon.Input
 {
     public class InputPlayer : MonoBehaviour
     {
-        [SerializeField] private D_Rewind _rewindData;
+        private D_Rewind _rewindData;
 
         private CharacterSpawner _characterSpawner;
         private InputRecored _inputRecored;
@@ -27,6 +28,8 @@ namespace NowakArtur97.LoopedDungeon.Input
 
             _inputRecored = FindObjectOfType<InputRecored>();
         }
+
+        private void Start() => _rewindData = FindObjectOfType<RewindDataHolder>().RewindData;
 
         private void OnDestroy()
         {

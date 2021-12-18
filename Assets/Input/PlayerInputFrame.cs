@@ -19,9 +19,6 @@ namespace NowakArtur97.LoopedDungeon.Input
             SecondaryAbilityInput = secondaryAbilityInput;
         }
 
-        public PlayerInputFrame Clone()
-        {
-            return new PlayerInputFrame(MovementInput, JumpInput, JumpInputStartTime, MainAbilityInput, SecondaryAbilityInput);
-        }
+        public PlayerInputFrame Clone() => new PlayerInputFrame(MovementInput, JumpInput, JumpInputStartTime, MainAbilityInput, SecondaryAbilityInput);
     }
 }

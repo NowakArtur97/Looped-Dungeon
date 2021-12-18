@@ -27,12 +27,9 @@ namespace NowakArtur97.LoopedDungeon.Core
         private void SpawnCharacters(GameObject spawnedCharacter)
         {
             _spawnIndex = 0;
+            _spawnedCharacters.ForEach(character => Destroy(character));
             _spawnedCharacters.Add(spawnedCharacter);
-            _spawnedCharacters.ForEach(character =>
-            {
-                character.SetActive(true);
-                character.transform.position = _spawnPositions[_spawnIndex++].position;
-            });
+            _spawnedCharacters.ForEach(character => Instantiate(character, _spawnPositions[_spawnIndex++].position, Quaternion.identity));
             OnSpawnCharacterEvent?.Invoke(spawnedCharacter);
         }
     }

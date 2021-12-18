@@ -2,12 +2,14 @@ using NowakArtur97.LoopedDungeon.Core;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using NowakArtur97.LoopedDungeon.Rewind;
 
+// TODO: InputRecored : REMOVE
 namespace NowakArtur97.LoopedDungeon.Input
 {
     public class InputRecored : MonoBehaviour
     {
-        [SerializeField] private D_Rewind _rewindData;
+        private D_Rewind _rewindData;
 
         private CharacterSpawner _characterSpawner;
         private Core.Input _characterInput;
@@ -24,6 +26,8 @@ namespace NowakArtur97.LoopedDungeon.Input
 
             CharacterInputs = new Dictionary<Core.Input, List<PlayerInputFrame>>();
         }
+
+        private void Start() => _rewindData = FindObjectOfType<RewindDataHolder>().RewindData;
 
         private void OnDestroy() => _characterSpawner.OnSpawnCharacterEvent -= StartRecording;
 
