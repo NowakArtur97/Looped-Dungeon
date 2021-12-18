@@ -18,10 +18,8 @@ namespace NowakArtur97.LoopedDungeon.Core
             IsSynchronized = true;
         }
 
-        public override void LogicUpdate()
+        private void Update()
         {
-            base.LogicUpdate();
-
             if (IsSynchronized)
             {
                 Synchronize();

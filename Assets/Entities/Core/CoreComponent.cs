@@ -15,9 +15,5 @@ namespace NowakArtur97.LoopedDungeon.Core
                 Debug.LogError("There is no Core on the parent");
             }
         }
-
-        public virtual void LogicUpdate() { }
-
-        public virtual void PhysicsUpdate() { }
     }
 }

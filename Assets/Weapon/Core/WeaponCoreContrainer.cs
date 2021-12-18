@@ -20,10 +20,6 @@ namespace NowakArtur97.LoopedDungeon.Core
             Inventory = GetComponentInParent<Inventory>();
         }
 
-        private void Update()
-        {
-            Animation.SetNumberOfWeaponsVariable(Inventory.Weapons.Count);
-            AnimatorSynchronizer.LogicUpdate();
-        }
+        private void Update() => Animation.SetNumberOfWeaponsVariable(Inventory.Weapons.Count);
     }
 }
